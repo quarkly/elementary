@@ -1,0 +1,12 @@
+demo/
+dist/
+tests/
+src/
+.*
+docs/
+.storybook/
+config/
+example/
+.DS_Store
+coverage/
+.jest
