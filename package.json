@@ -34,6 +34,7 @@
     "@emotion/styled": "^10.0.9",
     "ava": "^1.3.1",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-lodash": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^4.0.0",
@@ -53,5 +54,8 @@
   "bugs": {
     "url": "https://gitlab.com/quarkly/elementary/issues"
   },
-  "homepage": "https://gitlab.com/quarkly/elementary#readme"
+  "homepage": "https://gitlab.com/quarkly/elementary#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }

@@ -6,11 +6,11 @@
     },
     "cjs": {
       "presets": [["@babel/env", { "loose": true }]],
-      "plugins": ["@babel/transform-runtime"]
+      "plugins": ["@babel/transform-runtime", "lodash"]
     },
     "esm": {
       "presets": [["@babel/env", { "loose": true, "modules": false }]],
-      "plugins": [["@babel/transform-runtime", { "useESModules": true }]]
+      "plugins": [["@babel/transform-runtime", { "useESModules": true }], "lodash"]
     }
   }
 }
