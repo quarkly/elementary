@@ -11,7 +11,9 @@
     "clean": "rm -rf build/*",
     "build:cjs": "NODE_ENV=cjs babel src -o build/index.cjs.js",
     "build:esm": "NODE_ENV=esm babel src -o build/index.esm.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -48,7 +50,9 @@
     "prettier": "^1.16.4",
     "react": "^16.8.5",
     "react-test-renderer": "^16.8.5",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "babel-jest": "^24.3.1",
+    "jest": "^24.3.1"
   },
   "license": "ISC",
   "bugs": {
