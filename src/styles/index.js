@@ -94,7 +94,11 @@ export const makeRulesWithEffect = (properties, config) => {
           const effectRuleName = makeEffectRuleName(effectName, propName);
           const effectedProps = { [propName]: get(effectRuleName, props), theme: props.theme };
           const targetRule = rules[property];
-          Object.assign(accum, targetRule.call(null, effectedProps));
+          let styles = targetRule.call(null, effectedProps);
+          if (isArray(styles)) {
+            styles = styles.reduce((ac, style) => ({ ...ac, ...style }));
+          }
+          Object.assign(accum, styles);
           return accum;
         }, {}),
       });

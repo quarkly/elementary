@@ -19,6 +19,7 @@ const [ElButton] = elementary(styled)('button')(['color']);
 const el = elementary(styled);
 
 const [Box] = el('div')(['color'], { effects: { hover: ':hover' } });
+const [ComposedBox] = el('div')(['color'], { effects: { hover: ':hover', focus: ':focus' } });
 
 describe('Elementary integration to SC', () => {
   test('base', () => {
@@ -38,6 +39,26 @@ describe('Elementary integration to SC', () => {
     const tree = renderer.create(<Box hoverColor="red" color="blue" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
     expect(tree).toHaveStyleRule('color', 'red', {
+      modifier: ':hover',
+    });
+  });
+  test('composed effect', () => {
+    const tree = renderer
+      .create(<ComposedBox hoverColor="red" color="blue" focusColor="tomato" />)
+      .toJSON();
+    expect(tree).toHaveStyleRule('color', 'blue');
+    expect(tree).toHaveStyleRule('color', 'red', {
+      modifier: ':hover',
+    });
+    expect(tree).toHaveStyleRule('color', 'tomato', {
+      modifier: ':focus',
+    });
+  });
+  test('media effect', () => {
+    const tree = renderer.create(<Box hoverColor={['red', 'green']} color="blue" />).toJSON();
+    expect(tree).toHaveStyleRule('color', 'blue');
+    expect(tree).toHaveStyleRule('color', 'red', {
+      media: 'screen and (min-width: 40em)',
       modifier: ':hover',
     });
   });
