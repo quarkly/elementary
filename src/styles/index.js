@@ -109,3 +109,22 @@ export const makeRulesWithEffect = (properties, config) => {
   );
   return [Object.assign(rules, rulesWithEffect), Object.assign(propTypes, PropTypesWithEffect)];
 };
+
+export default (properties, config) => {
+  const [rules, propTypes] = makeRulesWithEffect(properties, config);
+  const bootstrap = props =>
+    Object.keys(rules).reduce((acc, rule) => {
+      const ruleFn = rules[rule];
+      const style = ruleFn(props);
+      let result;
+      if (isArray(style)) {
+        result = style.reduce((accum, value) => ({ ...accum, ...value }), {});
+      } else {
+        result = style;
+        console.log(style);
+      }
+      Object.assign(acc, result);
+      return acc;
+    }, {});
+  return [bootstrap, propTypes];
+};
