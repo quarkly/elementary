@@ -65,6 +65,7 @@ export const makeRule = (property /* config */) => {
 export const makeRules = (properties /* config */) =>
   properties.reduce(
     (acc, property) => {
+      if (isUndefined(stylesDict[property])) return acc;
       const { alias } = stylesDict[property];
       const propName = alias || property;
       const [rule, propTypes] = makeRule(property);

@@ -1,16 +1,16 @@
 {
-  "name": "elementary",
-  "version": "0.0.1",
+  "name": "@quarkly/elementary",
+  "version": "0.0.2",
   "author": "Eddort",
   "description": "Library for build atomic react-components",
-  "main": "build/index.cjs.js",
-  "module": "build/index.esm.js",
+  "main": "build/cjs",
+  "module": "build/esm",
   "sideEffects": false,
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm",
     "clean": "rm -rf build/*",
-    "build:cjs": "NODE_ENV=cjs babel src -o build/index.cjs.js --ignore '**/*.test.js'",
-    "build:esm": "NODE_ENV=esm babel src -o build/index.esm.js --ignore '**/*.test.js'",
+    "build:cjs": "NODE_ENV=cjs babel src --out-dir build/cjs --ignore '**/*.test.js'",
+    "build:esm": "NODE_ENV=esm babel src --out-dir build/esm --ignore '**/*.test.js'",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"

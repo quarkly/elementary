@@ -1,6 +1,7 @@
 demo/
 dist/
 tests/
+test/
 src/
 .*
 docs/
@@ -10,3 +11,4 @@ example/
 .DS_Store
 coverage/
 .jest
+jest.config.js

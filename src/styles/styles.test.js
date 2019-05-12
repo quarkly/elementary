@@ -49,6 +49,11 @@ describe('makeRules', () => {
     expect(rules).toBeDefined();
     expect(propTypes).toBeDefined();
   });
+  test('incorrect rule', () => {
+    const [rules, propTypes] = makeRules(['color', 'fakeRule']);
+    expect(rules).toBeDefined();
+    expect(propTypes).toBeDefined();
+  });
 });
 describe('makeRules with effect', () => {
   test('single rule', () => {
