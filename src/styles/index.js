@@ -87,8 +87,8 @@ export const makeRulesWithEffect = (properties, config) => {
   const [rulesWithEffect, PropTypesWithEffect] = effectNames.reduce(
     (acc, effectName) => {
       const effectKey = config.effects[effectName];
-      const effectFn = props =>
-        properties.reduce((accum, property) => {
+      const effectFn = props => ({
+        [`&${effectKey}`]: properties.reduce((accum, property) => {
           const { alias } = stylesDict[property];
           const propName = alias || property;
           const effectRuleName = makeEffectRuleName(effectName, propName);
@@ -96,7 +96,9 @@ export const makeRulesWithEffect = (properties, config) => {
           const targetRule = rules[property];
           Object.assign(accum, targetRule.call(null, effectedProps));
           return accum;
-        }, {});
+        }, {}),
+      });
+
       acc[0][`&${effectKey}`] = effectFn;
       acc[1] = Object.keys(propTypes).reduce((accum, propTypeName) => {
         const propTypeFn = propTypes[propTypeName];
@@ -111,20 +113,5 @@ export const makeRulesWithEffect = (properties, config) => {
 };
 
 export default (properties, config) => {
-  const [rules, propTypes] = makeRulesWithEffect(properties, config);
-  const bootstrap = props =>
-    Object.keys(rules).reduce((acc, rule) => {
-      const ruleFn = rules[rule];
-      const style = ruleFn(props);
-      let result;
-      if (isArray(style)) {
-        result = style.reduce((accum, value) => ({ ...accum, ...value }), {});
-      } else {
-        result = style;
-        console.log(style);
-      }
-      Object.assign(acc, result);
-      return acc;
-    }, {});
-  return [bootstrap, propTypes];
+  return makeRulesWithEffect(properties, config);
 };

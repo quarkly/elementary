@@ -16,6 +16,10 @@ test('sc setup works', () => {
 
 const [ElButton] = elementary(styled)('button')(['color']);
 
+const el = elementary(styled);
+
+const [Box] = el('div')(['color'], { effects: { hover: ':hover' } });
+
 describe('Elementary integration to SC', () => {
   test('base', () => {
     const tree = renderer.create(<ElButton color="red" />).toJSON();
@@ -28,6 +32,13 @@ describe('Elementary integration to SC', () => {
     });
     expect(tree).toHaveStyleRule('color', 'blue', {
       media: 'screen and (min-width: 52em)',
+    });
+  });
+  test('effect', () => {
+    const tree = renderer.create(<Box hoverColor="red" color="blue" />).toJSON();
+    expect(tree).toHaveStyleRule('color', 'blue');
+    expect(tree).toHaveStyleRule('color', 'red', {
+      modifier: ':hover',
     });
   });
 });

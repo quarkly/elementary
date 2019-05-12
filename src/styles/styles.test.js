@@ -2,11 +2,7 @@ import dict from './dict';
 import { toPropTypes, makeRule, makeRules, makeRulesWithEffect } from './index';
 
 const fakeApplier = (rules, props) =>
-  Object.keys(rules).reduce((acc, rule) => {
-    const ruleFn = rules[rule];
-    Object.assign(acc, { [rule]: ruleFn(props) });
-    return acc;
-  }, {});
+  Object.values(rules).reduce((acc, rule) => ({ ...acc, ...rule(props) }), {});
 
 describe('Style dict', () => {
   test('type exists in all style object', () => {
@@ -64,8 +60,7 @@ describe('makeRules with effect', () => {
     expect(fakeApplier(rules, { bg: 'red', hoverBg: 'blue' })).toBeDefined();
     expect(fakeApplier(rules, { bg: 'red', hoverBg: 'blue', hoverColor: 'red' })).toBeDefined();
     expect(fakeApplier(rules, { bg: 'red', hoverBg: 'blue', hoverColor: 'red' })).toStrictEqual({
-      color: null,
-      backgroundColor: { backgroundColor: 'red' },
+      backgroundColor: 'red',
       '&:hover': { color: 'red', backgroundColor: 'blue' },
     });
   });

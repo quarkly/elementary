@@ -1,8 +1,8 @@
 import bootstrap from './styles';
 // console.log(makeRulesWithEffect(styles, config)[0]) || makeRulesWithEffect(styles, config)[0]
 const makeElementary = styled => (tag, styles, config = {}) => {
-  const [makeStyles, propTypes] = bootstrap(styles, config);
-  const Component = styled(tag)(makeStyles);
+  const [rules, propTypes] = bootstrap(styles, config);
+  const Component = styled(tag)(...Object.values(rules));
   return [Component, propTypes];
 };
 
