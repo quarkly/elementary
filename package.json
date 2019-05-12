@@ -9,8 +9,8 @@
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm",
     "clean": "rm -rf build/*",
-    "build:cjs": "NODE_ENV=cjs babel src -o build/index.cjs.js",
-    "build:esm": "NODE_ENV=esm babel src -o build/index.esm.js",
+    "build:cjs": "NODE_ENV=cjs babel src -o build/index.cjs.js --ignore '**/*.test.js'",
+    "build:esm": "NODE_ENV=esm babel src -o build/index.esm.js --ignore '**/*.test.js'",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
