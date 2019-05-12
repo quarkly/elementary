@@ -22,7 +22,7 @@ describe('Use rule', () => {
     const [rule] = makeRule('backgroundColor');
     expect(rule({ bg: 'red' })).toStrictEqual({ backgroundColor: 'red' });
     expect(rule({ bg: ['red', 'green'] })).toStrictEqual([
-      { '@media screen and (min-width: 40em)': { backgroundColor: 'red' } },
+      { backgroundColor: 'red' },
       { '@media screen and (min-width: 52em)': { backgroundColor: 'green' } },
     ]);
     expect(rule({ bg: false })).toStrictEqual({ backgroundColor: false });
@@ -33,9 +33,10 @@ describe('Use rule', () => {
   test('single rule', () => {
     const [rule] = makeRule('color');
     expect(rule({ color: 'red' })).toStrictEqual({ color: 'red' });
-    expect(rule({ color: ['red', 'green'] })).toStrictEqual([
-      { '@media screen and (min-width: 40em)': { color: 'red' } },
+    expect(rule({ color: ['red', 'green', 'tomato'] })).toStrictEqual([
+      { color: 'red' },
       { '@media screen and (min-width: 52em)': { color: 'green' } },
+      { '@media screen and (min-width: 64em)': { color: 'tomato' } },
     ]);
     expect(rule({ color: false })).toStrictEqual({ color: false });
     expect(rule({})).toBe(null);

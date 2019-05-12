@@ -23,6 +23,7 @@ const [ComposedBox] = el('div')(['color'], { effects: { hover: ':hover', focus: 
 const [ChainBox] = el.div(['color'], { effects: { hover: ':hover', focus: ':focus' } });
 const [ExtendedSC] = el(Button)(['color'], { effects: { hover: ':hover' } });
 const [ExtendedEL] = el(Box)(['margin'], { effects: { hover: ':hover' } });
+const [WithIncorrectProp] = el(Box)(['fake'], { effects: { hover: ':hover' } });
 
 describe('Elementary integration to SC', () => {
   test('base', () => {
@@ -31,9 +32,7 @@ describe('Elementary integration to SC', () => {
   });
   test('media rules', () => {
     const tree = renderer.create(<ElButton color={['red', 'blue']} />).toJSON();
-    expect(tree).toHaveStyleRule('color', 'red', {
-      media: 'screen and (min-width: 40em)',
-    });
+    expect(tree).toHaveStyleRule('color', 'red');
     expect(tree).toHaveStyleRule('color', 'blue', {
       media: 'screen and (min-width: 52em)',
     });
@@ -61,7 +60,6 @@ describe('Elementary integration to SC', () => {
     const tree = renderer.create(<Box hoverColor={['red', 'green']} color="blue" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
     expect(tree).toHaveStyleRule('color', 'red', {
-      media: 'screen and (min-width: 40em)',
       modifier: ':hover',
     });
     expect(tree).toHaveStyleRule('color', 'green', {
@@ -81,5 +79,11 @@ describe('Elementary integration to SC', () => {
     const tree = renderer.create(<ExtendedEL hoverColor="red" color="blue" m="100px" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
     expect(tree).toHaveStyleRule('margin', '100px');
+  });
+  test('with incorrect prop', () => {
+    const tree = renderer
+      .create(<WithIncorrectProp hoverColor="red" color="blue" m="100px" />)
+      .toJSON();
+    expect(tree).toHaveStyleRule('color', 'blue');
   });
 });

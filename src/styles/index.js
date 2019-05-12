@@ -1,4 +1,4 @@
-import { isArray, map, isNumber, isUndefined, get, entries, flow } from 'lodash/fp';
+import { isArray, map, isNumber, isUndefined, get } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import stylesDict from './dict';
 
@@ -46,13 +46,18 @@ export const makeRule = (property /* config */) => {
     if (isArray(propertyValue)) {
       const breakpoints = get('breakpoints', props.theme) || defaultBreakpoints;
       // количество свойств в массиве должно быть не больше чем в брейкпоинтах
-      const consistentValues = propertyValue.slice(0, breakpoints.length + 1);
-      resultRule = flow(
-        entries,
-        map(([key, value]) => ({
-          [createMediaQuery(breakpoints[key])]: createStyle(value),
-        })),
-      )(consistentValues);
+      const consistentValues = propertyValue.slice(1, breakpoints.length + 1);
+      resultRule = [createStyle(propertyValue[0])];
+      let index = 1;
+      resultRule = resultRule.concat(
+        map(
+          value => ({
+            // eslint-disable-next-line no-plusplus
+            [createMediaQuery(breakpoints[index++])]: createStyle(value),
+          }),
+          consistentValues,
+        ),
+      );
     } else {
       resultRule = createStyle(propertyValue);
     }
@@ -90,6 +95,7 @@ export const makeRulesWithEffect = (properties, config) => {
       const effectKey = config.effects[effectName];
       const effectFn = props => ({
         [`&${effectKey}`]: properties.reduce((accum, property) => {
+          if (isUndefined(stylesDict[property])) return accum;
           const { alias } = stylesDict[property];
           const propName = alias || property;
           const effectRuleName = makeEffectRuleName(effectName, propName);
