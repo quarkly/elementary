@@ -7,8 +7,10 @@ Elemetary - библиотека для создания атомарных reac
 Так как в основе Elementary лежит styled-components, интерфейс может быть вам знаком. <br>
 Создаем элемент:
 ```
-import elementary from 'elementary';
+import wrap from '@quarkly/elementary';
+import styled from 'styled-components';
 
+const elementary = wrap(styled);
 const Link = elementary.a([
     'color',
     'bacground-color'
@@ -44,8 +46,10 @@ ReactDom.render(<Link color=['red', 'blue', 'green']/>, document.getElementById(
 
 ### Использование совместно с styled-components:
 ```
-import elementary from 'elementary';
+import wrap from '@quarkly/elementary';
 import styled from 'styled-components';
+
+const elementary = wrap(styled);
 
 const absLink = styled.a`
     border: 2px solid black;
@@ -66,8 +70,10 @@ const Link = elementary(absLink)([
 ```
 import React from 'react';
 import ReactDom from 'react-dom';
-import elementary from 'elementary';
+import wrap from '@quarkly/elementary';
 import styled from 'styled-components';
+
+const elementary = wrap(styled);
 
 const absLink = styled.a`
     border: 2px solid black;
@@ -85,4 +91,4 @@ const Link = elementary(absLink)([
 ReactDom.render(<Link color=['red', 'blue', 'green']/>, document.getElementById('root')
 ```
 
-Демо: TODO
+Демо: https://codesandbox.io/s/zn1yrxoxlx
