@@ -84,21 +84,28 @@ export const makeRulesWithEffect = (properties, config) => {
   const [rules, propTypes] = makeRules(properties);
   if (isUndefined(config.effects)) return [rules, propTypes];
   const effectNames = Object.keys(config.effects);
-  return effectNames.reduce(
+  const [rulesWithEffect, PropTypesWithEffect] = effectNames.reduce(
     (acc, effectName) => {
       const effectKey = config.effects[effectName];
-      acc[0][`&${effectKey}`] = props =>
+      const effectFn = props =>
         properties.reduce((accum, property) => {
           const { alias } = stylesDict[property];
           const propName = alias || property;
           const effectRuleName = makeEffectRuleName(effectName, propName);
           const effectedProps = { [propName]: get(effectRuleName, props), theme: props.theme };
           const targetRule = rules[property];
-          accum[propName] = targetRule.call(null, effectedProps);
+          Object.assign(accum, targetRule.call(null, effectedProps));
           return accum;
         }, {});
+      acc[0][`&${effectKey}`] = effectFn;
+      acc[1] = Object.keys(propTypes).reduce((accum, propTypeName) => {
+        const propTypeFn = propTypes[propTypeName];
+        accum[makeEffectRuleName(effectName, propTypeName)] = propTypeFn;
+        return accum;
+      }, {});
       return acc;
     },
     [{}, {}],
   );
+  return [Object.assign(rules, rulesWithEffect), Object.assign(propTypes, PropTypesWithEffect)];
 };

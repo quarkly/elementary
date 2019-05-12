@@ -1,6 +1,13 @@
 import dict from './dict';
 import { toPropTypes, makeRule, makeRules, makeRulesWithEffect } from './index';
 
+const fakeApplier = (rules, props) =>
+  Object.keys(rules).reduce((acc, rule) => {
+    const ruleFn = rules[rule];
+    Object.assign(acc, { [rule]: ruleFn(props) });
+    return acc;
+  }, {});
+
 describe('Style dict', () => {
   test('type exists in all style object', () => {
     Object.values(dict).forEach(style => expect(style.type).toBeDefined());
@@ -52,9 +59,14 @@ describe('makeRules with effect', () => {
     const [rules, propTypes] = makeRulesWithEffect(['color', 'backgroundColor'], {
       effects: { hover: ':hover' },
     });
-    console.log(rules)
-    console.log(rules['&:hover']({hoverBg: 'red', bg: 'blue'}))
     expect(rules).toBeDefined();
     expect(propTypes).toBeDefined();
+    expect(fakeApplier(rules, { bg: 'red', hoverBg: 'blue' })).toBeDefined();
+    expect(fakeApplier(rules, { bg: 'red', hoverBg: 'blue', hoverColor: 'red' })).toBeDefined();
+    expect(fakeApplier(rules, { bg: 'red', hoverBg: 'blue', hoverColor: 'red' })).toStrictEqual({
+      color: null,
+      backgroundColor: { backgroundColor: 'red' },
+      '&:hover': { color: 'red', backgroundColor: 'blue' },
+    });
   });
 });
