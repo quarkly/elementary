@@ -1,5 +1,5 @@
 import dict from './dict';
-import { toPropTypes, makeRule } from './index';
+import { toPropTypes, makeRule, makeRules } from './index';
 
 describe('Style dict', () => {
   test('type exists in all style object', () => {
@@ -38,5 +38,12 @@ describe('Use rule', () => {
     expect(rule({})).toBe(null);
     expect(rule({ bg: 'someFakeValue' })).toBe(null);
     expect(rule()).toBe(null);
+  });
+});
+describe('makeRules', () => {
+  test('single rule', () => {
+    const [rules, propTypes] = makeRules(['color', 'backgroundColor']);
+    expect(rules).toBeDefined();
+    expect(propTypes).toBeDefined();
   });
 });

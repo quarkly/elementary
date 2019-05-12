@@ -61,3 +61,17 @@ export const makeRule = (property /* config */) => {
   const propType = toPropTypes(stylesDict[property]);
   return [rule, propType];
 };
+
+export const makeRules = (properties /* config */) =>
+  properties.reduce(
+    (acc, property) => {
+      const { alias } = stylesDict[property];
+      const propName = alias || property;
+      const [rule, propTypes] = makeRule(property);
+
+      acc[0][property] = rule;
+      acc[1][propName] = propTypes;
+      return acc;
+    },
+    [{}, {}],
+  );
