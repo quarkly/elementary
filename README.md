@@ -6,7 +6,7 @@ Elemetary - библиотека для создания атомарных reac
 ### Как начать использовать:
 Так как в основе Elementary лежит styled-components, интерфейс может быть вам знаком. <br>
 Создаем элемент:
-```
+```jsx
 import wrap from '@quarkly/elementary';
 import styled from 'styled-components';
 
@@ -27,7 +27,7 @@ const Link = elementary.a([
 - themed - стили из темы по дефолту
 
 Далее иcпользуем наш элемент:
-```
+```jsx
 import React from 'react';
 import ReactDom from 'react-dom';
 
@@ -36,16 +36,16 @@ ReactDom.render(<Link color="red" hoverColor="blue" focusColor="green"/>, docume
 В качестве пропсов передаем color, hoverColor и focusColor. В итоге мы получаем ссылку, у которой в зависимости от эффекта наведения или фокуса меняется цвет. Аналогично будет работать любое css свойство, которое вы передадите в момент создания компонента.
 
 ### Медиа-запросы:
-```
+```jsx
 import React from 'react';
 import ReactDom from 'react-dom';
 
-ReactDom.render(<Link color=['red', 'blue', 'green']/>, document.getElementById('root')
+ReactDom.render(<Link color={['red', 'blue', 'green']}/>, document.getElementById('root')
 ```
 Для работы с медиа-запросами достаточно указать значения свойства в массиве, где каждое свойство будет применяться отностильно breakpoint из темы. <br>
 
 ### Использование совместно с styled-components:
-```
+```jsx
 import wrap from '@quarkly/elementary';
 import styled from 'styled-components';
 
@@ -67,7 +67,7 @@ const Link = elementary(absLink)([
 
 ### Полный пример
 
-```
+```jsx
 import React from 'react';
 import ReactDom from 'react-dom';
 import wrap from '@quarkly/elementary';
@@ -88,7 +88,7 @@ const Link = elementary(absLink)([
     themed: 'Link'
 });
 
-ReactDom.render(<Link color=['red', 'blue', 'green']/>, document.getElementById('root')
+ReactDom.render(<Link color={['red', 'blue', 'green']} />, document.getElementById('root')
 ```
 
 Демо: https://codesandbox.io/s/zn1yrxoxlx
