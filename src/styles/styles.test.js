@@ -15,12 +15,28 @@ describe('Create rule', () => {
   });
 });
 describe('Use rule', () => {
-  test('base', () => {
+  test('single rule with alias', () => {
     const [rule] = makeRule('backgroundColor');
     expect(rule({ bg: 'red' })).toStrictEqual({ backgroundColor: 'red' });
     expect(rule({ bg: ['red', 'green'] })).toStrictEqual([
-      { '@media screen and (min-width: 0)': { backgroundColor: 'red' } },
-      { '@media screen and (min-width: 1)': { backgroundColor: 'green' } },
+      { '@media screen and (min-width: 40em)': { backgroundColor: 'red' } },
+      { '@media screen and (min-width: 52em)': { backgroundColor: 'green' } },
     ]);
+    expect(rule({ bg: false })).toStrictEqual({ backgroundColor: false });
+    expect(rule({})).toBe(null);
+    expect(rule({ color: 'someFakeValue' })).toBe(null);
+    expect(rule()).toBe(null);
+  });
+  test('single rule', () => {
+    const [rule] = makeRule('color');
+    expect(rule({ color: 'red' })).toStrictEqual({ color: 'red' });
+    expect(rule({ color: ['red', 'green'] })).toStrictEqual([
+      { '@media screen and (min-width: 40em)': { color: 'red' } },
+      { '@media screen and (min-width: 52em)': { color: 'green' } },
+    ]);
+    expect(rule({ color: false })).toStrictEqual({ color: false });
+    expect(rule({})).toBe(null);
+    expect(rule({ bg: 'someFakeValue' })).toBe(null);
+    expect(rule()).toBe(null);
   });
 });

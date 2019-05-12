@@ -34,7 +34,7 @@ export const makeRule = (property /* config */) => {
   const propertyName = alias || property;
   // Инициализация - конец
   const rule = props => {
-    let resultRule;
+    let resultRule = null;
     // ищем свойство в пропсах
     const propertyValue = get(propertyName, props);
     if (isUndefined(propertyValue)) {
@@ -50,7 +50,7 @@ export const makeRule = (property /* config */) => {
       resultRule = flow(
         entries,
         map(([key, value]) => ({
-          [createMediaQuery(key)]: createStyle(value),
+          [createMediaQuery(breakpoints[key])]: createStyle(value),
         })),
       )(consistentValues);
     } else {
