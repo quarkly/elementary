@@ -25,6 +25,11 @@
     "emotion",
     "styled-system"
   ],
+  "optionalDependencies": {
+    "styled-components": "^4.2.0",
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9"
+  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",

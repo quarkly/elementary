@@ -1,3 +1,4 @@
+import SC from 'styled-components';
 import bootstrap from './styles';
 
 const makeElementary = styled => (tag, styles, config = {}) => {
@@ -6,7 +7,7 @@ const makeElementary = styled => (tag, styles, config = {}) => {
   return [Component, propTypes];
 };
 
-const witchStyled = styled => {
+export const wrap = styled => {
   const elementary = makeElementary(styled);
   const res = Object.keys(styled).reduce(
     (acc, tag) => {
@@ -18,4 +19,4 @@ const witchStyled = styled => {
   return res;
 };
 
-export default witchStyled;
+export default wrap(SC);

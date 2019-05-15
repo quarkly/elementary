@@ -12,8 +12,8 @@ export const typeToPropTypes = type => PropTypes[type];
 
 export const toPropTypes = style =>
   isArray(style.type)
-    ? PropTypes.oneOfType(map(typeToPropTypes, style.type))
-    : typeToPropTypes(style.type);
+    ? PropTypes.oneOfType(map(typeToPropTypes, style.type).concat(PropTypes.array))
+    : PropTypes.oneOfType([typeToPropTypes(style.type), PropTypes.array]);
 
 export const toPx = n => (isNumber(n) && n !== 0 ? `${n}px` : n);
 

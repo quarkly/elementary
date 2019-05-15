@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import elementary from '../src';
+import elementary, { wrap } from '../src';
 
 const Button = styled.button`
   color: red;
@@ -14,16 +14,16 @@ test('sc setup works', () => {
   expect(tree).toHaveStyleRule('color', 'red');
 });
 
-const [ElButton] = elementary(styled)('button')(['color']);
+const [ElButton] = wrap(styled)('button')(['color']);
 
-const el = elementary(styled);
-
-const [Box] = el('div')(['color'], { effects: { hover: ':hover' } });
-const [ComposedBox] = el('div')(['color'], { effects: { hover: ':hover', focus: ':focus' } });
-const [ChainBox] = el.div(['color'], { effects: { hover: ':hover', focus: ':focus' } });
-const [ExtendedSC] = el(Button)(['color'], { effects: { hover: ':hover' } });
-const [ExtendedEL] = el(Box)(['margin'], { effects: { hover: ':hover' } });
-const [WithIncorrectProp] = el(Box)(['fake'], { effects: { hover: ':hover' } });
+const [Box] = elementary('div')(['color'], { effects: { hover: ':hover' } });
+const [ComposedBox] = elementary('div')(['color'], {
+  effects: { hover: ':hover', focus: ':focus' },
+});
+const [ChainBox] = elementary.div(['color'], { effects: { hover: ':hover', focus: ':focus' } });
+const [ExtendedSC] = elementary(Button)(['color'], { effects: { hover: ':hover' } });
+const [ExtendedEL] = elementary(Box)(['margin'], { effects: { hover: ':hover' } });
+const [WithIncorrectProp] = elementary(Box)(['fake'], { effects: { hover: ':hover' } });
 
 describe('Elementary integration to SC', () => {
   test('base', () => {
