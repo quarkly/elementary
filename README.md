@@ -92,3 +92,11 @@ ReactDom.render(<Link color={['red', 'blue', 'green']} />, document.getElementBy
 ```
 
 Демо: https://codesandbox.io/s/zn1yrxoxlx
+
+# ROADMAP
+
+1. Система алиасов
+2. Система относительных едениц измерений
+3. Темизация правил
+4. Темизация элементов
+5. Дока + перевод
