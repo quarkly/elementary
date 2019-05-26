@@ -245,7 +245,7 @@ export default {
     type: 'string',
   },
   position: {
-    alias: 'p',
+    alias: 'pos',
     type: 'string',
   },
   zIndex: {
