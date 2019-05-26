@@ -1,4 +1,4 @@
-# Elemetary
+# WIP:Elemetary
 
 Elemetary - библиотека для создания атомарных react компонентов.
 Вдохновленная tahyon и styled-system.
