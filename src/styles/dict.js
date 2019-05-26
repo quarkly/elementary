@@ -161,9 +161,9 @@ export default {
     alias: 'as',
     type: 'string',
   },
-  order: { 
+  order: {
     alias: 'ord',
-    type: 'string'
+    type: 'string',
   },
   gridGap: { type: 'string' },
   gridColumnGap: { type: 'string' },
@@ -216,40 +216,41 @@ export default {
     alias: 'op',
     type: ['number', 'string'],
   },
-  overflow: { 
-    alias: 'ov',  
+  overflow: {
+    alias: 'ov',
     type: 'string',
   },
-  background: { 
+  background: {
     alias: 'bg',
-    type: 'string' },
+    type: 'string',
+  },
   backgroundColor: {
     alias: 'bgc',
     type: 'string',
   },
-  backgroundImage: { 
+  backgroundImage: {
     alias: 'bgi',
     type: 'string',
   },
-  backgroundPosition: { 
+  backgroundPosition: {
     alias: 'bgp',
     type: 'string',
   },
-  backgroundRepeat: { 
+  backgroundRepeat: {
     alias: 'bgr',
     type: 'string',
   },
-  backgroundSize: { 
+  backgroundSize: {
     alias: 'bgsz',
     type: 'string',
   },
-  position: { 
-      alias: 'p',
-      type: 'string',
+  position: {
+    alias: 'p',
+    type: 'string',
   },
-  zIndex: { 
-      alias: 'z',
-      type: 'number',
+  zIndex: {
+    alias: 'z',
+    type: 'number',
   },
   top: {
     alias: 't',
