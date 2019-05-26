@@ -40,51 +40,66 @@ export default {
     type: ['number', 'string'],
   },
   fontSize: {
+    alias: 'fz',
     type: ['number', 'string'],
   },
   textColor: {
     type: 'string',
   },
   color: {
+    alias: 'c',
     type: 'string',
   },
   fontFamily: {
+    alias: 'ff',
     type: 'string',
   },
   textAlign: {
+    alias: 'ta',
     type: 'string',
   },
   lineHeight: {
+    alias: 'lh',
     type: ['number', 'string'],
   },
   fontWeight: {
+    alias: 'fw',
     type: ['number', 'string'],
   },
   fontStyle: {
+    alias: 'fs',
     type: 'string',
   },
   letterSpacing: {
+    alias: 'lts',
     type: ['number', 'string'],
   },
   display: {
+    alias: 'd',
     type: 'string',
   },
   width: {
+    alias: 'w',
     type: ['number', 'string'],
   },
   maxWidth: {
+    alias: 'maw',
     type: ['number', 'string'],
   },
   minWidth: {
+    alias: 'miw',
     type: ['number', 'string'],
   },
   height: {
+    alias: 'h',
     type: ['number', 'string'],
   },
   maxHeight: {
+    alias: 'mah',
     type: ['number', 'string'],
   },
   minHeight: {
+    alias: 'mih',
     type: ['number', 'string'],
   },
   sizeWidth: {
@@ -103,39 +118,53 @@ export default {
     type: ['number', 'string'],
   },
   verticalAlign: {
+    alias: 'va',
     type: 'string',
   },
   alignItems: {
+    alias: 'ai',
     type: 'string',
   },
   alignContent: {
+    alias: 'ac',
     type: 'string',
   },
   justifyItems: {
+    alias: 'ji',
     type: 'string',
   },
   justifyContent: {
+    alias: 'jc',
     type: 'string',
   },
   flexWrap: {
+    alias: 'fxw',
     type: 'string',
   },
   flexBasis: {
+    alias: 'fxb',
     type: 'string',
   },
   flexDirection: {
+    alias: 'fxd',
     type: 'string',
   },
   flex: {
+    alias: 'fx',
     type: 'string',
   },
   justifySelf: {
+    alias: 'js',
     type: 'string',
   },
   alignSelf: {
+    alias: 'as',
     type: 'string',
   },
-  order: { type: 'string' },
+  order: {
+    alias: 'ord',
+    type: 'string',
+  },
   gridGap: { type: 'string' },
   gridColumnGap: { type: 'string' },
   gridRowGap: { type: 'string' },
@@ -149,57 +178,94 @@ export default {
   gridTemplateAreas: { type: 'string' },
   gridArea: { type: 'string' },
   border: {
+    alias: 'bd',
     type: 'string',
   },
   borderTop: {
+    alias: 'bdt',
     type: 'string',
   },
   borderRight: {
+    alias: 'bdr',
     type: 'string',
   },
   borderBottom: {
+    alias: 'bdb',
     type: 'string',
   },
   borderLeft: {
+    alias: 'bdl',
     type: 'string',
   },
   borders: {
     type: 'string',
   },
   borderColor: {
+    alias: 'bdc',
     type: 'string',
   },
   borderRadius: {
+    alias: 'bdrs',
     type: 'string',
   },
   boxShadow: {
+    alias: 'bxsh',
     type: 'string',
   },
   opacity: {
+    alias: 'op',
     type: ['number', 'string'],
   },
-  overflow: { type: 'string' },
-  background: { type: 'string' },
-  backgroundColor: {
+  overflow: {
+    alias: 'ov',
+    type: 'string',
+  },
+  background: {
     alias: 'bg',
     type: 'string',
   },
-  backgroundImage: { type: 'string' },
-  backgroundPosition: { type: 'string' },
-  backgroundRepeat: { type: 'string' },
-  backgroundSize: { type: 'string' },
-  position: { type: 'string' },
-  zIndex: { type: 'number' },
+  backgroundColor: {
+    alias: 'bgc',
+    type: 'string',
+  },
+  backgroundImage: {
+    alias: 'bgi',
+    type: 'string',
+  },
+  backgroundPosition: {
+    alias: 'bgp',
+    type: 'string',
+  },
+  backgroundRepeat: {
+    alias: 'bgr',
+    type: 'string',
+  },
+  backgroundSize: {
+    alias: 'bgsz',
+    type: 'string',
+  },
+  position: {
+    alias: 'pos',
+    type: 'string',
+  },
+  zIndex: {
+    alias: 'z',
+    type: 'number',
+  },
   top: {
+    alias: 't',
     type: ['number', 'string'],
   },
   right: {
+    alias: 'r',
     type: ['number', 'string'],
   },
   bottom: {
+    alias: 'b',
     type: ['number', 'string'],
   },
   left: {
+    alias: 'l',
     type: ['number', 'string'],
   },
   textStyle: {

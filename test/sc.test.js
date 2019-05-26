@@ -27,27 +27,25 @@ const [WithIncorrectProp] = elementary(Box)(['fake'], { effects: { hover: ':hove
 
 describe('Elementary integration to SC', () => {
   test('base', () => {
-    const tree = renderer.create(<ElButton color="red" />).toJSON();
+    const tree = renderer.create(<ElButton c="red" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'red');
   });
   test('media rules', () => {
-    const tree = renderer.create(<ElButton color={['red', 'blue']} />).toJSON();
+    const tree = renderer.create(<ElButton c={['red', 'blue']} />).toJSON();
     expect(tree).toHaveStyleRule('color', 'red');
     expect(tree).toHaveStyleRule('color', 'blue', {
       media: 'screen and (min-width: 52em)',
     });
   });
   test('effect', () => {
-    const tree = renderer.create(<Box hoverColor="red" color="blue" />).toJSON();
+    const tree = renderer.create(<Box hoverC="red" c="blue" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
     expect(tree).toHaveStyleRule('color', 'red', {
       modifier: ':hover',
     });
   });
   test('composed effect', () => {
-    const tree = renderer
-      .create(<ComposedBox hoverColor="red" color="blue" focusColor="tomato" />)
-      .toJSON();
+    const tree = renderer.create(<ComposedBox hoverC="red" c="blue" focusC="tomato" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
     expect(tree).toHaveStyleRule('color', 'red', {
       modifier: ':hover',
@@ -57,7 +55,7 @@ describe('Elementary integration to SC', () => {
     });
   });
   test('media effect', () => {
-    const tree = renderer.create(<Box hoverColor={['red', 'green']} color="blue" />).toJSON();
+    const tree = renderer.create(<Box hoverC={['red', 'green']} c="blue" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
     expect(tree).toHaveStyleRule('color', 'red', {
       modifier: ':hover',
@@ -68,22 +66,20 @@ describe('Elementary integration to SC', () => {
     });
   });
   test('chain call from elemetary', () => {
-    const tree = renderer.create(<ChainBox hoverColor="red" color="blue" />).toJSON();
+    const tree = renderer.create(<ChainBox hoverC="red" c="blue" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
   });
   test('extend from sc component', () => {
-    const tree = renderer.create(<ExtendedSC hoverColor="red" color="blue" />).toJSON();
+    const tree = renderer.create(<ExtendedSC hoverC="red" c="blue" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
   });
   test('extend from el component', () => {
-    const tree = renderer.create(<ExtendedEL hoverColor="red" color="blue" m="100px" />).toJSON();
+    const tree = renderer.create(<ExtendedEL hoverC="red" c="blue" m="100px" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
     expect(tree).toHaveStyleRule('margin', '100px');
   });
   test('with incorrect prop', () => {
-    const tree = renderer
-      .create(<WithIncorrectProp hoverColor="red" color="blue" m="100px" />)
-      .toJSON();
+    const tree = renderer.create(<WithIncorrectProp hoverC="red" c="blue" m="100px" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
   });
 });
