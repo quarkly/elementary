@@ -1,3 +1,16 @@
+[![Build Status][badge]][travis]
+[![Coverage][coverage-badge]][coverage]
+[![Version][version-badge]][npm]
+
+[badge]: https://travis-ci.com/quarkly/elementary.svg?branch=master
+[travis]: https://travis-ci.com/quarkly/elementary
+
+[coverage-badge]: https://flat.badgen.net/codecov/c/github/quarkly/elementary
+[coverage]: https://codecov.io/github/quarkly/elementary
+
+[version-badge]: https://flat.badgen.net/npm/v/@quarkly/elementary
+[npm]: https://npmjs.com/package/@quarkly/elementary
+
 # WIP:Elemetary
 
 Elemetary - библиотека для создания атомарных react компонентов.
