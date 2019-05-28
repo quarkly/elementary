@@ -12,8 +12,8 @@
     "build:cjs": "NODE_ENV=cjs babel src --out-dir build/cjs --ignore '**/*.test.js'",
     "build:esm": "NODE_ENV=esm babel src --out-dir build/esm --ignore '**/*.test.js'",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "cover": "jest --coverage && npx codecov"
   },
   "repository": {
     "type": "git",
