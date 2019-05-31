@@ -13,7 +13,7 @@ export const hashPropsWithAliases = Object.keys(stylesDict).reduce((acc, name) =
 
 export const getNames = properties =>
   properties.reduce((acc, name) => {
-    if (!stylesDict[name]) return acc;
+    if (isUndefined(stylesDict[name])) return acc;
     acc.push(name);
     if (stylesDict[name].alias) acc.push(stylesDict[name].alias);
     return acc;
@@ -37,7 +37,7 @@ export const getTransformer = name => transformers[name] || (value => value);
 export const makeRule = (property /* config */) => {
   const result = [null, null];
   // Инициализация - старт
-  if (!hashPropsWithAliases[property]) {
+  if (isUndefined(hashPropsWithAliases[property])) {
     return result;
   }
   const { transformerName } = hashPropsWithAliases[property];
@@ -98,35 +98,47 @@ export const makeRulesWithEffect = (properties, config) => {
   const [rules, propTypes] = makeRules(properties);
   if (isUndefined(config.effects)) return [rules, propTypes];
   const effectNames = Object.keys(config.effects);
-  const [rulesWithEffect, PropTypesWithEffect] = effectNames.reduce(
+  const [rulesWithEffect, PropTypesWithEffect] = makeEffects({
+    effectNames,
+    properties,
+    rules,
+    propTypes,
+    config,
+  });
+  return [{ ...rules, ...rulesWithEffect }, { ...propTypes, ...PropTypesWithEffect }];
+};
+
+export const makeEffectActivator = ({ effectKey, properties, effectName, rules }) => props => ({
+  [`&${effectKey}`]: properties.reduce((accum, property) => {
+    if (isUndefined(hashPropsWithAliases[property])) return accum;
+    const effectRuleName = makeEffectRuleName(effectName, property);
+    const effectedProps = { [property]: get(effectRuleName, props), theme: props.theme };
+    const targetRule = rules[property];
+    let styles = targetRule.call(null, effectedProps);
+    if (isArray(styles)) {
+      styles = styles.reduce((ac, style) => ({ ...ac, ...style }));
+    }
+    return { ...accum, ...styles };
+  }, {}),
+});
+
+export const makeEffectPropTypes = ({ effectName, propTypes }) =>
+  Object.keys(propTypes).reduce((accum, propTypeName) => {
+    const propTypeFn = propTypes[propTypeName];
+    accum[makeEffectRuleName(effectName, propTypeName)] = propTypeFn;
+    return accum;
+  }, {});
+
+export const makeEffects = ({ effectNames, properties, rules, propTypes, config }) =>
+  effectNames.reduce(
     (acc, effectName) => {
       const effectKey = config.effects[effectName];
-      const effectFn = props => ({
-        [`&${effectKey}`]: properties.reduce((accum, property) => {
-          if (isUndefined(hashPropsWithAliases[property])) return accum;
-          const effectRuleName = makeEffectRuleName(effectName, property);
-          const effectedProps = { [property]: get(effectRuleName, props), theme: props.theme };
-          const targetRule = rules[property];
-          let styles = targetRule.call(null, effectedProps);
-          if (isArray(styles)) {
-            styles = styles.reduce((ac, style) => ({ ...ac, ...style }));
-          }
-          return { ...accum, ...styles };
-        }, {}),
-      });
-
-      acc[0][`&${effectKey}`] = effectFn;
-      acc[1] = Object.keys(propTypes).reduce((accum, propTypeName) => {
-        const propTypeFn = propTypes[propTypeName];
-        accum[makeEffectRuleName(effectName, propTypeName)] = propTypeFn;
-        return accum;
-      }, {});
+      acc[0][`&${effectKey}`] = makeEffectActivator({ effectKey, properties, effectName, rules });
+      acc[1] = makeEffectPropTypes({ effectName, propTypes });
       return acc;
     },
     [{}, {}],
   );
-  return [{ ...rules, ...rulesWithEffect }, { ...propTypes, ...PropTypesWithEffect }];
-};
 
 export default (properties, config) => {
   return makeRulesWithEffect(getNames(properties), config);
