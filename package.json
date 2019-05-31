@@ -12,12 +12,12 @@
     "build:cjs": "NODE_ENV=cjs babel src --out-dir build/cjs --ignore '**/*.test.js'",
     "build:esm": "NODE_ENV=esm babel src --out-dir build/esm --ignore '**/*.test.js'",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "cover": "jest --coverage && npx codecov"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/quarkly/elementary.git"
+    "url": "https://github.com/quarkly/elementary"
   },
   "keywords": [
     "react",
@@ -43,6 +43,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.3.1",
     "babel-plugin-lodash": "^3.3.4",
+    "codecov": "^3.5.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^4.0.0",
@@ -63,9 +64,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/quarkly/elementary/issues"
+    "url": "https://github.com/quarkly/elementary/issues"
   },
-  "homepage": "https://gitlab.com/quarkly/elementary#readme",
+  "homepage": "https://github.com/quarkly/elementary#readme",
   "dependencies": {
     "lodash": "^4.17.11"
   }
