@@ -22,6 +22,9 @@
   "keywords": [
     "react",
     "styled-components",
+    "css-in-js",
+    "atomic-css",
+    "atomic-components",
     "emotion",
     "styled-system"
   ],

@@ -111,8 +111,7 @@ export const makeRulesWithEffect = (properties, config) => {
           if (isArray(styles)) {
             styles = styles.reduce((ac, style) => ({ ...ac, ...style }));
           }
-          Object.assign(accum, styles);
-          return accum;
+          return { ...accum, ...styles };
         }, {}),
       });
 
@@ -126,7 +125,7 @@ export const makeRulesWithEffect = (properties, config) => {
     },
     [{}, {}],
   );
-  return [Object.assign(rules, rulesWithEffect), Object.assign(propTypes, PropTypesWithEffect)];
+  return [{ ...rules, ...rulesWithEffect }, { ...propTypes, ...PropTypesWithEffect }];
 };
 
 export default (properties, config) => {

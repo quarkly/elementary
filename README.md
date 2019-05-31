@@ -20,10 +20,9 @@ Elemetary - библиотека для создания атомарных reac
 Так как в основе Elementary лежит styled-components, интерфейс может быть вам знаком. <br>
 Создаем элемент:
 ```jsx
-import wrap from '@quarkly/elementary';
+import elementary from '@quarkly/elementary';
 import styled from 'styled-components';
 
-const elementary = wrap(styled);
 const Link = elementary.a([
     'color',
     'bacground-color'
@@ -32,6 +31,8 @@ const Link = elementary.a([
     variants: ['links'],
     themed: 'Link'
 });
+
+ReactDom.render(<Link color="red" hoverColor="blue" focusColor="green"/>, document.getElementById('root');
 ```
 В качестве первого аргумента передаем массив css свойств, которые мы будем использовать.<br>
 Вторым аргументом идет конфигурация:
@@ -43,6 +44,17 @@ const Link = elementary.a([
 ```jsx
 import React from 'react';
 import ReactDom from 'react-dom';
+import elementary from '@quarkly/elementary';
+import styled from 'styled-components';
+
+const Link = elementary.a([
+    'color',
+    'bacground-color'
+], {
+    effects: [':hover', ':focus'],
+    variants: ['links'],
+    themed: 'Link'
+});
 
 ReactDom.render(<Link color="red" hoverColor="blue" focusColor="green"/>, document.getElementById('root');
 ```
@@ -59,10 +71,8 @@ ReactDom.render(<Link color={['red', 'blue', 'green']}/>, document.getElementByI
 
 ### Использование совместно с styled-components:
 ```jsx
-import wrap from '@quarkly/elementary';
+import elementary from '@quarkly/elementary';
 import styled from 'styled-components';
-
-const elementary = wrap(styled);
 
 const absLink = styled.a`
     border: 2px solid black;
@@ -83,10 +93,7 @@ const Link = elementary(absLink)([
 ```jsx
 import React from 'react';
 import ReactDom from 'react-dom';
-import wrap from '@quarkly/elementary';
-import styled from 'styled-components';
-
-const elementary = wrap(styled);
+import elementary from '@quarkly/elementary';
 
 const absLink = styled.a`
     border: 2px solid black;
@@ -105,11 +112,3 @@ ReactDom.render(<Link color={['red', 'blue', 'green']} />, document.getElementBy
 ```
 
 Демо: https://codesandbox.io/s/zn1yrxoxlx
-
-# ROADMAP
-
-1. Система алиасов
-2. Система относительных едениц измерений
-3. Темизация правил
-4. Темизация элементов
-5. Дока + перевод

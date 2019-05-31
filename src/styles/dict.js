@@ -108,9 +108,6 @@ export default {
   sizeHeight: {
     type: 'string',
   },
-  size: {
-    type: ['number', 'string'],
-  },
   ratioPadding: {
     type: ['number', 'string'],
   },
@@ -266,9 +263,6 @@ export default {
   },
   left: {
     alias: 'l',
-    type: ['number', 'string'],
-  },
-  textStyle: {
     type: ['number', 'string'],
   },
 };
