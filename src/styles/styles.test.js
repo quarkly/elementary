@@ -12,27 +12,27 @@ describe('Create rule', () => {
 describe('Use rule', () => {
   test('single rule with alias', () => {
     const [rule] = makeRule('backgroundColor');
-    expect(rule({ bgc: 'red' })).toStrictEqual({ backgroundColor: 'red' });
-    expect(rule({ bgc: ['red', 'green'] })).toStrictEqual([
+    expect(rule({ backgroundColor: 'red' })).toStrictEqual({ backgroundColor: 'red' });
+    expect(rule({ backgroundColor: ['red', 'green'] })).toStrictEqual([
       { backgroundColor: 'red' },
       { '@media screen and (min-width: 52em)': { backgroundColor: 'green' } },
     ]);
-    expect(rule({ bgc: false })).toStrictEqual({ backgroundColor: false });
+    expect(rule({ backgroundColor: false })).toStrictEqual({ backgroundColor: false });
     expect(rule({})).toBe(null);
     expect(rule({ color: 'someFakeValue' })).toBe(null);
     expect(rule()).toBe(null);
   });
   test('single rule', () => {
     const [rule] = makeRule('color');
-    expect(rule({ c: 'red' })).toStrictEqual({ color: 'red' });
-    expect(rule({ c: ['red', 'green', 'tomato'] })).toStrictEqual([
+    expect(rule({ color: 'red' })).toStrictEqual({ color: 'red' });
+    expect(rule({ color: ['red', 'green', 'tomato'] })).toStrictEqual([
       { color: 'red' },
       { '@media screen and (min-width: 52em)': { color: 'green' } },
       { '@media screen and (min-width: 64em)': { color: 'tomato' } },
     ]);
-    expect(rule({ c: false })).toStrictEqual({ color: false });
+    expect(rule({ color: false })).toStrictEqual({ color: false });
     expect(rule({})).toBe(null);
-    expect(rule({ bgc: 'someFakeValue' })).toBe(null);
+    expect(rule({ backgroundColor: 'someFakeValue' })).toBe(null);
     expect(rule()).toBe(null);
   });
 });
@@ -55,9 +55,23 @@ describe('makeRules with effect', () => {
     });
     expect(rules).toBeDefined();
     expect(propTypes).toBeDefined();
-    expect(fakeApplier(rules, { bgc: 'red', hoverBgc: 'blue' })).toBeDefined();
-    expect(fakeApplier(rules, { bgc: 'red', hoverBgc: 'blue', hoverC: 'red' })).toBeDefined();
-    expect(fakeApplier(rules, { bgc: 'red', hoverBgc: 'blue', hoverC: 'red' })).toStrictEqual({
+    expect(
+      fakeApplier(rules, { backgroundColor: 'red', hoverBackgroundColor: 'blue' }),
+    ).toBeDefined();
+    expect(
+      fakeApplier(rules, {
+        backgroundColor: 'red',
+        hoverBackgroundColor: 'blue',
+        hoverColor: 'red',
+      }),
+    ).toBeDefined();
+    expect(
+      fakeApplier(rules, {
+        backgroundColor: 'red',
+        hoverBackgroundColor: 'blue',
+        hoverColor: 'red',
+      }),
+    ).toStrictEqual({
       backgroundColor: 'red',
       '&:hover': { color: 'red', backgroundColor: 'blue' },
     });

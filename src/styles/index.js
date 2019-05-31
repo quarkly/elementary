@@ -4,9 +4,20 @@ import stylesDict from './dict';
 
 export const defaultBreakpoints = [40, 52, 64].map(n => `${n}em`);
 
-export const stylesDictValues = Object.values(stylesDict);
+export const hashPropsWithAliases = Object.keys(stylesDict).reduce((acc, name) => {
+  const propValue = { ...stylesDict[name], name };
+  acc[name] = propValue;
+  if (propValue.alias) acc[propValue.alias] = propValue;
+  return acc;
+}, {});
 
-export const getByAlias = alias => stylesDictValues.find(prop => prop.alias === alias);
+export const getNames = properties =>
+  properties.reduce((acc, name) => {
+    if (!stylesDict[name]) return acc;
+    acc.push(name);
+    if (stylesDict[name].alias) acc.push(stylesDict[name].alias);
+    return acc;
+  }, []);
 
 export const typeToPropTypes = type => PropTypes[type];
 
@@ -26,22 +37,21 @@ export const getTransformer = name => transformers[name] || (value => value);
 export const makeRule = (property /* config */) => {
   const result = [null, null];
   // Инициализация - старт
-  if (!stylesDict[property]) {
+  if (!hashPropsWithAliases[property]) {
     return result;
   }
-  const { alias, transformerName } = stylesDict[property];
+  const { transformerName } = hashPropsWithAliases[property];
   const transform = getTransformer(transformerName);
-  const propertyName = alias || property;
   // Инициализация - конец
   const rule = props => {
     let resultRule = null;
     // ищем свойство в пропсах
-    const propertyValue = get(propertyName, props);
+    const propertyValue = get(property, props);
     if (isUndefined(propertyValue)) {
       return resultRule;
     }
     const createStyle = n => ({
-      [property]: transform(n),
+      [hashPropsWithAliases[property].name]: transform(n), // !!!
     });
     if (isArray(propertyValue)) {
       const breakpoints = get('breakpoints', props.theme) || defaultBreakpoints;
@@ -63,20 +73,18 @@ export const makeRule = (property /* config */) => {
     }
     return resultRule;
   };
-  const propType = toPropTypes(stylesDict[property]);
+  const propType = toPropTypes(hashPropsWithAliases[property]);
   return [rule, propType];
 };
 
 export const makeRules = (properties /* config */) =>
   properties.reduce(
     (acc, property) => {
-      if (isUndefined(stylesDict[property])) return acc;
-      const { alias } = stylesDict[property];
-      const propName = alias || property;
+      if (isUndefined(hashPropsWithAliases[property])) return acc;
       const [rule, propTypes] = makeRule(property);
 
       acc[0][property] = rule;
-      acc[1][propName] = propTypes;
+      acc[1][property] = propTypes;
       return acc;
     },
     [{}, {}],
@@ -95,11 +103,9 @@ export const makeRulesWithEffect = (properties, config) => {
       const effectKey = config.effects[effectName];
       const effectFn = props => ({
         [`&${effectKey}`]: properties.reduce((accum, property) => {
-          if (isUndefined(stylesDict[property])) return accum;
-          const { alias } = stylesDict[property];
-          const propName = alias || property;
-          const effectRuleName = makeEffectRuleName(effectName, propName);
-          const effectedProps = { [propName]: get(effectRuleName, props), theme: props.theme };
+          if (isUndefined(hashPropsWithAliases[property])) return accum;
+          const effectRuleName = makeEffectRuleName(effectName, property);
+          const effectedProps = { [property]: get(effectRuleName, props), theme: props.theme };
           const targetRule = rules[property];
           let styles = targetRule.call(null, effectedProps);
           if (isArray(styles)) {
@@ -124,5 +130,5 @@ export const makeRulesWithEffect = (properties, config) => {
 };
 
 export default (properties, config) => {
-  return makeRulesWithEffect(properties, config);
+  return makeRulesWithEffect(getNames(properties), config);
 };
