@@ -33,6 +33,7 @@ describe('Use rule', () => {
     expect(rule({ color: false })).toStrictEqual({ color: false });
     expect(rule({})).toBe(null);
     expect(rule({ backgroundColor: 'someFakeValue' })).toBe(null);
+    expect(rule({ someFakeValue: 'someFakeValue' })).toBe(null);
     expect(rule()).toBe(null);
   });
 });
@@ -43,7 +44,7 @@ describe('makeRules', () => {
     expect(propTypes).toBeDefined();
   });
   test('incorrect rule', () => {
-    const [rules, propTypes] = makeRules(['color', 'fakeRule']);
+    const [rules, propTypes] = makeRules(['fakeRule']);
     expect(rules).toBeDefined();
     expect(propTypes).toBeDefined();
   });

@@ -2,6 +2,9 @@ import { isArray, map, isNumber, isUndefined, get } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import stylesDict from './dict';
 
+const RULE = 0;
+const PROP_TYPES = 1;
+
 export const defaultBreakpoints = [40, 52, 64].map(n => `${n}em`);
 
 export const hashPropsWithAliases = Object.keys(stylesDict).reduce((acc, name) => {
@@ -35,11 +38,7 @@ export const transformers = {};
 export const getTransformer = name => transformers[name] || (value => value);
 
 export const makeRule = (property /* config */) => {
-  const result = [null, null];
   // Инициализация - старт
-  if (isUndefined(hashPropsWithAliases[property])) {
-    return result;
-  }
   const { transformerName } = hashPropsWithAliases[property];
   const transform = getTransformer(transformerName);
   // Инициализация - конец
@@ -83,8 +82,8 @@ export const makeRules = (properties /* config */) =>
       if (isUndefined(hashPropsWithAliases[property])) return acc;
       const [rule, propTypes] = makeRule(property);
 
-      acc[0][property] = rule;
-      acc[1][property] = propTypes;
+      acc[RULE][property] = rule;
+      acc[PROP_TYPES][property] = propTypes;
       return acc;
     },
     [{}, {}],
@@ -133,8 +132,13 @@ export const makeEffects = ({ effectNames, properties, rules, propTypes, config 
   effectNames.reduce(
     (acc, effectName) => {
       const effectKey = config.effects[effectName];
-      acc[0][`&${effectKey}`] = makeEffectActivator({ effectKey, properties, effectName, rules });
-      acc[1] = makeEffectPropTypes({ effectName, propTypes });
+      acc[RULE][`&${effectKey}`] = makeEffectActivator({
+        effectKey,
+        properties,
+        effectName,
+        rules,
+      });
+      acc[PROP_TYPES] = makeEffectPropTypes({ effectName, propTypes });
       return acc;
     },
     [{}, {}],
