@@ -1,4 +1,4 @@
-import { toPropTypes } from './index';
+import { toPropTypes } from './styles';
 import dict from './dict';
 
 const getName = name => dict[name].alias || name;

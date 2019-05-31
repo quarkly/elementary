@@ -1,5 +1,5 @@
 import dict from './dict';
-import { makeRule, makeRules, makeRulesWithEffect } from './index';
+import { makeRule, makeRules, makeRulesWithEffect } from './styles';
 
 const fakeApplier = (rules, props) =>
   Object.values(rules).reduce((acc, rule) => ({ ...acc, ...rule(props) }), {});
