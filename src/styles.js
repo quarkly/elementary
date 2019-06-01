@@ -1,7 +1,8 @@
-import { isArray, map, isNumber, isUndefined, get } from 'lodash/fp';
+import { isArray, map, isUndefined, get } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import stylesDict from './dict';
 import { getFromTheme } from './theme';
+import transformers, { toPx } from './transformers';
 
 const RULE = 0;
 const PROP_TYPES = 1;
@@ -28,11 +29,7 @@ export const toPropTypes = style =>
     ? PropTypes.oneOfType(map(typeToPropTypes, style.type).concat(PropTypes.array))
     : PropTypes.oneOfType([typeToPropTypes(style.type), PropTypes.array]);
 
-export const toPx = n => (isNumber(n) && n !== 0 ? `${n}px` : n);
-
 export const createMediaQuery = n => `@media screen and (min-width: ${toPx(n)})`;
-
-export const transformers = {};
 
 export const getTransformer = name => transformers[name] || (value => value);
 

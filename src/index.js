@@ -10,14 +10,13 @@ const makeElementary = styled => (tag, styles, config = {}) => {
 
 export const wrap = styled => {
   const elementary = makeElementary(styled);
-  const res = Object.keys(styled).reduce(
+  return Object.keys(styled).reduce(
     (acc, tag) => {
       acc[tag] = elementary.bind(null, tag);
       return acc;
     },
     tag => elementary.bind(null, tag),
   );
-  return res;
 };
 
 export default wrap(SC);

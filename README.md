@@ -13,9 +13,9 @@
 [npm]: https://npmjs.com/package/@quarkly/elementary
 <!-- [size]: https://flat.badgen.net/packagephobia/min/@quarkly/elementary -->
 
-# WIP:Elemetary
+# Elementary
 
-Elemetary - библиотека для создания атомарных react компонентов.
+Elementary - библиотека для создания атомарных react компонентов.
 Вдохновленная tahyon и styled-system.
 
 ### Как начать использовать:
