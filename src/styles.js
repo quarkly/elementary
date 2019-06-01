@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import stylesDict from './dict';
 import { getFromTheme, themeGet, variantGet } from './theme';
 import transformers, { pixel } from './transformers';
-import { variants, themed } from './modifiers';
+import { variants, themed, mixins } from './modifiers';
 
 const RULE = 0;
 const PROP_TYPES = 1;
@@ -146,7 +146,7 @@ export const makeEffects = ({ effectNames, properties, rules, propTypes, config 
     [{}, {}],
   );
 
-export default (properties, config) => {
+export default (properties, config = {}) => {
   const deps = [];
   if (config.themed) {
     deps.push(themed(config.themed));
@@ -154,6 +154,7 @@ export default (properties, config) => {
   if (config.variant) {
     deps.push(variants(config.variant));
   }
+  deps.push(mixins);
   const [rules, propTypes] = makeRulesWithEffect(getNames(properties), config);
   return [[...deps, ...Object.values(rules)], propTypes];
 };
