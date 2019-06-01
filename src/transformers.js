@@ -1,5 +1,4 @@
-import { isNumber, get } from 'lodash/fp';
-import { isUndefined } from 'util';
+import { isNumber, get, isUndefined } from 'lodash/fp';
 
 export const pixel = n => (isNumber(n) && n !== 0 ? `${n}px` : n);
 
@@ -9,7 +8,6 @@ export const space = (n, scale) => {
   if (!isNumber(n)) {
     return pixel(n);
   }
-
   const isNegative = n < 0;
   const absolute = Math.abs(n);
   const value = get(absolute, scale);

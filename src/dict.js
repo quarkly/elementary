@@ -70,6 +70,7 @@ export default {
   },
   fontFamily: {
     alias: 'ff',
+    variant: 'fonts',
     type: 'string',
   },
   textAlign: {
@@ -103,22 +104,27 @@ export default {
   },
   maxWidth: {
     alias: 'maw',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   minWidth: {
     alias: 'miw',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   height: {
     alias: 'h',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   maxHeight: {
     alias: 'mah',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   minHeight: {
     alias: 'mih',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   sizeWidth: {
@@ -159,6 +165,7 @@ export default {
   },
   flexBasis: {
     alias: 'fxb',
+    transformer: 'width',
     type: 'string',
   },
   flexDirection: {
@@ -181,9 +188,9 @@ export default {
     alias: 'ord',
     type: 'string',
   },
-  gridGap: { type: 'string' },
-  gridColumnGap: { type: 'string' },
-  gridRowGap: { type: 'string' },
+  gridGap: { type: 'string', scale: 'space', transformer: 'pixel' },
+  gridColumnGap: { type: 'string', scale: 'space', transformer: 'pixel' },
+  gridRowGap: { type: 'string', scale: 'space', transformer: 'pixel' },
   gridColumn: { type: 'string' },
   gridRow: { type: 'string' },
   gridAutoFlow: { type: 'string' },
@@ -218,14 +225,17 @@ export default {
   },
   borderColor: {
     alias: 'bdc',
+    variant: 'colors',
     type: 'string',
   },
   borderRadius: {
     alias: 'bdrs',
+    transformer: 'pixel',
     type: 'string',
   },
   boxShadow: {
     alias: 'bxsh',
+    variant: 'shadows',
     type: 'string',
   },
   opacity: {
@@ -242,6 +252,7 @@ export default {
   },
   backgroundColor: {
     alias: 'bgc',
+    variant: 'colors',
     type: 'string',
   },
   backgroundImage: {
@@ -270,18 +281,22 @@ export default {
   },
   top: {
     alias: 't',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   right: {
     alias: 'r',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   bottom: {
     alias: 'b',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
   left: {
     alias: 'l',
+    transformer: 'pixel',
     type: ['number', 'string'],
   },
 };
