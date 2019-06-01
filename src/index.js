@@ -4,7 +4,8 @@ import bootstrap from './styles';
 const makeElementary = styled => (tag, styles, config = {}) => {
   const [rules, propTypes] = bootstrap(styles, config);
   const Component = styled(tag)(...Object.values(rules));
-  return [Component, propTypes];
+  Component.propTypes = propTypes;
+  return Component;
 };
 
 export const wrap = styled => {
