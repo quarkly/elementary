@@ -1,4 +1,4 @@
-import { get } from 'lodash/fp';
+import { get, isUndefined } from 'lodash/fp';
 
 export const themeDefault = {
   breakpoints: ['40em', '52em', '64em'],
@@ -7,5 +7,10 @@ export const themeDefault = {
 };
 
 export const getFromTheme = (props, key) => get(key, props.theme) || get(key, themeDefault);
+
+export const themeGet = (props, key, def) => {
+  const value = getFromTheme(props, key);
+  return isUndefined(value) ? def : value;
+};
 
 export default themeDefault;

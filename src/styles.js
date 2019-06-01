@@ -1,8 +1,8 @@
 import { isArray, map, isUndefined, get } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import stylesDict from './dict';
-import { getFromTheme } from './theme';
-import transformers, { toPx } from './transformers';
+import { getFromTheme, themeGet } from './theme';
+import transformers, { pixel } from './transformers';
 
 const RULE = 0;
 const PROP_TYPES = 1;
@@ -29,14 +29,14 @@ export const toPropTypes = style =>
     ? PropTypes.oneOfType(map(typeToPropTypes, style.type).concat(PropTypes.array))
     : PropTypes.oneOfType([typeToPropTypes(style.type), PropTypes.array]);
 
-export const createMediaQuery = n => `@media screen and (min-width: ${toPx(n)})`;
+export const createMediaQuery = n => `@media screen and (min-width: ${pixel(n)})`;
 
 export const getTransformer = name => transformers[name] || (value => value);
 
 export const makeRule = (property /* config */) => {
   // Инициализация - старт
-  const { transformerName } = hashPropsWithAliases[property];
-  const transform = getTransformer(transformerName);
+  const { transformer, themed, scale } = hashPropsWithAliases[property];
+  const transform = getTransformer(transformer);
   // Инициализация - конец
   const rule = props => {
     let resultRule = null;
@@ -45,9 +45,14 @@ export const makeRule = (property /* config */) => {
     if (isUndefined(propertyValue)) {
       return resultRule;
     }
-    const createStyle = n => ({
-      [hashPropsWithAliases[property].name]: transform(n), // !!!
-    });
+    const createStyle = n => {
+      let scaleMap = [];
+      if (themed) n = themeGet(props, themed, n);
+      if (scale) scaleMap = themeGet(props, scale, scaleMap);
+      return {
+        [hashPropsWithAliases[property].name]: transform(n, scaleMap),
+      };
+    };
     if (isArray(propertyValue)) {
       const breakpoints = getFromTheme(props, 'breakpoints');
       // количество свойств в массиве должно быть не больше чем в брейкпоинтах

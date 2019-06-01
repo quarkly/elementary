@@ -1,53 +1,71 @@
 export default {
   margin: {
     alias: 'm',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   marginTop: {
     alias: 'mt',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   marginRight: {
     alias: 'mr',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   marginBottom: {
     alias: 'mb',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   marginLeft: {
     alias: 'ml',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   padding: {
     alias: 'p',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   paddingTop: {
     alias: 'pt',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   paddingRight: {
     alias: 'pr',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   paddingBottom: {
     alias: 'pb',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   paddingLeft: {
     alias: 'pl',
+    scale: 'space',
+    transformer: 'space',
     type: ['number', 'string'],
   },
   fontSize: {
     alias: 'fz',
     type: ['number', 'string'],
   },
-  textColor: {
-    type: 'string',
-  },
   color: {
     alias: 'c',
+    themed: 'colors',
     type: 'string',
   },
   fontFamily: {
