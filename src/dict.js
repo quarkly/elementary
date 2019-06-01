@@ -98,6 +98,7 @@ export default {
   },
   width: {
     alias: 'w',
+    transformer: 'width',
     type: ['number', 'string'],
   },
   maxWidth: {
