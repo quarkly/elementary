@@ -1,11 +1,10 @@
 import { isArray, map, isNumber, isUndefined, get } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import stylesDict from './dict';
+import { getFromTheme } from './theme';
 
 const RULE = 0;
 const PROP_TYPES = 1;
-
-export const defaultBreakpoints = [40, 52, 64].map(n => `${n}em`);
 
 export const hashPropsWithAliases = Object.keys(stylesDict).reduce((acc, name) => {
   const propValue = { ...stylesDict[name], name };
@@ -53,7 +52,7 @@ export const makeRule = (property /* config */) => {
       [hashPropsWithAliases[property].name]: transform(n), // !!!
     });
     if (isArray(propertyValue)) {
-      const breakpoints = get('breakpoints', props.theme) || defaultBreakpoints;
+      const breakpoints = getFromTheme(props, 'breakpoints');
       // количество свойств в массиве должно быть не больше чем в брейкпоинтах
       const consistentValues = propertyValue.slice(1, breakpoints.length + 1);
       resultRule = [createStyle(propertyValue[0])];
