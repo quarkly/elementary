@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100" src="logo.jpg">
+  <img width="100" src="elementary-logo.jpg">
 </p>
 <h1 align="center"> Elementary </h1>
 <p align="center">
