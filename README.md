@@ -1,3 +1,13 @@
+<p align="center">
+  <img width="100" src="logo.jpg">
+</p>
+<h1 align="center"> Elementary </h1>
+<p align="center">
+  <b >Elementary - библиотека для создания атомарных react компонентов.
+Вдохновленная tahyon и styled-system.</b>
+</p>
+<br>
+
 [![Build Status][badge]][travis]
 [![Coverage][coverage-badge]][coverage]
 [![Version][version-badge]][npm]
@@ -12,11 +22,6 @@
 [version-badge]: https://flat.badgen.net/npm/v/@quarkly/elementary
 [npm]: https://npmjs.com/package/@quarkly/elementary
 <!-- [size]: https://flat.badgen.net/packagephobia/min/@quarkly/elementary -->
-
-# Elementary
-
-Elementary - библиотека для создания атомарных react компонентов.
-Вдохновленная tahyon и styled-system.
 
 ### Как начать использовать:
 ```sh
