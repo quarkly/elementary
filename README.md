@@ -33,7 +33,7 @@ const Link = elementary.a([
     'bacground-color'
 ], {
     effects: [':hover', ':focus'],
-    variants: ['links'],
+    variant: 'links',
     themed: 'Link'
 });
 
@@ -42,7 +42,7 @@ ReactDom.render(<Link color="red" hoverColor="blue" focusColor="green"/>, docume
 В качестве первого аргумента передаем массив css свойств, которые мы будем использовать.<br>
 Вторым аргументом идет конфигурация:
 - effects - какие эффекты можно будет использовать из jsx
-- variants - варианты свойств из темы
+- variant - варианты свойств из темы
 - themed - стили из темы по дефолту
 
 Далее иcпользуем наш элемент:
@@ -57,7 +57,7 @@ const Link = elementary.a([
     'bacground-color'
 ], {
     effects: [':hover', ':focus'],
-    variants: ['links'],
+    variant: 'links',
     themed: 'Link'
 });
 
@@ -88,7 +88,7 @@ const Link = elementary(absLink)([
     'bacground-color'
 ], {
     effects: [':hover', ':focus'],
-    variants: ['links'],
+    variant: 'links',
     themed: 'Link'
 });
 ```
@@ -109,7 +109,7 @@ const Link = elementary(absLink)([
     'bacground-color'
 ], {
     effects: [':hover', ':focus'],
-    variants: ['links'],
+    variant: 'links',
     themed: 'Link'
 });
 
