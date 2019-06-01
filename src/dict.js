@@ -65,7 +65,7 @@ export default {
   },
   color: {
     alias: 'c',
-    themed: 'colors',
+    variant: 'colors',
     type: 'string',
   },
   fontFamily: {

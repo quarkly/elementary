@@ -1,7 +1,7 @@
 import { isArray, map, isUndefined, get } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import stylesDict from './dict';
-import { getFromTheme, themeGet } from './theme';
+import { getFromTheme, themeGet, variantGet } from './theme';
 import transformers, { pixel } from './transformers';
 
 const RULE = 0;
@@ -35,7 +35,7 @@ export const getTransformer = name => transformers[name] || (value => value);
 
 export const makeRule = (property /* config */) => {
   // Инициализация - старт
-  const { transformer, themed, scale } = hashPropsWithAliases[property];
+  const { transformer, variant, scale } = hashPropsWithAliases[property];
   const transform = getTransformer(transformer);
   // Инициализация - конец
   const rule = props => {
@@ -47,7 +47,7 @@ export const makeRule = (property /* config */) => {
     }
     const createStyle = n => {
       let scaleMap = [];
-      if (themed) n = themeGet(props, themed, n);
+      if (variant) n = variantGet(props, variant, n);
       if (scale) scaleMap = themeGet(props, scale, scaleMap);
       return {
         [hashPropsWithAliases[property].name]: transform(n, scaleMap),

@@ -8,6 +8,13 @@ export const themeDefault = {
 
 export const getFromTheme = (props, key) => get(key, props.theme) || get(key, themeDefault);
 
+export const variantGet = (props, key, name) => {
+  const variants = getFromTheme(props, key);
+  if (isUndefined(variants)) return name;
+  const value = get(name, variants);
+  return isUndefined(value) ? name : value;
+};
+
 export const themeGet = (props, key, def) => {
   const value = getFromTheme(props, key);
   return isUndefined(value) ? def : value;
