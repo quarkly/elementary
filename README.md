@@ -1,8 +1,9 @@
 [![Build Status][badge]][travis]
 [![Coverage][coverage-badge]][coverage]
 [![Version][version-badge]][npm]
+<!-- ![size][] -->
 
-[badge]: https://travis-ci.com/quarkly/elementary.svg?branch=master
+[badge]: https://flat.badgen.net/travis/quarkly/elementary/master
 [travis]: https://travis-ci.com/quarkly/elementary
 
 [coverage-badge]: https://flat.badgen.net/codecov/c/github/quarkly/elementary
@@ -10,6 +11,7 @@
 
 [version-badge]: https://flat.badgen.net/npm/v/@quarkly/elementary
 [npm]: https://npmjs.com/package/@quarkly/elementary
+<!-- [size]: https://flat.badgen.net/packagephobia/min/@quarkly/elementary -->
 
 # WIP:Elemetary
 
@@ -17,6 +19,9 @@ Elemetary - библиотека для создания атомарных reac
 Вдохновленная tahyon и styled-system.
 
 ### Как начать использовать:
+```sh
+npm i @quarkly/elementary
+```
 Так как в основе Elementary лежит styled-components, интерфейс может быть вам знаком. <br>
 Создаем элемент:
 ```jsx
@@ -111,4 +116,4 @@ const Link = elementary(absLink)([
 ReactDom.render(<Link color={['red', 'blue', 'green']} />, document.getElementById('root')
 ```
 
-Демо: https://codesandbox.io/s/zn1yrxoxlx
+Демо: https://codesandbox.io/embed/quarklyelementary-demo-jplhn
