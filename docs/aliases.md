@@ -4,14 +4,8 @@ Elementary aliases are short names for each css rule
 
 # Table of short names
 
-<style>
-table {
-    width:100%;
-}
-</style>
-
 | Css rule | Alias |
-| --- | --- | --- |
+| --- | --- |
 | *margin* | `m` |
 | *marginTop* | `mt` |
 | *marginRight* | `mr` |
