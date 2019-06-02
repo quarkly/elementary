@@ -1,8 +1,8 @@
 {
   "name": "@quarkly/elementary",
-  "version": "0.2.2",
+  "version": "0.5.0",
   "author": "Eddort",
-  "description": "Library for build atomic react-components",
+  "description": "Library for creating atomic react components",
   "main": "build/cjs",
   "module": "build/esm",
   "sideEffects": false,
@@ -65,7 +65,7 @@
     "react-test-renderer": "^16.8.5",
     "styled-components": "^4.2.0"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/quarkly/elementary/issues"
   },

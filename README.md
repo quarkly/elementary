@@ -1,16 +1,17 @@
-<p align="center">
-  <img width="100" src="elementary-logo.jpg">
+<p>
+  <img width="130" src="elementary-logo.jpg">
 </p>
-<h1 align="center"> Elementary </h1>
-<p align="center">
-  <b >Elementary - библиотека для создания атомарных react компонентов.
-Вдохновленная tahyon и styled-system.</b>
+<h1> Elementary </h1>
+<p>
+  <b>Elementary is a library for creating atomic react components. 
+Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a href="https://github.com/styled-system/styled-system" target="_blank">styled-system</a>.</b>
 </p>
 <br>
 
 [![Build Status][badge]][travis]
 [![Coverage][coverage-badge]][coverage]
 [![Version][version-badge]][npm]
+![MIT License][license]
 <!-- ![size][] -->
 
 [badge]: https://flat.badgen.net/travis/quarkly/elementary/master
@@ -21,104 +22,58 @@
 
 [version-badge]: https://flat.badgen.net/npm/v/@quarkly/elementary
 [npm]: https://npmjs.com/package/@quarkly/elementary
+[license]: https://flat.badgen.net/badge/license/MIT/blue
 <!-- [size]: https://flat.badgen.net/packagephobia/min/@quarkly/elementary -->
+# Features
+- Any css properties - props
+- Convenient writing media queries
+- Alias ​​system
+- Scaling indents and font sizes
+- Support hover, focus ..etc as props
+- Fully themed
+- Support mixins
 
-### Как начать использовать:
+# Demo
+https://codesandbox.io/embed/quarklyelementary-demo-jplhn
+
+# Installation and Usage
 ```sh
 npm i @quarkly/elementary
 ```
-Так как в основе Elementary лежит styled-components, интерфейс может быть вам знаком. <br>
-Создаем элемент:
-```jsx
-import elementary from '@quarkly/elementary';
-import styled from 'styled-components';
+Since Elementary is based on styled-components, the interface may be familiar to you. <br>
 
-const Link = elementary.a([
-    'color',
-    'bacground-color'
-], {
-    effects: [':hover', ':focus'],
-    variant: 'links',
-    themed: 'Link'
-});
-
-ReactDom.render(<Link color="red" hoverColor="blue" focusColor="green"/>, document.getElementById('root');
-```
-В качестве первого аргумента передаем массив css свойств, которые мы будем использовать.<br>
-Вторым аргументом идет конфигурация:
-- effects - какие эффекты можно будет использовать из jsx
-- variant - варианты свойств из темы
-- themed - стили из темы по дефолту
-
-Далее иcпользуем наш элемент:
-```jsx
-import React from 'react';
-import ReactDom from 'react-dom';
-import elementary from '@quarkly/elementary';
-import styled from 'styled-components';
-
-const Link = elementary.a([
-    'color',
-    'bacground-color'
-], {
-    effects: [':hover', ':focus'],
-    variant: 'links',
-    themed: 'Link'
-});
-
-ReactDom.render(<Link color="red" hoverColor="blue" focusColor="green"/>, document.getElementById('root');
-```
-В качестве пропсов передаем color, hoverColor и focusColor. В итоге мы получаем ссылку, у которой в зависимости от эффекта наведения или фокуса меняется цвет. Аналогично будет работать любое css свойство, которое вы передадите в момент создания компонента.
-
-### Медиа-запросы:
-```jsx
-import React from 'react';
-import ReactDom from 'react-dom';
-
-ReactDom.render(<Link color={['red', 'blue', 'green']}/>, document.getElementById('root')
-```
-Для работы с медиа-запросами достаточно указать значения свойства в массиве, где каждое свойство будет применяться отностильно breakpoint из темы. <br>
-
-### Использование совместно с styled-components:
-```jsx
-import elementary from '@quarkly/elementary';
-import styled from 'styled-components';
-
-const absLink = styled.a`
-    border: 2px solid black;
-`;
-
-const Link = elementary(absLink)([
-    'color',
-    'bacground-color'
-], {
-    effects: [':hover', ':focus'],
-    variant: 'links',
-    themed: 'Link'
-});
-```
-
-### Полный пример
-
+Let's create element:
 ```jsx
 import React from 'react';
 import ReactDom from 'react-dom';
 import elementary from '@quarkly/elementary';
 
-const absLink = styled.a`
-    border: 2px solid black;
-`;
-
-const Link = elementary(absLink)([
-    'color',
-    'bacground-color'
-], {
-    effects: [':hover', ':focus'],
-    variant: 'links',
-    themed: 'Link'
+const Box = elementary.div(['height', 'width', 'backgroundColor'], {
+  effects: { hover: ':hover' },
+  variant: 'boxes',
+  themed: 'Box',
 });
 
-ReactDom.render(<Link color={['red', 'blue', 'green']} />, document.getElementById('root')
+ReactDom.render(
+  <Box
+    width={[1, 1 / 2, 1 / 4]}
+    bgc={['red', 'green', 'blue']}
+    hoverBgc="black"
+    height="300px"
+    hoverHeight="150px"
+  />,
+  document.getElementById('root'),
+);
 ```
 
-Демо: https://codesandbox.io/embed/quarklyelementary-demo-jplhn
+As the first argument, we pass an array of css properties that we will use.<br>
+
+The second argument is the configuration:
+
+- effects - what effects can be used from jsx (hover, focus ..etc)
+- variant - options for component styles from themes
+- themed - default styles for a component from a theme
+
+# License
+
+Licensed under MIT.
