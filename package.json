@@ -1,6 +1,6 @@
 {
   "name": "@quarkly/elementary",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Eddort",
   "description": "Library for creating atomic react components",
   "main": "build/cjs",

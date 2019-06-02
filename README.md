@@ -31,7 +31,7 @@ Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a hr
 - Scaling indents and font sizes
 - Support hover, focus ..etc as props
 - Fully themed
-- Support mixins
+- Mixins support
 
 # Demo
 https://codesandbox.io/embed/quarklyelementary-demo-jplhn
