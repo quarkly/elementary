@@ -31,7 +31,7 @@ Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a hr
 - Scaling indents and font sizes
 - Support hover, focus ..etc as props
 - Fully themed
-- Support mixins
+- Mixins support
 
 # Demo
 https://codesandbox.io/embed/quarklyelementary-demo-jplhn
@@ -73,6 +73,11 @@ The second argument is the configuration:
 - effects - what effects can be used from jsx (hover, focus ..etc)
 - variant - options for component styles from themes
 - themed - default styles for a component from a theme
+
+# Docs
+
+- [Aliases](docs/aliases.md)
+- [Theming](docs/themnig.md)
 
 # License
 

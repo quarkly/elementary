@@ -220,9 +220,6 @@ export default {
     alias: 'bdl',
     type: 'string',
   },
-  borders: {
-    type: 'string',
-  },
   borderColor: {
     alias: 'bdc',
     variant: 'colors',
