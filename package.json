@@ -65,7 +65,7 @@
     "react-test-renderer": "^16.8.5",
     "styled-components": "^4.2.0"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/quarkly/elementary/issues"
   },
