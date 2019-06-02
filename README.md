@@ -77,7 +77,7 @@ The second argument is the configuration:
 # Docs
 
 - [Aliases](docs/aliases.md)
-- [Theming](docs/themnig.md)
+- [Theming](docs/theming.md)
 
 # License
 
