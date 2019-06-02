@@ -74,13 +74,6 @@ The second argument is the configuration:
 - variant - options for component styles from themes
 - themed - default styles for a component from a theme
 
-# Docs
-
-- [Basics](docs/basics.md)
-- [Effects](docs/effects.md)
-- [Aliases](docs/aliases.md)
-- [Theming](docs/themnig.md)
-
 # License
 
 Licensed under MIT.

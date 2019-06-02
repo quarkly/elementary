@@ -2,7 +2,7 @@
   "name": "@quarkly/elementary",
   "version": "0.2.2",
   "author": "Eddort",
-  "description": "Library for build atomic react-components",
+  "description": "Library for creating atomic react components",
   "main": "build/cjs",
   "module": "build/esm",
   "sideEffects": false,
