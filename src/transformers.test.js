@@ -62,4 +62,30 @@ describe('Test transformers', () => {
       expect(rule({ width: '111rem' })).toStrictEqual({ width: '111rem' });
     });
   });
+  describe('fontSize transformer', () => {
+    test('number scale', () => {
+      const [rule] = makeRule('fontSize');
+      expect(rule({ fontSize: 1 })).toStrictEqual({ fontSize: '14px' });
+      expect(rule({ fontSize: 0 })).toStrictEqual({ fontSize: '12px' });
+      expect(rule({ fontSize: 2 })).toStrictEqual({ fontSize: '16px' });
+    });
+    test('pixel number', () => {
+      const [rule] = makeRule('fontSize');
+      expect(rule({ fontSize: 14 })).toStrictEqual({ fontSize: '14px' });
+      expect(rule({ fontSize: 12 })).toStrictEqual({ fontSize: '12px' });
+      expect(rule({ fontSize: 16 })).toStrictEqual({ fontSize: '16px' });
+    });
+    test('pixel string', () => {
+      const [rule] = makeRule('fontSize');
+      expect(rule({ fontSize: '14px' })).toStrictEqual({ fontSize: '14px' });
+      expect(rule({ fontSize: '12px' })).toStrictEqual({ fontSize: '12px' });
+      expect(rule({ fontSize: '16px' })).toStrictEqual({ fontSize: '16px' });
+    });
+    test('em string', () => {
+      const [rule] = makeRule('fontSize');
+      expect(rule({ fontSize: '2em' })).toStrictEqual({ fontSize: '2em' });
+      expect(rule({ fontSize: '6em' })).toStrictEqual({ fontSize: '6em' });
+      expect(rule({ fontSize: '1em' })).toStrictEqual({ fontSize: '1em' });
+    });
+  });
 });

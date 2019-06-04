@@ -61,6 +61,8 @@ export default {
   },
   fontSize: {
     alias: 'fz',
+    scale: 'fontSizes',
+    transformer: 'fontSize',
     type: ['number', 'string'],
   },
   color: {
