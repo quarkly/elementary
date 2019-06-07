@@ -29,6 +29,11 @@ const ExtendedSC = elementary(Button)({ effects: { hover: ':hover' }, styles: ['
 const ExtendedEL = elementary(Box)({ effects: { hover: ':hover' }, styles: ['margin'] });
 const WithIncorrectProp = elementary(Box)({ effects: { hover: ':hover' }, styles: ['fake'] });
 
+const ZeroConfig = elementary.div();
+const ZeroConfigWithTemplate = elementary.div`
+  color: red;
+`;
+
 describe('Elementary integration to SC', () => {
   test('base', () => {
     const tree = renderer.create(<ElButton c="red" />).toJSON();
@@ -85,5 +90,15 @@ describe('Elementary integration to SC', () => {
   test('with incorrect prop', () => {
     const tree = renderer.create(<WithIncorrectProp hoverC="red" c="blue" m="100px" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
+  });
+  test('zero-config component', () => {
+    const tree = renderer.create(<ZeroConfig c="blue" m="100px" />).toJSON();
+    expect(tree).toHaveStyleRule('color', 'blue');
+    expect(tree).toHaveStyleRule('margin', '100px');
+  });
+  test('zero-config component with template', () => {
+    const tree = renderer.create(<ZeroConfigWithTemplate m="100px" />).toJSON();
+    expect(tree).toHaveStyleRule('color', 'red');
+    expect(tree).toHaveStyleRule('margin', '100px');
   });
 });
