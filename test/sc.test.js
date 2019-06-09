@@ -23,6 +23,12 @@ const ComposedBox = elementary('div')({
   styles: ['color'],
 });
 
+const NamedBox = elementary('div')({
+  effects: { hover: ':hover', focus: ':focus' },
+  styles: ['color'],
+  name: 'NamedBox',
+});
+
 const ChainBox = elementary.div({
   effects: { hover: ':hover', focus: ':focus' },
   styles: ['color'],
@@ -103,5 +109,8 @@ describe('Elementary integration to SC', () => {
     const tree = renderer.create(<ZeroConfigWithTemplate m="100px" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'red');
     expect(tree).toHaveStyleRule('margin', '100px');
+  });
+  test('config name to displayName', () => {
+    expect(NamedBox.displayName).toStrictEqual('NamedBox');
   });
 });

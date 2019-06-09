@@ -10,6 +10,9 @@ export const makeComponent = (styled, tag, styles, config, other) => {
   const [rules, propTypes] = bootstrap(styles, config);
   const Component = styled(tag)(...rules, ...other);
   Component.propTypes = propTypes;
+  if (config.name) {
+    Component.displayName = config.name;
+  }
   return Component;
 };
 
