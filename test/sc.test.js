@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import elementary, { wrap } from '../src';
+import elementary from '../src';
 
 const Button = styled.button`
   color: red;
@@ -14,16 +14,28 @@ test('sc setup works', () => {
   expect(tree).toHaveStyleRule('color', 'red');
 });
 
-const ElButton = wrap(styled)('button')(['color']);
+const ElButton = elementary('button')({ styles: ['color'] });
 
-const Box = elementary('div')(['color'], { effects: { hover: ':hover' } });
-const ComposedBox = elementary('div')(['color'], {
+const Box = elementary('div')({ effects: { hover: ':hover' }, styles: ['color'] });
+
+const ComposedBox = elementary('div')({
   effects: { hover: ':hover', focus: ':focus' },
+  styles: ['color'],
 });
-const ChainBox = elementary.div(['color'], { effects: { hover: ':hover', focus: ':focus' } });
-const ExtendedSC = elementary(Button)(['color'], { effects: { hover: ':hover' } });
-const ExtendedEL = elementary(Box)(['margin'], { effects: { hover: ':hover' } });
-const WithIncorrectProp = elementary(Box)(['fake'], { effects: { hover: ':hover' } });
+
+const ChainBox = elementary.div({
+  effects: { hover: ':hover', focus: ':focus' },
+  styles: ['color'],
+});
+
+const ExtendedSC = elementary(Button)({ effects: { hover: ':hover' }, styles: ['color'] });
+const ExtendedEL = elementary(Box)({ effects: { hover: ':hover' }, styles: ['margin'] });
+const WithIncorrectProp = elementary(Box)({ effects: { hover: ':hover' }, styles: ['fake'] });
+
+const ZeroConfig = elementary.div();
+const ZeroConfigWithTemplate = elementary.div`
+  color: red;
+`;
 
 describe('Elementary integration to SC', () => {
   test('base', () => {
@@ -81,5 +93,15 @@ describe('Elementary integration to SC', () => {
   test('with incorrect prop', () => {
     const tree = renderer.create(<WithIncorrectProp hoverC="red" c="blue" m="100px" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'blue');
+  });
+  test('zero-config component', () => {
+    const tree = renderer.create(<ZeroConfig c="blue" m="100px" />).toJSON();
+    expect(tree).toHaveStyleRule('color', 'blue');
+    expect(tree).toHaveStyleRule('margin', '100px');
+  });
+  test('zero-config component with template', () => {
+    const tree = renderer.create(<ZeroConfigWithTemplate m="100px" />).toJSON();
+    expect(tree).toHaveStyleRule('color', 'red');
+    expect(tree).toHaveStyleRule('margin', '100px');
   });
 });
