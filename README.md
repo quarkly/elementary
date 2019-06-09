@@ -12,19 +12,21 @@ Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a hr
 [![Coverage][coverage-badge]][coverage]
 [![Version][version-badge]][npm]
 ![MIT License][license]
+
 <!-- ![size][] -->
 
 [badge]: https://flat.badgen.net/travis/quarkly/elementary/master
 [travis]: https://travis-ci.com/quarkly/elementary
-
 [coverage-badge]: https://flat.badgen.net/codecov/c/github/quarkly/elementary
 [coverage]: https://codecov.io/github/quarkly/elementary
-
 [version-badge]: https://flat.badgen.net/npm/v/@quarkly/elementary
 [npm]: https://npmjs.com/package/@quarkly/elementary
 [license]: https://flat.badgen.net/badge/license/MIT/blue
+
 <!-- [size]: https://flat.badgen.net/packagephobia/min/@quarkly/elementary -->
+
 # Features
+
 - Any css properties - props
 - Convenient writing media queries
 - Alias ​​system
@@ -34,45 +36,69 @@ Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a hr
 - Mixins support
 
 # Demo
+
 https://codesandbox.io/embed/quarklyelementary-demo-jplhn
 
 # Installation and Usage
+
 ```sh
 npm i @quarkly/elementary
 ```
-Since Elementary is based on styled-components, the interface may be familiar to you. <br>
+
+```sh
+npm i styled-components
+```
 
 Let's create element:
+
 ```jsx
 import React from 'react';
 import ReactDom from 'react-dom';
 import elementary from '@quarkly/elementary';
 
-const Box = elementary.div(['height', 'width', 'backgroundColor'], {
-  effects: { hover: ':hover' },
-  variant: 'boxes',
-  themed: 'Box',
-});
+const Box = elementary.div();
 
 ReactDom.render(
-  <Box
-    width={[1, 1 / 2, 1 / 4]}
-    bgc={['red', 'green', 'blue']}
-    hoverBgc="black"
-    height="300px"
-    hoverHeight="150px"
-  />,
+  <Box width={[1, 1 / 2, 1 / 4]} bgc={['red', 'green', 'blue']} height="300px" />,
   document.getElementById('root'),
 );
 ```
 
-As the first argument, we pass an array of css properties that we will use.<br>
+Since Elementary is based on styled-components, the interface may be familiar to you. <br>
 
-The second argument is the configuration:
+```jsx
+const Box = elementary.div`
+  border: 2px solid tomato;
+`;
+```
 
+# Advanced usage
+
+```jsx
+import React from 'react';
+import ReactDom from 'react-dom';
+import elementary from '@quarkly/elementary';
+
+const Box = elementary.div({
+  effects: {
+    hover: ':hover',
+  },
+  variant: 'boxes',
+  rules: ['height', 'backgroundColor'],
+});
+
+ReactDom.render(
+  <Box width={[1, 1 / 2, 1 / 4]} bgc={['red', 'green', 'blue']} height="300px" />,
+  document.getElementById('root'),
+);
+```
+
+First argument is the configuration:
+
+- rules - an array of css properties that we will use.
 - effects - what effects can be used from jsx (hover, focus ..etc)
 - variant - options for component styles from themes
-- themed - default styles for a component from a theme
+- name - componentName and default styles for this component from a theme
 
 # Docs
 

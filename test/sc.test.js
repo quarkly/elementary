@@ -17,14 +17,17 @@ test('sc setup works', () => {
 const ElButton = elementary('button')({ styles: ['color'] });
 
 const Box = elementary('div')({ effects: { hover: ':hover' }, styles: ['color'] });
+
 const ComposedBox = elementary('div')({
   effects: { hover: ':hover', focus: ':focus' },
   styles: ['color'],
 });
+
 const ChainBox = elementary.div({
   effects: { hover: ':hover', focus: ':focus' },
   styles: ['color'],
 });
+
 const ExtendedSC = elementary(Button)({ effects: { hover: ':hover' }, styles: ['color'] });
 const ExtendedEL = elementary(Box)({ effects: { hover: ':hover' }, styles: ['margin'] });
 const WithIncorrectProp = elementary(Box)({ effects: { hover: ':hover' }, styles: ['fake'] });
