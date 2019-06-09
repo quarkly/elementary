@@ -10,7 +10,7 @@ const fakeTheme = {
       margin: '300px',
     },
   },
-  someTheme: {
+  someName: {
     margin: '122px',
     padding: '30px',
   },
@@ -38,7 +38,7 @@ describe('Test modifiers', () => {
     expect(fakeApplier(rules, { theme: fakeTheme })).toStrictEqual({});
   });
   test('themed works fine', () => {
-    const [rules] = bootsrap(['margin'], { themed: 'someTheme' });
+    const [rules] = bootsrap(['margin'], { name: 'someName' });
     expect(fakeApplier(rules, { m: 3, theme: fakeTheme })).toStrictEqual({
       margin: '16px',
       padding: '30px',
@@ -63,7 +63,7 @@ describe('Test modifiers', () => {
     });
   });
   test('actual priority', () => {
-    const [rules] = bootsrap(['margin'], { themed: 'someTheme', variant: 'someVariants' });
+    const [rules] = bootsrap(['margin'], { name: 'someName', variant: 'someVariants' });
     expect(
       fakeApplier(rules, { m: 3, theme: fakeTheme, variant: 'alert', cBlue: true }),
     ).toStrictEqual({

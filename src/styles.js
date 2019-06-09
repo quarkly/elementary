@@ -148,8 +148,8 @@ export const makeEffects = ({ effectNames, properties, rules, propTypes, config 
 
 export default (properties, config = {}) => {
   const deps = [];
-  if (config.themed) {
-    deps.push(themed(config.themed));
+  if (config.name) {
+    deps.push(themed(config.name));
   }
   if (config.variant) {
     deps.push(variants(config.variant));
