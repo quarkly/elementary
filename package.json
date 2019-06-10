@@ -1,6 +1,6 @@
 {
   "name": "@quarkly/elementary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Eddort",
   "description": "Library for creating atomic react components",
   "main": "build/cjs",
@@ -28,10 +28,8 @@
     "emotion",
     "styled-system"
   ],
-  "optionalDependencies": {
-    "styled-components": "^4.2.0",
-    "@emotion/core": "^10.0.9",
-    "@emotion/styled": "^10.0.9"
+  "peerDependencies": {
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
