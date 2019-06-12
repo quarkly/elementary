@@ -28,7 +28,7 @@ Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a hr
 # Features
 
 - Any css properties - props
-- Convenient writing media queries
+- Simple writing media queries
 - Alias ​​system
 - Scaling indents and font sizes
 - Support hover, focus ..etc as props
@@ -37,7 +37,7 @@ Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a hr
 
 # Demo
 
-https://codesandbox.io/embed/quarklyelementary-demo-jplhn
+[Codesandbox](https://codesandbox.io/embed/quarklyelementary-demo-jplhn)
 
 # Installation and Usage
 
