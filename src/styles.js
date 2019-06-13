@@ -78,10 +78,10 @@ export const makeRule = (property /* config */) => {
   return [rule, propType];
 };
 
-export const compoose = property => {
+export const compose = property => {
   const composed = [];
   const dictRule = hashPropsWithAliases[property];
-  const rules = dictRule.compoose.reduce((acc, cssRule) => {
+  const rules = dictRule.compose.reduce((acc, cssRule) => {
     const [rule] = makeRule(cssRule);
     acc.push(rule);
     return acc;
@@ -91,7 +91,7 @@ export const compoose = property => {
     const clearProps = omit(property, props);
     return rules.reduce(
       (acc, rule, i) =>
-        merge(makeComoosedRule(rule, dictRule.compoose[i], props[property], clearProps), acc),
+        merge(makeComoosedRule(rule, dictRule.compose[i], props[property], clearProps), acc),
       {},
     );
   };
@@ -121,8 +121,8 @@ export const makeRules = (properties /* config */) =>
       const dictRule = hashPropsWithAliases[property];
       if (isUndefined(dictRule)) return acc;
       let result = [];
-      if (dictRule.compoose) {
-        result = compoose(property);
+      if (dictRule.compose) {
+        result = compose(property);
       } else {
         result = makeRule(property);
       }

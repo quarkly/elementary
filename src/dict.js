@@ -301,6 +301,30 @@ export default {
   size: {
     transformer: 'pixel',
     type: ['number', 'string'],
-    compoose: ['height', 'width'],
+    compose: ['height', 'width'],
+  },
+  paddingX: {
+    alias: 'px',
+    transformer: 'pixel',
+    type: ['number', 'string'],
+    compose: ['paddingLeft', 'paddingRight'],
+  },
+  paddingY: {
+    alias: 'py',
+    transformer: 'pixel',
+    type: ['number', 'string'],
+    compose: ['paddingTop', 'paddingBottom'],
+  },
+  marginX: {
+    alias: 'mx',
+    transformer: 'pixel',
+    type: ['number', 'string'],
+    compose: ['marginLeft', 'marginRight'],
+  },
+  marginY: {
+    alias: 'my',
+    transformer: 'pixel',
+    type: ['number', 'string'],
+    compose: ['marginTop', 'marginBottom'],
   },
 };
