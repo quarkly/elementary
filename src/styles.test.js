@@ -116,4 +116,31 @@ describe('makeRules with effect', () => {
       '&:hover': { height: '22px', width: '22px' },
     });
   });
+  test('rules with commpose & media query', () => {
+    const [rules, propTypes] = makeRulesWithEffect(['color', 'backgroundColor', 'size'], {
+      effects: {
+        hover: ':hover',
+      },
+    });
+    expect(propTypes).toBeDefined();
+    expect(rules['&:hover']).toBeDefined();
+    expect(
+      fakeApplier(rules, {
+        size: [20, 30, 40],
+        hoverSize: 22,
+      }),
+    ).toStrictEqual({
+      '@media screen and (min-width: 52em)': {
+        height: '30px',
+        width: '30px',
+      },
+      '@media screen and (min-width: 64em)': {
+        height: '40px',
+        width: '40px',
+      },
+      width: '20px',
+      height: '20px',
+      '&:hover': { height: '22px', width: '22px' },
+    });
+  });
 });
