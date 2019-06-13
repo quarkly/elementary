@@ -43,6 +43,8 @@ const ZeroConfigWithTemplate = elementary.div`
   color: red;
 `;
 
+const BoxWithSizeAndEffects = elementary.div({ effects: { hover: ':hover' } });
+
 describe('Elementary integration to SC', () => {
   test('base', () => {
     const tree = renderer.create(<ElButton c="red" />).toJSON();
@@ -109,6 +111,48 @@ describe('Elementary integration to SC', () => {
     const tree = renderer.create(<ZeroConfigWithTemplate m="100px" />).toJSON();
     expect(tree).toHaveStyleRule('color', 'red');
     expect(tree).toHaveStyleRule('margin', '100px');
+  });
+  test('compoosed rule', () => {
+    const tree = renderer.create(<ZeroConfigWithTemplate size="20px" />).toJSON();
+    expect(tree).toHaveStyleRule('height', '20px');
+    expect(tree).toHaveStyleRule('width', '20px');
+  });
+  test('compoosed rule with media query', () => {
+    const tree = renderer.create(<ZeroConfigWithTemplate size={['20px', '30px']} />).toJSON();
+    expect(tree).toHaveStyleRule('height', '30px', {
+      media: 'screen and (min-width: 52em)',
+    });
+    expect(tree).toHaveStyleRule('width', '30px', {
+      media: 'screen and (min-width: 52em)',
+    });
+    expect(tree).toHaveStyleRule('height', '20px');
+    expect(tree).toHaveStyleRule('width', '20px');
+  });
+  test('compoosed rule & effect', () => {
+    const tree = renderer.create(<BoxWithSizeAndEffects hoverSize="22px" />).toJSON();
+    expect(tree).toHaveStyleRule('height', '22px', {
+      modifier: ':hover',
+    });
+    expect(tree).toHaveStyleRule('width', '22px', {
+      modifier: ':hover',
+    });
+  });
+  test('compoosed rule & effect & media', () => {
+    const tree = renderer.create(<BoxWithSizeAndEffects hoverSize={['22px', '30px']} />).toJSON();
+    expect(tree).toHaveStyleRule('height', '30px', {
+      media: 'screen and (min-width: 52em)',
+      modifier: ':hover',
+    });
+    expect(tree).toHaveStyleRule('width', '30px', {
+      media: 'screen and (min-width: 52em)',
+      modifier: ':hover',
+    });
+    expect(tree).toHaveStyleRule('height', '22px', {
+      modifier: ':hover',
+    });
+    expect(tree).toHaveStyleRule('width', '22px', {
+      modifier: ':hover',
+    });
   });
   test('config name to displayName', () => {
     expect(NamedBox.displayName).toStrictEqual('NamedBox');

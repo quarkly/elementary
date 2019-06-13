@@ -298,4 +298,9 @@ export default {
     transformer: 'pixel',
     type: ['number', 'string'],
   },
+  size: {
+    transformer: 'pixel',
+    type: ['number', 'string'],
+    compoose: ['height', 'width'],
+  },
 };
