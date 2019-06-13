@@ -1,4 +1,4 @@
-import { isArray, map, isUndefined, get } from 'lodash/fp';
+import { isArray, map, isUndefined, get, omit } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import stylesDict from './dict';
 import { getFromTheme, themeGet, variantGet } from './theme';
@@ -77,15 +77,46 @@ export const makeRule = (property /* config */) => {
   const propType = toPropTypes(hashPropsWithAliases[property]);
   return [rule, propType];
 };
-
+export const compoose = property => {
+  const composed = [];
+  const dictRule = hashPropsWithAliases[property];
+  const rules = dictRule.compoose.reduce((acc, cssRule) => {
+    const [rule] = makeRule(cssRule);
+    acc.push(rule);
+    return acc;
+  }, []);
+  composed[RULE] = props => {
+    if (isUndefined(props[property])) return;
+    const clearProps = omit(property, props);
+    return rules.reduce(
+      (acc, rule, i) => ({
+        ...acc,
+        ...rule.call(null, {
+          [dictRule.compoose[i]]: props[property],
+          ...clearProps,
+        }),
+      }),
+      {},
+    );
+  };
+  composed[PROP_TYPES] = toPropTypes(dictRule);
+  return composed;
+};
+// дописать вызов создания плагинов
 export const makeRules = (properties /* config */) =>
   properties.reduce(
     (acc, property) => {
-      if (isUndefined(hashPropsWithAliases[property])) return acc;
-      const [rule, propTypes] = makeRule(property);
+      const dictRule = hashPropsWithAliases[property];
+      if (isUndefined(dictRule)) return acc;
+      let result = [];
+      if (dictRule.compoose) {
+        result = compoose(property);
+      } else {
+        result = makeRule(property);
+      }
 
-      acc[RULE][property] = rule;
-      acc[PROP_TYPES][property] = propTypes;
+      acc[RULE][property] = result[RULE];
+      acc[PROP_TYPES][property] = result[PROP_TYPES];
       return acc;
     },
     [{}, {}],

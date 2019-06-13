@@ -77,4 +77,43 @@ describe('makeRules with effect', () => {
       '&:hover': { color: 'red', backgroundColor: 'blue' },
     });
   });
+  test('rules with commpose', () => {
+    const [rules, propTypes] = makeRulesWithEffect(['color', 'backgroundColor', 'size'], {});
+    expect(propTypes).toBeDefined();
+    expect(
+      fakeApplier(rules, {
+        size: '20px',
+      }),
+    ).toStrictEqual({
+      height: '20px',
+      width: '20px',
+    });
+    expect(
+      fakeApplier(rules, {
+        size: 20,
+      }),
+    ).toStrictEqual({
+      height: '20px',
+      width: '20px',
+    });
+  });
+  test('rules with commpose & effect', () => {
+    const [rules, propTypes] = makeRulesWithEffect(['color', 'backgroundColor', 'size'], {
+      effects: {
+        hover: ':hover',
+      },
+    });
+    expect(propTypes).toBeDefined();
+    expect(rules['&:hover']).toBeDefined();
+    expect(
+      fakeApplier(rules, {
+        size: 20,
+        hoverSize: 22,
+      }),
+    ).toStrictEqual({
+      height: '20px',
+      width: '20px',
+      '&:hover': { height: '22px', width: '22px' },
+    });
+  });
 });
