@@ -1,5 +1,5 @@
 <p>
-  <img src="docs/src/q-elementary.png" width="200px">
+  <img src="docs/src/q-elementary.png" width="200px" margin-left="-18px">
 </p>
 <h1> Elementary </h1>
 <p>
