@@ -1,5 +1,5 @@
 <p>
-  <img src="docs/src/q-elementary.png" width="200px">
+  <img src="https://github.com/quarkly/elementary/raw/master/docs/src/q-elementary.png" width="200px">
 </p>
 <h1> Elementary </h1>
 <p>
@@ -37,7 +37,8 @@ Inspired by <a href="http://tachyons.io/" target="_blank">tachyons</a> and <a hr
 
 # Demo
 
-[Codesandbox](https://codesandbox.io/embed/quarklyelementary-demo-jplhn)
+ - [Codesandbox](https://codesandbox.io/embed/quarklyelementary-demo-jplhn)
+ - [@quarkly/elements](https://github.com/quarkly/elements)
 
 # Installation and Usage
 

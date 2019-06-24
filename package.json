@@ -1,6 +1,6 @@
 {
   "name": "@quarkly/elementary",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Eddort",
   "description": "Library for creating atomic react components",
   "main": "build/cjs",
@@ -25,7 +25,6 @@
     "css-in-js",
     "atomic-css",
     "atomic-components",
-    "emotion",
     "styled-system"
   ],
   "peerDependencies": {
