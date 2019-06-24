@@ -247,6 +247,7 @@ export default {
   },
   background: {
     alias: 'bg',
+    variant: 'colors',
     type: 'string',
   },
   backgroundColor: {
