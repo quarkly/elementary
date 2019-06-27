@@ -16,7 +16,7 @@
 - [verticalAlign](###verticalAlign)
 
 
- #### Spaces
+#### Spaces
  
 - [padding / p](###p)
 - [paddingTop / pt](###pt)
@@ -34,7 +34,7 @@
 - [marginY / my](###my)
 
 
- #### Typography
+#### Typography
 
 - fontSize / fz
 - color / c
@@ -46,7 +46,7 @@
 - letterSpacing / lts
 
 
- #### Flex
+#### Flex
  
 - [alignItems / ai](###alignItems)
 - [alignContent / ac](###alignContent)
@@ -59,7 +59,7 @@
 - [order / ord](###order)
 
 
- #### Grid
+#### Grid
  
 - [justifySelf / js](###justifySelf)
 - [alignSelf / as](###alignSelf)
@@ -77,7 +77,7 @@
 - [gridArea](###gridTemplateAreas)
 
 
- #### Background
+#### Background
  
 - [background / bg](###bg)
 - [backgroundColor / bgc](###bgc)
@@ -87,7 +87,7 @@
 - [backgroundRepeat / bgr](###backgroundRepeat)
 
 
- #### Misc
+#### Misc
  
 - [border / bd](###border)
 - [borderTop / bdt](###borderTop)
@@ -101,7 +101,7 @@
 - [overflow / ov](###overflow)
 
 
- #### Position
+#### Position
  
 - [position / pos](###position)
 - [top / t](###top)
@@ -113,7 +113,7 @@
 
 ## Reference	
 
- ### `variant`	
+### `variant`	
 
  One of the variants of this element which are described in the theme.	
 
@@ -121,7 +121,7 @@
 | ------ | :-----: |	
 | string |  none   |	
 
- ### `display`	
+### `display`	
 
  This CSS property specifies the display behavior (the type of rendering box) of an element.	
 
@@ -129,7 +129,7 @@
 | ------------------------------------------------------------- | :-----: |	
 | oneOf(inline, block, inline-block, flex, grid, none) or array |  block  |	
 
- ### `height`	
+### `height`	
 
  This CSS property sets the height of an element. The height of an element does not include padding, borders, or margins.	
 
@@ -137,7 +137,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  auto   |	
 
- ### `minHeight`	
+### `minHeight`	
 
  This CSS property defines the minimum height of an element.	
 
@@ -145,7 +145,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |    0    |	
 
- ### `maxHeight`	
+### `maxHeight`	
 
  This CSS property defines the maximum height of an element.	
 
@@ -153,7 +153,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `width`	
+### `width`	
 
  This CSS property sets the width of an element. The width of an element does not include padding, borders, or margins.	
 
@@ -161,7 +161,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  auto   |	
 
- ### `minWidth`	
+### `minWidth`	
 
  This CSS property defines the minimum width of an element.	
 
@@ -169,7 +169,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |    0    |	
 
- ### `maxWidth`	
+### `maxWidth`	
 
  This CSS property defines the maximum width of an element.	
 
@@ -177,7 +177,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `size`	
+### `size`	
 
  This property defines both are "width" and "height" CSS properties.	
 
@@ -185,7 +185,7 @@
 | --------------- | :-----: |	
 | string or array |  none   |	
 
- ### `verticalAlign`	
+### `verticalAlign`	
 
  This CSS property sets the vertical alignment of an element.	
 
@@ -193,7 +193,7 @@
 | ----------------------------------------------------------- | :------: |	
 | oneOf(baseline, text-top, text-bottom, sub, super) or array | baseline |	
 
- ### `p`	
+### `p`	
 
  The shorthand of the "padding" CSS property. Are used to generate space around an element's content, inside of any defined borders.	
 
@@ -201,7 +201,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `pt`	
+### `pt`	
 
  The shorthand of the "padding-top" CSS property.	
 
@@ -209,7 +209,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `pr`	
+### `pr`	
 
  The shorthand of the "padding-right" CSS property.	
 
@@ -217,7 +217,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `pb`	
+### `pb`	
 
  The shorthand of the "padding-bottom" CSS property.	
 
@@ -225,7 +225,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `pl`	
+### `pl`	
 
  The shorthand of the "padding-left" CSS property.	
 
@@ -233,7 +233,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `px`	
+### `px`	
 
  Both are "padding-right" and "padding-left" (x-asix) CSS properties.	
 
@@ -241,7 +241,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `py`	
+### `py`	
 
  This property defines both are "padding-top" and "padding-bottom" (y-asix) CSS properties.	
 
@@ -249,7 +249,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `m`	
+### `m`	
 
  The shorthand of the "margin" CSS property. Are used to sets the margins for an element, outside of any defined borders.	
 
@@ -257,7 +257,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `mt`	
+### `mt`	
 
  The shorthand of the "margin-top" CSS property.	
 
@@ -265,7 +265,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `mr`	
+### `mr`	
 
  The shorthand of the "margin-right" CSS property.	
 
@@ -273,7 +273,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `mb`	
+### `mb`	
 
  The shorthand of the "margin-bottom" CSS property.	
 
@@ -281,7 +281,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `ml`	
+### `ml`	
 
  The shorthand of the "margin-left" CSS property.	
 
@@ -289,7 +289,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `mx`	
+### `mx`	
 
  This property defines both are "margin-right" and "margin-left" (x-asix) CSS properties.	
 
@@ -297,7 +297,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `my`	
+### `my`	
 
  Both are "margin-top" and "margin-bottom" (x-asix) CSS properties.	
 
@@ -305,7 +305,7 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
- ### `alignItems`	
+### `alignItems`	
 
  This CSS property specifies the default alignment for items inside the flexible container.	
 
@@ -313,7 +313,7 @@
 | --------------------------------------------------------------------------------- | :-----: |	
 | oneOf(stretch, center, flex-start, flex-end, baseline, initial, inherit) or array | stretch |	
 
- ### `alignContent`	
+### `alignContent`	
 
  This CSS property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines. There must be multiple lines of items for this property to have any effect!	
 
@@ -321,7 +321,7 @@
 | ---------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(stretch, center, flex-start, flex-end, space-between, space-around, initial, inherit) or array | stretch |	
 
- ### `justifyItems`	
+### `justifyItems`	
 
  This CSS property defines the default justify-self for all items of the box, giving them all a default way of justifying each box along the appropriate axis.	
 
@@ -329,7 +329,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  none   |	
 
- ### `justifyContent`	
+### `justifyContent`	
 
  This CSS property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).	
 
@@ -337,7 +337,7 @@
 | ------------------------------------------------------------------------------------------- | :--------: |	
 | oneOf(flex-start, flex-end, center, space-between, space-around, initial, inherit) or array | flex-start |	
 
- ### `flexWrap`	
+### `flexWrap`	
 
  This CSS property specifies whether the flexible items should wrap or not.	
 
@@ -345,7 +345,7 @@
 | ------------------------------------------------------------ | :-----: |	
 | oneOf(nowrap, wrap, wrap-reverse, initial, inherit) or array | nowrap  |	
 
- ### `flexBasis`	
+### `flexBasis`	
 
  This CSS property specifies the initial length of a flexible item.	
 
@@ -353,7 +353,7 @@
 | --------------- | :-----: |	
 | number or array |    0    |	
 
- ### `flexDirection`	
+### `flexDirection`	
 
  This CSS property specifies the direction of the flexible items.	
 
@@ -361,7 +361,7 @@
 | -------------------------------------------------------------------------- | :-----: |	
 | oneOf(row, row-reverse, column, column-reverse, initial, inherit) or array |   row   |	
 
- ### `flex`	
+### `flex`	
 
  This CSS property is a shorthand property for: flex-grow, flex-shrink, flex-basis.	
 
@@ -369,7 +369,7 @@
 | --------------- | :------: |	
 | string or array | 0 1 auto |	
 
- ### `order`	
+### `order`	
 
  This CSS property specifies the order of a flexible item relative to the rest of the flexible items inside the same container.	
 
@@ -377,7 +377,7 @@
 | --------------- | :-----: |	
 | number or array |    0    |	
 
- ### `justifySelf`	
+### `justifySelf`	
 
  This CSS property set the way a box is justified inside its alignment container along the appropriate axis.	
 
@@ -385,7 +385,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  auto   |	
 
- ### `alignSelf`	
+### `alignSelf`	
 
  This CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.	
 
@@ -393,7 +393,7 @@
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  auto   |	
 
- ### `gridGap`	
+### `gridGap`	
 
  It is a shorthand for row-gap and column-gap.	
 
@@ -407,7 +407,7 @@
 | --------------- | :-----: |	
 | string or array | normal  |	
 
- ### `gridColumnGap`	
+### `gridColumnGap`	
 
  This CSS property sets the size of the gap (gutter) between an element's columns.	
 
@@ -415,7 +415,7 @@
 | ------------------------------------------------------ | :-----: |	
 | oneOf(normal, inherit, initial, unset) string or array | normal  |	
 
- ### `gridRowGap`	
+### `gridRowGap`	
 
  This CSS property sets the size of the gap (gutter) between an element's grid rows.	
 
@@ -423,7 +423,7 @@
 | ------------------------------------------------------ | :-----: |	
 | oneOf(normal, inherit, initial, unset) string or array | normal  |	
 
- ### `gridColumn`	
+### `gridColumn`	
 
  This is a shorthand property for grid-column-start and grid-column-end.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)	
@@ -432,7 +432,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `gridRow`	
+### `gridRow`	
 
  This is a shorthand property for grid-row-start and grid-row-end.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row)	
@@ -441,7 +441,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `gridAutoFlow`	
+### `gridAutoFlow`	
 
  This CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.	
 
@@ -449,7 +449,7 @@
 | ------------------------------------------------------------------------------------ | :-----: |	
 | oneOf(row, column, dense, row dense, column dense, inherit, initial, unset) or array |   row   |	
 
- ### `gridAutoColumns`	
+### `gridAutoColumns`	
 
  This CSS property specifies the size of an implicitly-created grid column track.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns)	
@@ -458,7 +458,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `gridAutoRows`	
+### `gridAutoRows`	
 
  This CSS property specifies the size of an implicitly-created grid row track.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows)	
@@ -467,7 +467,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `gridTemplateColumns`	
+### `gridTemplateColumns`	
 
  This CSS property defines the line names and track sizing functions of the grid columns.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)	
@@ -476,7 +476,7 @@
 | --------------- | :-----: |	
 | string or array |  none   |	
 
- ### `gridTemplateRows`	
+### `gridTemplateRows`	
 
  This CSS property defines the line names and track sizing functions of the grid rows.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)	
@@ -485,7 +485,7 @@
 | --------------- | :-----: |	
 | string or array |  none   |	
 
- ### `gridTemplateAreas`	
+### `gridTemplateAreas`	
 
  This CSS property specifies named grid areas.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)	
@@ -494,7 +494,7 @@
 | --------------- | :-----: |	
 | string or array |  none   |	
 
- ### `gridArea`	
+### `gridArea`	
 
  It is a shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end, specifying a grid item’s size and location within the grid by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area.	
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area)	
@@ -503,7 +503,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `bg`	
+### `bg`	
 
  The shorthand of the "background-color" CSS property.	
 
@@ -511,7 +511,7 @@
 | --------------- | :-----: |	
 | string or array |  none   |	
 
- ### `background`	
+### `background`	
 
  That's a shorthand property for background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment.	
 
@@ -521,7 +521,7 @@
 | --------------- | :--------: |	
 | string or array | individual |	
 
- ### `backgroundImage`	
+### `backgroundImage`	
 
  This CSS property sets one or more background images for an element.	
 
@@ -531,7 +531,7 @@
 | --------------- | :-----: |	
 | string or array |  none   |	
 
- ### `backgroundSize`	
+### `backgroundSize`	
 
  This CSS property specifies the size of the background images.	
 
@@ -546,7 +546,7 @@
 | -------------------------------------------------------------- | :-----: |	
 | oneOf(auto, cover, contain, initial, inherit), string or array |  auto   |	
 
- ### `backgroundPosition`	
+### `backgroundPosition`	
 
  This CSS property sets the starting position of a background image.	
 
@@ -560,7 +560,7 @@
 | ------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(left top, left center, left bottom, right top, right center, right bottom, center top, center center, center bottom), string or array |  0% 0%  |	
 
- ### `backgroundRepeat`	
+### `backgroundRepeat`	
 
  This CSS property sets if/how a background image will be repeated.	
 
@@ -568,7 +568,7 @@
 | ------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(repeat, repeat-x, repeat-y, no-repeat, space, round, initial, inherit) or array | repeat  |	
 
- ### `border`	
+### `border`	
 
  It is a shorthand property for: border-width, border-style (required), border-color.	
 
@@ -576,7 +576,7 @@
 | --------------- | :---------------: |	
 | string or array | medium none color |	
 
- ### `borderTop`	
+### `borderTop`	
 
  It is a shorthand property sets all the top border properties in one declaration. The properties that can be set must be in the following order: border-top-width, border-top-style (required), border-top-color.	
 
@@ -584,7 +584,7 @@
 | --------------- | :---------------: |	
 | string or array | medium none color |	
 
- ### `borderRight`	
+### `borderRight`	
 
  It is a shorthand property sets all the right border properties in one declaration. The properties that can be set must be in the following order: border-right-width, border-right-style (required), border-right-color.	
 
@@ -592,7 +592,7 @@
 | --------------- | :---------------: |	
 | string or array | medium none color |	
 
- ### `borderBottom`	
+### `borderBottom`	
 
  It is a shorthand property sets all the bottom border properties in one declaration. The properties that can be set must be in the following order: border-bottom-width, border-bottom-style (required), border-bottom-color.	
 
@@ -600,7 +600,7 @@
 | --------------- | :---------------: |	
 | string or array | medium none color |	
 
- ### `borderLeft`	
+### `borderLeft`	
 
  It is a shorthand property sets all the left border properties in one declaration. The properties that can be set must be in the following order: border-left-width, border-left-style (required), border-left-color.	
 
@@ -608,7 +608,7 @@
 | --------------- | :---------------: |	
 | string or array | medium none color |	
 
- ### `borderColor`	
+### `borderColor`	
 
  This CSS property sets the color of an element's four borders. This property can have from one to four values.	
 
@@ -623,7 +623,7 @@
 | ----------------------------------------------------- | :-----: |	
 | oneOf(transparent, initial, inherit), string or array |  none   |	
 
- ### `borderRadius`	
+### `borderRadius`	
 
  This CSS property defines the radius of the element's corners. This property can have from one to four values.	
 
@@ -638,7 +638,7 @@
 | --------------- | :-----: |	
 | string or array |    0    |	
 
- ### `opacity`	
+### `opacity`	
 
  This CSS property sets the opacity level for an element.	
 
@@ -646,7 +646,7 @@
 | --------------- | :-----: |	
 | number or array |    1    |	
 
- ### `boxShadow`	
+### `boxShadow`	
 
  This CSS property attaches one or more shadows to an element. To attach more than one shadow to an element, add a comma-separated list of shadows.	
 
@@ -656,7 +656,7 @@
 | --------------- | :-----: |	
 | string or array |  none   |	
 
- ### `overflow`	
+### `overflow`	
 
  This CSS property specifies what should happen if content overflows an element's box.	
 
@@ -664,7 +664,7 @@
 | --------------------------------------------------------------- | :-----: |	
 | oneOf(visible, hidden, scroll, auto, initial, inherit) or array | visible |	
 
- ### `position`	
+### `position`	
 
  This CSS property specifies the type of positioning method used for an element.	
 
@@ -672,7 +672,7 @@
 | --------------------------------------------------------------------------- | :-----: |	
 | oneOf(static, absolute, fixed, relative, sticky, initial, inherit) or array | static  |	
 
- ### `top`	
+### `top`	
 
  This CSS property affects the vertical position of a positioned element. This property has no effect on non-positioned elements.	
 
@@ -686,7 +686,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `right`	
+### `right`	
 
  This CSS property affects the horizontal position of a positioned element. This property has no effect on non-positioned elements.	
 
@@ -700,7 +700,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `bottom`	
+### `bottom`	
 
  This CSS property affects the vertical position of a positioned element. This property has no effect on non-positioned elements.	
 
@@ -714,7 +714,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `left`	
+### `left`	
 
  This CSS property affects the horizontal position of a positioned element. This property has no effect on non-positioned elements.	
 
@@ -728,7 +728,7 @@
 | --------------- | :-----: |	
 | string or array |  auto   |	
 
- ### `zIndex`	
+### `zIndex`	
 
  This CSS property specifies the stack order of an element. Works on positioned elements (position="absolute", position="relative", position="fixed", or position="sticky").	
 
