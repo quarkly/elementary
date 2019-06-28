@@ -1,19 +1,12 @@
 import { isArray, map, isUndefined, get, omit, merge } from 'lodash/fp';
 import PropTypes from 'prop-types';
-import stylesDict from './dict';
+import stylesDict, { hashPropsWithAliases } from './dict';
 import { getFromTheme, themeGet, variantGet } from './theme';
 import transformers, { pixel } from './transformers';
 import { variants, themed, mixins } from './modifiers';
 
 const RULE = 0;
 const PROP_TYPES = 1;
-
-export const hashPropsWithAliases = Object.keys(stylesDict).reduce((acc, name) => {
-  const propValue = { ...stylesDict[name], name };
-  acc[name] = propValue;
-  if (propValue.alias) acc[propValue.alias] = propValue;
-  return acc;
-}, {});
 
 export const getNames = properties =>
   properties.reduce((acc, name) => {
