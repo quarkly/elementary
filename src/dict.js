@@ -1,4 +1,4 @@
-export default {
+const dict = {
   margin: {
     alias: 'm',
     scale: 'space',
@@ -329,3 +329,12 @@ export default {
     compose: ['marginTop', 'marginBottom'],
   },
 };
+
+export const hashPropsWithAliases = Object.keys(dict).reduce((acc, name) => {
+  const propValue = { ...dict[name], name };
+  acc[name] = propValue;
+  if (propValue.alias) acc[propValue.alias] = propValue;
+  return acc;
+}, {});
+
+export default dict;
