@@ -1,4 +1,5 @@
 import React from 'react';
+import { get, merge, isArray } from 'lodash/fp';
 import { hashPropsWithAliases } from './dict';
 
 export const omit = (props, omitMap) =>
@@ -10,10 +11,29 @@ export const omit = (props, omitMap) =>
     return acc;
   }, {});
 
-export default Tag =>
+export const hashify = array =>
+  array.reduce((acc, item) => {
+    acc[item] = true;
+    return acc;
+  }, {});
+
+export const getOmitPropsFromConfig = config => {
+  const uMap = get('omit', config);
+  if (isArray(uMap)) {
+    return hashify(uMap);
+  }
+  return uMap;
+};
+
+export const createOmitMap = config => {
+  const userOmitMap = getOmitPropsFromConfig(config);
+  return merge(userOmitMap, hashPropsWithAliases);
+};
+
+export default (Tag, config) =>
   React.forwardRef((props, ref) =>
     React.createElement(Tag, {
       ref,
-      ...omit(props, hashPropsWithAliases),
+      ...omit(props, createOmitMap(config)),
     }),
   );
