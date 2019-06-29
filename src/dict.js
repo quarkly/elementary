@@ -183,7 +183,7 @@ const dict = {
     type: 'string',
   },
   alignSelf: {
-    alias: 'as',
+    alias: 'asf',
     type: 'string',
   },
   order: {
