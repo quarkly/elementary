@@ -45,6 +45,8 @@ const ZeroConfigWithTemplate = elementary.div`
 
 const BoxWithSizeAndEffects = elementary.div({ effects: { hover: ':hover' } });
 
+const BoxWithOmit = elementary.div({ effects: { hover: ':hover' }, omit: ['role'] });
+
 describe('Elementary integration to SC', () => {
   test('base', () => {
     const tree = renderer.create(<ElButton c="red" />).toJSON();
@@ -156,5 +158,13 @@ describe('Elementary integration to SC', () => {
   });
   test('config name to displayName', () => {
     expect(NamedBox.displayName).toStrictEqual('NamedBox');
+  });
+  test('omit props from html element', () => {
+    const tree = renderer
+      // eslint-disable-next-line jsx-a11y/aria-role
+      .create(<BoxWithOmit size={['22px', '30px']} role="test" passrole="test" />)
+      .toJSON();
+    expect(tree.props.role).toBeUndefined();
+    expect(tree.props.passrole).toBeDefined();
   });
 });

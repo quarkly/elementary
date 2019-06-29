@@ -9,7 +9,7 @@ export const isTemplate = arg => isArray(arg);
 
 export const makeComponent = (styled, tag, styles, config, other) => {
   const [rules, propTypes] = bootstrap(styles, config);
-  const Component = styled(clearProps(tag))(...rules, ...other);
+  const Component = styled(clearProps(tag, config))(...rules, ...other);
   Component.propTypes = propTypes;
   if (config.name) {
     Component.displayName = config.name;
