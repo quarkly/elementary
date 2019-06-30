@@ -103,6 +103,7 @@ First argument is the configuration:
 
 # Docs
 
+- [Props](docs/props.md)
 - [Aliases](docs/aliases.md)
 - [Theming](docs/theming.md)
 
