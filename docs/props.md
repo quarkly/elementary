@@ -1,8 +1,3 @@
-#### Base
-
-- [variant](###variant)
-
-
 #### Layout
 
 - [display / d](###display)
@@ -112,14 +107,6 @@
 
 
 ## Reference	
-
-### `variant`	
-
- One of the variants of this element which are described in the theme.	
-
-| Type   | Default |	
-| ------ | :-----: |	
-| string |  none   |	
 
 ### `display`	
 
