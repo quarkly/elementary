@@ -1,4 +1,9 @@
-#### Layout
+# Props
+
+The list of all elementary styling props.
+
+
+### Layout
 
 - [display / d](#display)
 - [height / h](#height)
@@ -11,7 +16,7 @@
 - [verticalAlign](#verticalAlign)
 
 
-#### Spaces
+### Spaces
  
 - [padding / p](#p)
 - [paddingTop / pt](#pt)
@@ -29,7 +34,7 @@
 - [marginY / my](#my)
 
 
-#### Typography
+### Typography
 
 - [fontSize / fz](#fontSize)
 - [color / c](#color)
@@ -41,7 +46,7 @@
 - [letterSpacing / lts](#letterSpacing)
 
 
-#### Flex
+### Flex
  
 - [alignItems / ai](#alignItems)
 - [alignContent / ac](#alignContent)
@@ -54,7 +59,7 @@
 - [order / ord](#order)
 
 
-#### Grid
+### Grid
  
 - [justifySelf / js](#justifySelf)
 - [alignSelf / as](#alignSelf)
@@ -72,7 +77,7 @@
 - [gridArea](#gridTemplateAreas)
 
 
-#### Background
+### Background
  
 - [background / bg](#bg)
 - [backgroundColor / bgc](#bgc)
@@ -82,7 +87,7 @@
 - [backgroundRepeat / bgr](#backgroundRepeat)
 
 
-#### Misc
+### Misc
  
 - [border / bd](#border)
 - [borderTop / bdt](#borderTop)
@@ -96,7 +101,7 @@
 - [overflow / ov](#overflow)
 
 
-#### Position
+### Position
  
 - [position / pos](#position)
 - [top / t](#top)
