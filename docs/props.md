@@ -36,14 +36,14 @@
 
 #### Typography
 
-- fontSize / fz
-- color / c
-- fontFamily / ff
-- fontWeight / fw
-- textAlign / ta
-- lineHeight / lh
-- fontStyle / fs
-- letterSpacing / lts
+- [fontSize / fz](###fontSize)
+- [color / c](###color)
+- [fontFamily / ff](###fontFamily)
+- [fontWeight / fw](###fontWeight)
+- [textAlign / ta](###textAlign)
+- [lineHeight / lh](###lineHeight)
+- [fontStyle / fs](###fontStyle)
+- [letterSpacing / lts](###letterSpacing)
 
 
 #### Flex
@@ -305,6 +305,81 @@
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
 
+### `fontSize`	
+
+ This CSS property sets the size of a font.	
+
+| Type                                                                                                                          | Default   |	
+| ----------------------------------------------------------------------------------------------------------------------------- | :-------: |	
+| oneOf(medium, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, initial, inherit), string, number or array |  medium   |	
+
+### `color`	
+
+ This CSS property specifies the color of text.	
+ They can be specified by the following methods:
+ - Hexadecimal colors (`#0000ff`)
+ - RGB colors (`rgb(0, 0, 255)`)
+ - RGBA colors (`rgba(0, 0, 255, 0.3)`)
+ - HSL colors (`hsl(120, 100%, 25%)`)
+ - HSLA colors (`hsla(120, 100%, 25%, 0.3)`)
+ - Predefined/Cross-browser color names (`darkblue`)
+ - Theme variable (`primary`)
+
+| Type            | Default           |	
+| --------------- | :---------------: |	
+| string or array | *not specified*   |	
+
+### `fontFamily`	
+
+ This CSS property specifies the font for an element
+
+| Type                    | Default |	
+| ----------------------- | :-----: |	
+| oneOf(medium, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, initial, inherit), string, or array |  *depends on the browser*   |	
+
+### `fontWeight`	
+
+ This CSS property sets how thick or thin characters in text should be displayed.
+
+| Type                                                                                                          | Default   |	
+| ------------------------------------------------------------------------------------------------------------- | :-------: |	
+| oneOf(normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, initial, inherit), or array |  normal   |	
+### `textAlign`	
+
+ This CSS property specifies the horizontal alignment of text in an element.
+
+| Type                                                            | Default           |	
+| --------------------------------------------------------------- | :---------------: |	
+| oneOf(left, right, center, justify, initial, inherit), or array |  left *or* right  |	
+
+### `lineHeight`	
+
+ This CSS property specifies the height of a line.
+ It can be specified in number, length or percent.
+
+| Type                       | Default  |	
+| -------------------------- | :------: |	
+| "normal", string, or array |  normal  |	
+
+### `fontStyle`	
+
+ This CSS property specifies the font style for a text.
+ It can be specified in number, length or percent.
+
+| Type                                                       | Default  |	
+| ---------------------------------------------------------- | :------: |	
+| oneOf(normal, italic, oblique, initial, inherit), or array |  normal  |
+
+### `letterSpacing`	
+
+ This CSS property increases or decreases the space between characters in a text.
+ It can be specified in number, length or percent.
+
+| Type                                              | Default  |	
+| ------------------------------------------------- | :------: |	
+| oneOf(normal, initial, inherit), string, or array |  normal  |
+
+
 ### `alignItems`	
 
  This CSS property specifies the default alignment for items inside the flexible container.	
@@ -400,8 +475,8 @@
  **Syntax**: there are three different syntaxes you can use with this property:	
 
  1. the one-value syntax for both row and column in any CSS units ("20px", "3vmin", "100%", e.g.),	
-2. the two-value syntax separately: first row, second column in any CSS units ("20px 10px", "3vmin 2vmax", "21px 82%", e.g.),	
-3. global values (inherit, initial, unset)	
+1. the two-value syntax separately: first row, second column in any CSS units ("20px 10px", "3vmin 2vmax", "21px 82%", e.g.),	
+2. global values (inherit, initial, unset)	
 
 | Type            | Default |	
 | --------------- | :-----: |	
