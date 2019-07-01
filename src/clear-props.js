@@ -1,6 +1,7 @@
 import React from 'react';
 import { get, merge, isArray } from 'lodash/fp';
 import { hashPropsWithAliases } from './dict';
+import normalizeProps from './normalize-props';
 
 export const omit = (props, omitMap) =>
   Object.keys(props).reduce((acc, prop) => {
@@ -34,6 +35,6 @@ export default (Tag, config) =>
   React.forwardRef((props, ref) =>
     React.createElement(Tag, {
       ref,
-      ...omit(props, createOmitMap(config)),
+      ...omit(normalizeProps(props), createOmitMap(config)),
     }),
   );
