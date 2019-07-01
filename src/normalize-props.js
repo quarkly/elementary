@@ -1,3 +1,4 @@
+import React from 'react';
 import { isString, isObject } from 'lodash/fp';
 
 const normalizeMap = {
@@ -12,9 +13,17 @@ export const applynormalizer = (key, value) => {
   return null;
 };
 
-export default props => {
+export const normalizer = props => {
   return Object.keys(props).reduce((acc, key) => {
     acc[key] = applynormalizer(key, props[key]);
     return acc;
   }, {});
 };
+
+export default Tag =>
+  React.forwardRef((props, ref) =>
+    React.createElement(Tag, {
+      ref,
+      ...normalizer(props),
+    }),
+  );

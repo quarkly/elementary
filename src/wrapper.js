@@ -2,6 +2,7 @@ import { isArray } from 'lodash/fp';
 import bootstrap from './styles';
 import dict from './dict';
 import clearProps from './clear-props';
+import normalize from './normalize-props';
 
 const defaultStyles = Object.keys(dict);
 
@@ -9,7 +10,10 @@ export const isTemplate = arg => isArray(arg);
 
 export const makeComponent = (styled, tag, styles, config, other) => {
   const [rules, propTypes] = bootstrap(styles, config);
-  const Component = styled(clearProps(tag, config))(...rules, ...other);
+  let Component = styled(clearProps(tag, config))(...rules, ...other);
+  if (config.normalize) {
+    Component = normalize(Component);
+  }
   Component.propTypes = propTypes;
   if (config.name) {
     Component.displayName = config.name;
