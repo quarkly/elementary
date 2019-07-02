@@ -109,9 +109,13 @@ The list of all elementary styling props.
 - [bottom / b](#bottom)
 - [left / l](#left)
 - [zIndex / z](#zIndex)
+<br/>
+<br/>
 
 
-## Reference	
+
+## Reference
+
 
 ### `display`	
 
@@ -120,6 +124,8 @@ The list of all elementary styling props.
 | Type                                                          | Default |	
 | ------------------------------------------------------------- | :-----: |	
 | oneOf(inline, block, inline-block, flex, grid, none) or array |  block  |	
+<br/>
+
 
 ### `height`	
 
@@ -128,6 +134,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  auto   |	
+<br/>
+
+
 
 ### `minHeight`	
 
@@ -136,6 +145,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |    0    |	
+<br/>
+
+
 
 ### `maxHeight`	
 
@@ -144,6 +156,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `width`	
 
@@ -152,6 +167,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  auto   |	
+<br/>
+
+
 
 ### `minWidth`	
 
@@ -160,6 +178,8 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |    0    |	
+<br/>
+
 
 ### `maxWidth`	
 
@@ -168,6 +188,8 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
 
 ### `size`	
 
@@ -176,6 +198,8 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  none   |	
+<br/>
+
 
 ### `verticalAlign`	
 
@@ -184,6 +208,8 @@ The list of all elementary styling props.
 | Type                                                        | Default  |	
 | ----------------------------------------------------------- | :------: |	
 | oneOf(baseline, text-top, text-bottom, sub, super) or array | baseline |	
+<br/>
+
 
 ### `p`	
 
@@ -192,6 +218,8 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
 
 ### `pt`	
 
@@ -200,6 +228,8 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
 
 ### `pr`	
 
@@ -208,6 +238,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `pb`	
 
@@ -216,6 +249,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `pl`	
 
@@ -224,6 +260,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `px`	
 
@@ -232,6 +271,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `py`	
 
@@ -240,6 +282,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `m`	
 
@@ -248,6 +293,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `mt`	
 
@@ -256,6 +304,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `mr`	
 
@@ -264,6 +315,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `mb`	
 
@@ -272,6 +326,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `ml`	
 
@@ -280,6 +337,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `mx`	
 
@@ -288,6 +348,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `my`	
 
@@ -296,6 +359,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | string, number or array |  none   |	
+<br/>
+
+
 
 ### `fontSize`	
 
@@ -304,6 +370,9 @@ The list of all elementary styling props.
 | Type                                                                                                                          | Default   |	
 | ----------------------------------------------------------------------------------------------------------------------------- | :-------: |	
 | oneOf(medium, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, initial, inherit), string, number or array |  medium   |	
+<br/>
+
+
 
 ### `color`	
 
@@ -320,6 +389,9 @@ The list of all elementary styling props.
 | Type            | Default           |	
 | --------------- | :---------------: |	
 | string or array | *not specified*   |	
+<br/>
+
+
 
 ### `fontFamily`	
 
@@ -328,6 +400,9 @@ The list of all elementary styling props.
 | Type                    | Default |	
 | ----------------------- | :-----: |	
 | oneOf(medium, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, initial, inherit), string, or array |  *depends on the browser*   |	
+<br/>
+
+
 
 ### `fontWeight`	
 
@@ -336,6 +411,10 @@ The list of all elementary styling props.
 | Type                                                                                                          | Default   |	
 | ------------------------------------------------------------------------------------------------------------- | :-------: |	
 | oneOf(normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, initial, inherit), or array |  normal   |	
+<br/>
+
+
+
 ### `textAlign`	
 
  This CSS property specifies the horizontal alignment of text in an element.
@@ -343,6 +422,9 @@ The list of all elementary styling props.
 | Type                                                            | Default           |	
 | --------------------------------------------------------------- | :---------------: |	
 | oneOf(left, right, center, justify, initial, inherit), or array |  left *or* right  |	
+<br/>
+
+
 
 ### `lineHeight`	
 
@@ -352,6 +434,9 @@ The list of all elementary styling props.
 | Type                       | Default  |	
 | -------------------------- | :------: |	
 | "normal", string, or array |  normal  |	
+<br/>
+
+
 
 ### `fontStyle`	
 
@@ -361,6 +446,9 @@ The list of all elementary styling props.
 | Type                                                       | Default  |	
 | ---------------------------------------------------------- | :------: |	
 | oneOf(normal, italic, oblique, initial, inherit), or array |  normal  |
+<br/>
+
+
 
 ### `letterSpacing`	
 
@@ -370,6 +458,9 @@ The list of all elementary styling props.
 | Type                                              | Default  |	
 | ------------------------------------------------- | :------: |	
 | oneOf(normal, initial, inherit), string, or array |  normal  |
+<br/>
+
+
 
 
 ### `alignItems`	
@@ -379,6 +470,9 @@ The list of all elementary styling props.
 | Type                                                                              | Default |	
 | --------------------------------------------------------------------------------- | :-----: |	
 | oneOf(stretch, center, flex-start, flex-end, baseline, initial, inherit) or array | stretch |	
+<br/>
+
+
 
 ### `alignContent`	
 
@@ -387,6 +481,9 @@ The list of all elementary styling props.
 | Type                                                                                                 | Default |	
 | ---------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(stretch, center, flex-start, flex-end, space-between, space-around, initial, inherit) or array | stretch |	
+<br/>
+
+
 
 ### `justifyItems`	
 
@@ -395,6 +492,9 @@ The list of all elementary styling props.
 | Type                                                                                                                                                                                                                                                       | Default |	
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  none   |	
+<br/>
+
+
 
 ### `justifyContent`	
 
@@ -403,6 +503,9 @@ The list of all elementary styling props.
 | Type                                                                                        |  Default   |	
 | ------------------------------------------------------------------------------------------- | :--------: |	
 | oneOf(flex-start, flex-end, center, space-between, space-around, initial, inherit) or array | flex-start |	
+<br/>
+
+
 
 ### `flexWrap`	
 
@@ -411,6 +514,9 @@ The list of all elementary styling props.
 | Type                                                         | Default |	
 | ------------------------------------------------------------ | :-----: |	
 | oneOf(nowrap, wrap, wrap-reverse, initial, inherit) or array | nowrap  |	
+<br/>
+
+
 
 ### `flexBasis`	
 
@@ -419,6 +525,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | number or array |    0    |	
+<br/>
+
+
 
 ### `flexDirection`	
 
@@ -427,6 +536,9 @@ The list of all elementary styling props.
 | Type                                                                       | Default |	
 | -------------------------------------------------------------------------- | :-----: |	
 | oneOf(row, row-reverse, column, column-reverse, initial, inherit) or array |   row   |	
+<br/>
+
+
 
 ### `flex`	
 
@@ -435,6 +547,9 @@ The list of all elementary styling props.
 | Type            | Default  |	
 | --------------- | :------: |	
 | string or array | 0 1 auto |	
+<br/>
+
+
 
 ### `order`	
 
@@ -443,6 +558,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | number or array |    0    |	
+<br/>
+
+
 
 ### `justifySelf`	
 
@@ -451,6 +569,9 @@ The list of all elementary styling props.
 | Type                                                                                                                                                                                                                                                       | Default |	
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  auto   |	
+<br/>
+
+
 
 ### `alignSelf`	
 
@@ -459,6 +580,9 @@ The list of all elementary styling props.
 | Type                                                                                                                                                                                                                                                       | Default |	
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  auto   |	
+<br/>
+
+
 
 ### `gridGap`	
 
@@ -473,6 +597,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array | normal  |	
+<br/>
+
+
 
 ### `gridColumnGap`	
 
@@ -481,6 +608,9 @@ The list of all elementary styling props.
 | Type                                                   | Default |	
 | ------------------------------------------------------ | :-----: |	
 | oneOf(normal, inherit, initial, unset) string or array | normal  |	
+<br/>
+
+
 
 ### `gridRowGap`	
 
@@ -489,6 +619,9 @@ The list of all elementary styling props.
 | Type                                                   | Default |	
 | ------------------------------------------------------ | :-----: |	
 | oneOf(normal, inherit, initial, unset) string or array | normal  |	
+<br/>
+
+
 
 ### `gridColumn`	
 
@@ -498,6 +631,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `gridRow`	
 
@@ -507,6 +643,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `gridAutoFlow`	
 
@@ -514,7 +653,10 @@ The list of all elementary styling props.
 
 | Type                                                                                 | Default |	
 | ------------------------------------------------------------------------------------ | :-----: |	
-| oneOf(row, column, dense, row dense, column dense, inherit, initial, unset) or array |   row   |	
+| oneOf(row, column, dense, row dense, column dense, inherit, initial, unset) or array |   row   |<br/>
+
+
+
 
 ### `gridAutoColumns`	
 
@@ -524,6 +666,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `gridAutoRows`	
 
@@ -533,6 +678,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `gridTemplateColumns`	
 
@@ -542,6 +690,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  none   |	
+<br/>
+
+
 
 ### `gridTemplateRows`	
 
@@ -551,6 +702,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  none   |	
+<br/>
+
+
 
 ### `gridTemplateAreas`	
 
@@ -560,6 +714,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  none   |	
+<br/>
+
+
 
 ### `gridArea`	
 
@@ -569,6 +726,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `bg`	
 
@@ -577,6 +737,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  none   |	
+<br/>
+
+
 
 ### `background`	
 
@@ -587,6 +750,9 @@ The list of all elementary styling props.
 | Type            |  Default   |	
 | --------------- | :--------: |	
 | string or array | individual |	
+<br/>
+
+
 
 ### `backgroundImage`	
 
@@ -597,6 +763,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  none   |	
+<br/>
+
+
 
 ### `backgroundSize`	
 
@@ -612,6 +781,9 @@ The list of all elementary styling props.
 | Type                                                           | Default |	
 | -------------------------------------------------------------- | :-----: |	
 | oneOf(auto, cover, contain, initial, inherit), string or array |  auto   |	
+<br/>
+
+
 
 ### `backgroundPosition`	
 
@@ -626,6 +798,9 @@ The list of all elementary styling props.
 | Type                                                                                                                                        | Default |	
 | ------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
 | oneOf(left top, left center, left bottom, right top, right center, right bottom, center top, center center, center bottom), string or array |  0% 0%  |	
+<br/>
+
+
 
 ### `backgroundRepeat`	
 
@@ -633,7 +808,10 @@ The list of all elementary styling props.
 
 | Type                                                                                  | Default |	
 | ------------------------------------------------------------------------------------- | :-----: |	
-| oneOf(repeat, repeat-x, repeat-y, no-repeat, space, round, initial, inherit) or array | repeat  |	
+| oneOf(repeat, repeat-x, repeat-y, no-repeat, space, round, initial, inherit) or array | repeat  |<br/>
+
+
+
 
 ### `border`	
 
@@ -642,6 +820,9 @@ The list of all elementary styling props.
 | Type            |      Default      |	
 | --------------- | :---------------: |	
 | string or array | medium none color |	
+<br/>
+
+
 
 ### `borderTop`	
 
@@ -650,6 +831,9 @@ The list of all elementary styling props.
 | Type            |      Default      |	
 | --------------- | :---------------: |	
 | string or array | medium none color |	
+<br/>
+
+
 
 ### `borderRight`	
 
@@ -658,6 +842,9 @@ The list of all elementary styling props.
 | Type            |      Default      |	
 | --------------- | :---------------: |	
 | string or array | medium none color |	
+<br/>
+
+
 
 ### `borderBottom`	
 
@@ -666,6 +853,9 @@ The list of all elementary styling props.
 | Type            |      Default      |	
 | --------------- | :---------------: |	
 | string or array | medium none color |	
+<br/>
+
+
 
 ### `borderLeft`	
 
@@ -674,6 +864,9 @@ The list of all elementary styling props.
 | Type            |      Default      |	
 | --------------- | :---------------: |	
 | string or array | medium none color |	
+<br/>
+
+
 
 ### `borderColor`	
 
@@ -689,6 +882,9 @@ The list of all elementary styling props.
 | Type                                                  | Default |	
 | ----------------------------------------------------- | :-----: |	
 | oneOf(transparent, initial, inherit), string or array |  none   |	
+<br/>
+
+
 
 ### `borderRadius`	
 
@@ -704,6 +900,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |    0    |	
+<br/>
+
+
 
 ### `opacity`	
 
@@ -712,6 +911,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | number or array |    1    |	
+<br/>
+
+
 
 ### `boxShadow`	
 
@@ -722,6 +924,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  none   |	
+<br/>
+
+
 
 ### `overflow`	
 
@@ -730,6 +935,9 @@ The list of all elementary styling props.
 | Type                                                            | Default |	
 | --------------------------------------------------------------- | :-----: |	
 | oneOf(visible, hidden, scroll, auto, initial, inherit) or array | visible |	
+<br/>
+
+
 
 ### `position`	
 
@@ -738,6 +946,9 @@ The list of all elementary styling props.
 | Type                                                                        | Default |	
 | --------------------------------------------------------------------------- | :-----: |	
 | oneOf(static, absolute, fixed, relative, sticky, initial, inherit) or array | static  |	
+<br/>
+
+
 
 ### `top`	
 
@@ -752,6 +963,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `right`	
 
@@ -766,6 +980,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `bottom`	
 
@@ -780,6 +997,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `left`	
 
@@ -794,6 +1014,9 @@ The list of all elementary styling props.
 | Type            | Default |	
 | --------------- | :-----: |	
 | string or array |  auto   |	
+<br/>
+
+
 
 ### `zIndex`	
 
