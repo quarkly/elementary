@@ -10,7 +10,7 @@ export const isTemplate = arg => isArray(arg);
 
 export const makeComponent = (styled, tag, styles, config, other) => {
   const [rules, propTypes] = bootstrap(styles, config);
-  let Component = styled(clearProps(tag, config))(...rules, ...other);
+  let Component = styled(clearProps(tag, config))(...other, ...rules);
   if (config.normalize) {
     Component = normalize(Component);
   }
