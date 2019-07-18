@@ -122,20 +122,41 @@ The list of all elementary styling props.
  This CSS property specifies the display behavior (the type of rendering box) of an element.	
 
 | Type                                                          | Default |	
-| ------------------------------------------------------------- | :-----: |	
+| ------------------------------------------------------------- | :----- |	
 | oneOf(inline, block, inline-block, flex, grid, none) or array |  block  |	
 <br/>
 
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "inline"                                                      |  Simple value  |	
+| ["block", "block", "inline", "inline", "inline"]              |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 ### `height`	
 
  This CSS property sets the height of an element. The height of an element does not include padding, borders, or margins.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :-----  |	
 | string, number or array |  auto   |	
 <br/>
 
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| "auto"                                                        |  The browser calculates the height  |	
+| 1/2                                                           |  Value in fractions of the parent container  |	
+| [1, 1/2, 2/3, 2/3, 1/3]                                       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `minHeight`	
@@ -143,8 +164,24 @@ The list of all elementary styling props.
  This CSS property defines the minimum height of an element.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |    0    |	
+<br/>
+
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| 1/2                                                           |  Value in fractions of the parent container  |	
+| [1, 1/2, 2/3, 2/3, 1/3]                                       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -154,8 +191,24 @@ The list of all elementary styling props.
  This CSS property defines the maximum height of an element.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
+<br/>
+
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| 1/2                                                           |  Value in fractions of the parent container  |	
+| [1, 1/2, 2/3, 2/3, 1/3]                                       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -165,8 +218,25 @@ The list of all elementary styling props.
  This CSS property sets the width of an element. The width of an element does not include padding, borders, or margins.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  auto   |	
+<br/>
+
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| "auto"                                                        |  The browser calculates the width  |	
+| 1/2                                                           |  Value in fractions of the parent container  |	
+| [1, 1/2, 2/3, 2/3, 1/3]                                       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -176,8 +246,24 @@ The list of all elementary styling props.
  This CSS property defines the minimum width of an element.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |    0    |	
+<br/>
+
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| 1/2                                                           |  Value in fractions of the parent container  |	
+| [1, 1/2, 2/3, 2/3, 1/3]                                       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -186,8 +272,24 @@ The list of all elementary styling props.
  This CSS property defines the maximum width of an element.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
+<br/>
+
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| 1/2                                                           |  Value in fractions of the parent container  |	
+| [1, 1/2, 2/3, 2/3, 1/3]                                       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -196,8 +298,24 @@ The list of all elementary styling props.
  This property defines both are "width" and "height" CSS properties.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  none   |	
+<br/>
+
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| 1/2                                                           |  Value in fractions of the parent container  |	
+| [1, 1/2, 2/3, 2/3, 1/3]                                       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -206,40 +324,91 @@ The list of all elementary styling props.
  This CSS property sets the vertical alignment of an element.	
 
 | Type                                                        | Default  |	
-| ----------------------------------------------------------- | :------: |	
+| ----------------------------------------------------------- | :------- |	
 | oneOf(baseline, text-top, text-bottom, sub, super) or array | baseline |	
 <br/>
 
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "baseline"                                                      |  Simple value  |	
+| ["baseline", "baseline", "text-top", "text-top", "text-top"]              |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 ### `p`	
 
  The shorthand of the "padding" CSS property. Are used to generate space around an element's content, inside of any defined borders.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
 
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+| "100px, 200px, 300px, 400px"                                  |  The four-value syntax separately: first for top padding, second for right padding, third for bottom padding, fourth for left padding |	
+| "100px, 200px, 300px"                                         |  The three-value syntax separately: first for top padding, second for right and left paddings, third for bottom padding |	
+| "100px, 200px"                                         |  The two-value syntax separately: first for top and bottom paddings, second for right and left paddings|
+<br/>
 
 ### `pt`	
 
  The shorthand of the "padding-top" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 ### `pr`	
 
  The shorthand of the "padding-right" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `pb`	
@@ -247,10 +416,24 @@ The list of all elementary styling props.
  The shorthand of the "padding-bottom" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `pl`	
@@ -258,10 +441,24 @@ The list of all elementary styling props.
  The shorthand of the "padding-left" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `px`	
@@ -269,10 +466,24 @@ The list of all elementary styling props.
  Both are "padding-right" and "padding-left" (x-asix) CSS properties.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `py`	
@@ -280,10 +491,24 @@ The list of all elementary styling props.
  This property defines both are "padding-top" and "padding-bottom" (y-asix) CSS properties.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `m`	
@@ -291,10 +516,27 @@ The list of all elementary styling props.
  The shorthand of the "margin" CSS property. Are used to sets the margins for an element, outside of any defined borders.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+| "100px, 200px, 300px, 400px"                                  |  The four-value syntax separately: first for top margin, second for  right margin, third for bottom margin, fourth for left margin |	
+| "100px, 200px, 300px"                                         |  The three-value syntax separately: first for top margin, second for  right and left margins, third for bottom margin |	
+| "100px, 200px"                                         |  The two-value syntax separately: first for top and bottom margins, second for right and left margins |
+<br/>
 
 
 ### `mt`	
@@ -302,10 +544,24 @@ The list of all elementary styling props.
  The shorthand of the "margin-top" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `mr`	
@@ -313,10 +569,24 @@ The list of all elementary styling props.
  The shorthand of the "margin-right" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `mb`	
@@ -324,10 +594,24 @@ The list of all elementary styling props.
  The shorthand of the "margin-bottom" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `ml`	
@@ -335,10 +619,24 @@ The list of all elementary styling props.
  The shorthand of the "margin-left" CSS property.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `mx`	
@@ -346,10 +644,24 @@ The list of all elementary styling props.
  This property defines both are "margin-right" and "margin-left" (x-asix) CSS properties.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `my`	
@@ -357,10 +669,24 @@ The list of all elementary styling props.
  Both are "margin-top" and "margin-bottom" (x-asix) CSS properties.	
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
+| ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "100px"                                                       |  Value in pixels                  |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/scale           |	
+| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `fontSize`	
@@ -368,10 +694,24 @@ The list of all elementary styling props.
  This CSS property sets the size of a font.	
 
 | Type                                                                                                                          | Default   |	
-| ----------------------------------------------------------------------------------------------------------------------------- | :-------: |	
+| ----------------------------------------------------------------------------------------------------------------------------- | :-------- |	
 | oneOf(medium, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, initial, inherit), string, number or array |  medium   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "medium"                                                      |  Value is a predefined name        |	
+| "40%"                                                         |  Value in persent                 |	
+| "10em"                                                        |  Value in em                      |	
+| "10rem"                                                       |  Value in rem                     |	
+| "10ch"                                                        |  Value in ch                      |	
+| "10ex"                                                        |  Value in ex                      |	
+| "10vh"                                                        |  Value in vh                      |	
+| "10vw"                                                        |  Value in vw                      |	
+| "10vmin"                                                      |  Value in vmin                    |	
+| "10vmax"                                                      |  Value in vmax                    |	
+| 5                                                             |  Value from theme/fontSizes       |	
+| ["12px", "14px", "16px", "18px", "20px"]                      |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `color`	
@@ -387,10 +727,20 @@ The list of all elementary styling props.
  - Theme variable (`primary`)
 
 | Type            | Default           |	
-| --------------- | :---------------: |	
+| --------------- | :---------------- |	
 | string or array | *not specified*   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "#0000ff"                                                     |  Value in hexadecimal colors      |	
+| "rgb(0, 0, 255)"                                              |  Value in RGB colors              |	
+| "rgba(0, 0, 255, 0.3)"                                        |  Value in RGBA colors             |	
+| "hsl(120, 100%, 25%)"                                         |  Value in HSL colors              |	
+| "hsla(120, 100%, 25%, 0.3)"                                   |  Value in ch                      |	
+| "darkblue"                                                    |  Value is a predefined name        |	
+| "primary"                                                     |  Value from theme/colors          |	
+| ["primary", "red", "rgb(0, 0, 255)", "yellow-l3", "green-d2"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `fontFamily`	
@@ -398,10 +748,17 @@ The list of all elementary styling props.
  This CSS property specifies the font for an element
 
 | Type                    | Default |	
-| ----------------------- | :-----: |	
-| oneOf(medium, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, initial, inherit), string, or array |  *depends on the browser*   |	
+| ----------------------- | :------ |	
+| string or array |  *depends on the browser*   |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "times"                                                       |  Value is the name of a font-family  |	
+| "sans-serif"                                                  |  Value is the name of a generic-family  |	
+| "'Times New Roman', Times, serif"                             |  Value are several font names as a "fallback" system. If the browser does not support the first font, it tries the next font  |	
+| "sans-heavy"                                                  |  Value from theme/fonts  |	
+| ["sans-serif", "sans-serif", "serif", "serif", "serif"]       |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `fontWeight`	
@@ -409,10 +766,15 @@ The list of all elementary styling props.
  This CSS property sets how thick or thin characters in text should be displayed.
 
 | Type                                                                                                          | Default   |	
-| ------------------------------------------------------------------------------------------------------------- | :-------: |	
+| ------------------------------------------------------------------------------------------------------------- | :-------- |	
 | oneOf(normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, initial, inherit), or array |  normal   |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "normal"                                                      |  Value is a predefined name  |	
+| 500                                                           |  Value in number of weightness  |	
+| [700, 600, 500, 400, 300]                                     |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `textAlign`	
@@ -420,8 +782,13 @@ The list of all elementary styling props.
  This CSS property specifies the horizontal alignment of text in an element.
 
 | Type                                                            | Default           |	
-| --------------------------------------------------------------- | :---------------: |	
+| --------------------------------------------------------------- | :---------------- |	
 | oneOf(left, right, center, justify, initial, inherit), or array |  left *or* right  |	
+<br/>
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "left"                                                        |  Value is a predefined name  |	
+| ["center", "center", "left", "left", "left"]                  |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -432,10 +799,25 @@ The list of all elementary styling props.
  It can be specified in number, length or percent.
 
 | Type                       | Default  |	
-| -------------------------- | :------: |	
+| -------------------------- | :------- |	
 | "normal", string, or array |  normal  |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "normal"                                                      |  Value is a predefined name  |	
+| "1.6"                                                         |  Value in numbers  |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| ["1", "1", "1.6", "2", "2"]                                   |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `fontStyle`	
@@ -444,10 +826,14 @@ The list of all elementary styling props.
  It can be specified in number, length or percent.
 
 | Type                                                       | Default  |	
-| ---------------------------------------------------------- | :------: |	
+| ---------------------------------------------------------- | :------- |	
 | oneOf(normal, italic, oblique, initial, inherit), or array |  normal  |
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "normal"                                                      |  Value is a predefined name  |	
+| ["normal", "normal", "normal", "italic", "italic"]            |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `letterSpacing`	
@@ -456,10 +842,15 @@ The list of all elementary styling props.
  It can be specified in number, length or percent.
 
 | Type                                              | Default  |	
-| ------------------------------------------------- | :------: |	
+| ------------------------------------------------- | :------- |	
 | oneOf(normal, initial, inherit), string, or array |  normal  |
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "normal"                                                      |  Value is a predefined name  |	
+| "2px"                                                         |  Value in pixels  |	
+| ["normal", "normal", "normal", "italic", "italic"]            |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 
@@ -468,10 +859,14 @@ The list of all elementary styling props.
  This CSS property specifies the default alignment for items inside the flexible container.	
 
 | Type                                                                              | Default |	
-| --------------------------------------------------------------------------------- | :-----: |	
+| --------------------------------------------------------------------------------- | :------ |	
 | oneOf(stretch, center, flex-start, flex-end, baseline, initial, inherit) or array | stretch |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "stretch"                                                      |  Value is a predefined name  |	
+| ["center", "center", "flex-start", "flex-start", "flex-start"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `alignContent`	
@@ -479,10 +874,14 @@ The list of all elementary styling props.
  This CSS property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines. There must be multiple lines of items for this property to have any effect!	
 
 | Type                                                                                                 | Default |	
-| ---------------------------------------------------------------------------------------------------- | :-----: |	
+| ---------------------------------------------------------------------------------------------------- | :------ |	
 | oneOf(stretch, center, flex-start, flex-end, space-between, space-around, initial, inherit) or array | stretch |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "stretch"                                                      |  Value is a predefined name  |	
+| ["center", "center", "flex-start", "flex-start", "flex-start"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `justifyItems`	
@@ -490,10 +889,14 @@ The list of all elementary styling props.
  This CSS property defines the default justify-self for all items of the box, giving them all a default way of justifying each box along the appropriate axis.	
 
 | Type                                                                                                                                                                                                                                                       | Default |	
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  none   |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "stretch"                                                      |  Value is a predefined name  |	
+| ["center", "center", "flex-start", "flex-start", "flex-start"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `justifyContent`	
@@ -501,10 +904,14 @@ The list of all elementary styling props.
  This CSS property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).	
 
 | Type                                                                                        |  Default   |	
-| ------------------------------------------------------------------------------------------- | :--------: |	
+| ------------------------------------------------------------------------------------------- | :--------- |	
 | oneOf(flex-start, flex-end, center, space-between, space-around, initial, inherit) or array | flex-start |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "center"                                                      |  Value is a predefined name  |	
+| ["center", "center", "flex-start", "flex-start", "flex-start"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `flexWrap`	
@@ -512,10 +919,14 @@ The list of all elementary styling props.
  This CSS property specifies whether the flexible items should wrap or not.	
 
 | Type                                                         | Default |	
-| ------------------------------------------------------------ | :-----: |	
+| ------------------------------------------------------------ | :------ |	
 | oneOf(nowrap, wrap, wrap-reverse, initial, inherit) or array | nowrap  |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "wrap"                                                      |  Value is a predefined name  |	
+| ["wrap", "wrap", "nowrap", "nowrap", "nowrap"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `flexBasis`	
@@ -523,10 +934,24 @@ The list of all elementary styling props.
  This CSS property specifies the initial length of a flexible item.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | number or array |    0    |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "1"                                                           |  Value in number  |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| ["1", "1", "2", "2", "2"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `flexDirection`	
@@ -534,10 +959,14 @@ The list of all elementary styling props.
  This CSS property specifies the direction of the flexible items.	
 
 | Type                                                                       | Default |	
-| -------------------------------------------------------------------------- | :-----: |	
+| -------------------------------------------------------------------------- | :------ |	
 | oneOf(row, row-reverse, column, column-reverse, initial, inherit) or array |   row   |	
 <br/>
-
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "row"                                                      |  Value is a predefined name  |	
+| ["column", "column", "column", "row", "row"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `flex`	
@@ -545,8 +974,14 @@ The list of all elementary styling props.
  This CSS property is a shorthand property for: flex-grow, flex-shrink, flex-basis.	
 
 | Type            | Default  |	
-| --------------- | :------: |	
+| --------------- | :------- |	
 | string or array | 0 1 auto |	
+<br/>
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "auto"                                                        |  Value is a predefined name  |	
+| "0 1 auto"                                                    |  Value is a group flex-grow flex-shrink and flex-basis values |	
+| ["1 1 auto", "1 1 auto", "1 1 auto", "auto", "auto"]                  |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -556,8 +991,13 @@ The list of all elementary styling props.
  This CSS property specifies the order of a flexible item relative to the rest of the flexible items inside the same container.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | number or array |    0    |	
+<br/>
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "0"                                                           |  Value in number  |	
+| ["0", "0", "1", "1", "1"]                                     |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -567,8 +1007,13 @@ The list of all elementary styling props.
  This CSS property set the way a box is justified inside its alignment container along the appropriate axis.	
 
 | Type                                                                                                                                                                                                                                                       | Default |	
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  auto   |	
+<br/>
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "stretch"                                                     |  Value is a predefined name  |	
+| ["stretch", "stretch", "center", "center", "center"]            |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -578,8 +1023,13 @@ The list of all elementary styling props.
  This CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.	
 
 | Type                                                                                                                                                                                                                                                       | Default |	
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |	
 | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array |  auto   |	
+<br/>
+| Examples of value                                             | Description |	
+| ------------------------------------------------------------- | :--------- |	
+| "stretch"                                                     |  Value is a predefined name  |	
+| ["stretch", "stretch", "center", "center", "center"]          |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -590,26 +1040,49 @@ The list of all elementary styling props.
 
  **Syntax**: there are three different syntaxes you can use with this property:	
 
- 1. the one-value syntax for both row and column in any CSS units ("20px", "3vmin", "100%", e.g.),	
-1. the two-value syntax separately: first row, second column in any CSS units ("20px 10px", "3vmin 2vmax", "21px 82%", e.g.),	
-2. global values (inherit, initial, unset)	
+1. the one-value syntax for both row and column in any CSS units ("20px", "3vmin", "100%", e.g.),	
+2. the two-value syntax separately: first row, second column in any CSS units ("20px 10px", "3vmin 2vmax", "21px 82%", e.g.),	
+3. global values (inherit, initial, unset)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array | normal  |	
 <br/>
-
-
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| "100px 200px"                                                 |  The two-value syntax separately: first row, second column |	
+| ["30px", "30px", "60px", "60px", "60px"]                      |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 ### `gridColumnGap`	
 
  This CSS property sets the size of the gap (gutter) between an element's columns.	
 
 | Type                                                   | Default |	
-| ------------------------------------------------------ | :-----: |	
+| ------------------------------------------------------ | :------ |	
 | oneOf(normal, inherit, initial, unset) string or array | normal  |	
 <br/>
-
+| "normal"                                                       |  Value is a predefined name   |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| ["30px", "30px", "60px", "60px", "60px"]                      |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `gridRowGap`	
@@ -617,8 +1090,21 @@ The list of all elementary styling props.
  This CSS property sets the size of the gap (gutter) between an element's grid rows.	
 
 | Type                                                   | Default |	
-| ------------------------------------------------------ | :-----: |	
+| ------------------------------------------------------ | :------ |	
 | oneOf(normal, inherit, initial, unset) string or array | normal  |	
+<br/>
+| "normal"                                                       |  Value is a predefined name   |	
+| "100px"                                                       |  Value in pixels  |	
+| "40%"                                                         |  Value in persent  |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| ["30px", "30px", "60px", "60px", "60px"]                      |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -629,10 +1115,25 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
-
+| "auto"                                                        |  Value is a predefined name |
+| "1"                                                           |  Value in number for both properties: grid-column-start and grid-column-end |
+| "2 / 4"                                                       |  The two-value syntax separately: first for grid-column-start, second for grid-column-end   |	
+| "somegridarea"                                                |  Value is a name  |	
+| "somegridarea / someothergridarea"                            |  The two-value syntax separately: first for grid-column-start, second for grid-column-end   |	
+| "4 somegridarea / 6"                                          |  The two-value syntax separately: first for grid-column-start, second for grid-column-end   |	
+| "span 3 / 6"                                                  |  Value in persent  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| ["30px", "30px", "60px", "60px", "60px"]                      |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `gridRow`	
@@ -641,7 +1142,7 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
@@ -652,7 +1153,7 @@ The list of all elementary styling props.
  This CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.	
 
 | Type                                                                                 | Default |	
-| ------------------------------------------------------------------------------------ | :-----: |	
+| ------------------------------------------------------------------------------------ | :------ |	
 | oneOf(row, column, dense, row dense, column dense, inherit, initial, unset) or array |   row   |<br/>
 
 
@@ -664,7 +1165,7 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
@@ -676,7 +1177,7 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
@@ -688,7 +1189,7 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  none   |	
 <br/>
 
@@ -700,7 +1201,7 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  none   |	
 <br/>
 
@@ -712,7 +1213,7 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  none   |	
 <br/>
 
@@ -724,19 +1225,30 @@ The list of all elementary styling props.
 [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area)	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
 
 
-### `bg`	
+### `bgс`	
 
  The shorthand of the "background-color" CSS property.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  none   |	
+<br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "#0000ff"                                                     |  Value in hexadecimal colors      |	
+| "rgb(0, 0, 255)"                                              |  Value in RGB colors              |	
+| "rgba(0, 0, 255, 0.3)"                                        |  Value in RGBA colors             |	
+| "hsl(120, 100%, 25%)"                                         |  Value in HSL colors              |	
+| "hsla(120, 100%, 25%, 0.3)"                                   |  Value in ch                      |	
+| "darkblue"                                                    |  Value is a predefined name        |	
+| "primary"                                                     |  Value from theme/colors          |	
+| ["primary", "red", "rgb(0, 0, 255)", "yellow-l3", "green-d2"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -748,8 +1260,12 @@ The list of all elementary styling props.
  **Syntax**: background="bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment"	
 
 | Type            |  Default   |	
-| --------------- | :--------: |	
+| --------------- | :--------- |	
 | string or array | individual |	
+<br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "lightblue url('image.jpg') center center cover no-repeat padding-box content-box fixed"           |  Value is a group of values for properties in order: background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment      |	
 <br/>
 
 
@@ -761,8 +1277,13 @@ The list of all elementary styling props.
  **Syntax**: backgroundColor="url(firstImage.png), url(secondImage.png)"	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  none   |	
+<br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "url(image1.jpg), url(image2.jpg)"                            |  Value is the two image URLs       |	
+| ["url(image1.jpg)", "url(image2.jpg)", "url(image3.jpg)", "url(image4.jpg)", "url(image5.jpg)"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
 <br/>
 
 
@@ -774,15 +1295,30 @@ The list of all elementary styling props.
  **Syntax**: there are four different syntaxes you can use with this property:	
 
  1. the keyword syntax ("auto", "cover" and "contain"),	
-2. the one-value syntax (sets the width of the image (height becomes "auto"),	
-3. the two-value syntax (first value: width of the image, second value: height),	
-4. the multiple background syntax (separated with comma).	
+1. the one-value syntax (sets the width of the image (height becomes "auto"),	
+2. the two-value syntax (first value: width of the image, second value: height),	
+3. the multiple background syntax (separated with comma).	
 
 | Type                                                           | Default |	
-| -------------------------------------------------------------- | :-----: |	
+| -------------------------------------------------------------- | :------ |	
 | oneOf(auto, cover, contain, initial, inherit), string or array |  auto   |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "auto"                                                        |  Value is a predefined name       |	
+| "100px"                                                       |  Value in pixels  |	
+| "50%"                                                         |  Value in percentage       |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| "10px 150px"                                                  |  The two-value syntax separately: first for width, second for height |
+| ["cover", "cover", "cover", "contain", "contain"]              |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `backgroundPosition`	
@@ -791,15 +1327,21 @@ The list of all elementary styling props.
 
  **Syntax**: there are three different syntaxes you can use with this property:	
 
- 1. the keyword syntax ("left top", "left center", e.g.),	
+1. the keyword syntax ("left top", "left center", e.g.),	
 2. the two-value syntax in persent (the first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%),	
 3. the two-value syntax in any CSS units(the first value is the horizontal position and the second value is the vertical. The top left corner is 0 0).	
 
 | Type                                                                                                                                        | Default |	
-| ------------------------------------------------------------------------------------------------------------------------------------------- | :-----: |	
+| ------------------------------------------------------------------------------------------------------------------------------------------- | :------ |	
 | oneOf(left top, left center, left bottom, right top, right center, right bottom, center top, center center, center bottom), string or array |  0% 0%  |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "left top"                                |  The two-value syntax in predefined names separately: first for horizontal, second for vertical       |	
+| "25% 75%"                                 |  The two-value syntax in percentages separately: first for horizontal, second for vertical       |	
+| "50px 150px"                                 |  The two-value syntax in pixels separately: first for horizontal, second for vertical       |	
+| ["left top", "left top", "left top", "center", "center"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 ### `backgroundRepeat`	
@@ -807,9 +1349,14 @@ The list of all elementary styling props.
  This CSS property sets if/how a background image will be repeated.	
 
 | Type                                                                                  | Default |	
-| ------------------------------------------------------------------------------------- | :-----: |	
-| oneOf(repeat, repeat-x, repeat-y, no-repeat, space, round, initial, inherit) or array | repeat  |<br/>
-
+| ------------------------------------------------------------------------------------- | :------ |	
+| oneOf(repeat, repeat-x, repeat-y, no-repeat, space, round, initial, inherit) or array | repeat  |
+<br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "repeat"                                                      |  Value is a predefined name       |	
+| ["repeat", "repeat-x", "no-repeat", "space", "round"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+<br/>
 
 
 
@@ -818,7 +1365,7 @@ The list of all elementary styling props.
  It is a shorthand property for: border-width, border-style (required), border-color.	
 
 | Type            |      Default      |	
-| --------------- | :---------------: |	
+| --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
 
@@ -829,7 +1376,7 @@ The list of all elementary styling props.
  It is a shorthand property sets all the top border properties in one declaration. The properties that can be set must be in the following order: border-top-width, border-top-style (required), border-top-color.	
 
 | Type            |      Default      |	
-| --------------- | :---------------: |	
+| --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
 
@@ -840,7 +1387,7 @@ The list of all elementary styling props.
  It is a shorthand property sets all the right border properties in one declaration. The properties that can be set must be in the following order: border-right-width, border-right-style (required), border-right-color.	
 
 | Type            |      Default      |	
-| --------------- | :---------------: |	
+| --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
 
@@ -851,7 +1398,7 @@ The list of all elementary styling props.
  It is a shorthand property sets all the bottom border properties in one declaration. The properties that can be set must be in the following order: border-bottom-width, border-bottom-style (required), border-bottom-color.	
 
 | Type            |      Default      |	
-| --------------- | :---------------: |	
+| --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
 
@@ -862,7 +1409,7 @@ The list of all elementary styling props.
  It is a shorthand property sets all the left border properties in one declaration. The properties that can be set must be in the following order: border-left-width, border-left-style (required), border-left-color.	
 
 | Type            |      Default      |	
-| --------------- | :---------------: |	
+| --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
 
@@ -875,12 +1422,12 @@ The list of all elementary styling props.
  **Syntax**: there are four different syntaxes you can use with this property:	
 
  1. the one-value syntax (the value applies to all four borders),	
-2. the two-value syntax (first value applies to top and bottom, and the second value applies to right and left borders),	
-3. the three-value syntax (first value applies to top, second value applies to right and left, and third value applies to bottom border),	
-4. the four-value syntax (first value applies to top, second value applies to right, third value applies to bottom, and fourth value applies to left border).	
+1. the two-value syntax (first value applies to top and bottom, and the second value applies to right and left borders),	
+2. the three-value syntax (first value applies to top, second value applies to right and left, and third value applies to bottom border),	
+3. the four-value syntax (first value applies to top, second value applies to right, third value applies to bottom, and fourth value applies to left border).	
 
 | Type                                                  | Default |	
-| ----------------------------------------------------- | :-----: |	
+| ----------------------------------------------------- | :------ |	
 | oneOf(transparent, initial, inherit), string or array |  none   |	
 <br/>
 
@@ -898,7 +1445,7 @@ The list of all elementary styling props.
 4. the four-value syntax (first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner).	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |    0    |	
 <br/>
 
@@ -909,7 +1456,7 @@ The list of all elementary styling props.
  This CSS property sets the opacity level for an element.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | number or array |    1    |	
 <br/>
 
@@ -922,7 +1469,7 @@ The list of all elementary styling props.
  **Syntax**: boxShadow="h-offset v-offset blur spread color"	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  none   |	
 <br/>
 
@@ -933,7 +1480,7 @@ The list of all elementary styling props.
  This CSS property specifies what should happen if content overflows an element's box.	
 
 | Type                                                            | Default |	
-| --------------------------------------------------------------- | :-----: |	
+| --------------------------------------------------------------- | :------ |	
 | oneOf(visible, hidden, scroll, auto, initial, inherit) or array | visible |	
 <br/>
 
@@ -944,7 +1491,7 @@ The list of all elementary styling props.
  This CSS property specifies the type of positioning method used for an element.	
 
 | Type                                                                        | Default |	
-| --------------------------------------------------------------------------- | :-----: |	
+| --------------------------------------------------------------------------- | :------ |	
 | oneOf(static, absolute, fixed, relative, sticky, initial, inherit) or array | static  |	
 <br/>
 
@@ -961,7 +1508,7 @@ The list of all elementary styling props.
 3. If position="sticky" - the top property behaves like its position is relative when the element is inside the viewport, and like its position is fixed when it is outside.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
@@ -978,7 +1525,7 @@ The list of all elementary styling props.
 3. If position="sticky" - the right property behaves like its position is relative when the element is inside the viewport, and like its position is fixed when it is outside.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
@@ -995,7 +1542,7 @@ The list of all elementary styling props.
 3. If position="sticky" - the bottom property behaves like its position is relative when the element is inside the viewport, and like its position is fixed when it is outside.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
@@ -1012,7 +1559,7 @@ The list of all elementary styling props.
 3. If position="sticky" - the left property behaves like its position is relative when the element is inside the viewport, and like its position is fixed when it is outside.	
 
 | Type            | Default |	
-| --------------- | :-----: |	
+| --------------- | :------ |	
 | string or array |  auto   |	
 <br/>
 
@@ -1023,5 +1570,5 @@ The list of all elementary styling props.
  This CSS property specifies the stack order of an element. Works on positioned elements (position="absolute", position="relative", position="fixed", or position="sticky").	
 
 | Type                                           | Default |	
-| ---------------------------------------------- | :-----: |	
+| ---------------------------------------------- | :------ |	
 | oneOf(auto, initial, inherit), number or array |  auto   |
