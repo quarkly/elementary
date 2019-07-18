@@ -1368,6 +1368,11 @@ The list of all elementary styling props.
 | --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "2px solid blue"                                              |  The three-value syntax separately: first for border-width, second for border-style, third for border-color        |	
+| ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
+<br/>
 
 
 
@@ -1379,7 +1384,11 @@ The list of all elementary styling props.
 | --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "2px solid blue"                                              |  The three-value syntax separately: first for border-top-width, second for border-top-style, third for border-top-color        |	
+| ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
+<br/>
 
 
 ### `borderRight`	
@@ -1389,6 +1398,11 @@ The list of all elementary styling props.
 | Type            |      Default      |	
 | --------------- | :---------------- |	
 | string or array | medium none color |	
+<br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "2px solid blue"                                              |  The three-value syntax separately: first for border-right-width, second for border-right-style, third for border-right-color        |	
+| ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
 <br/>
 
 
@@ -1401,6 +1415,11 @@ The list of all elementary styling props.
 | --------------- | :---------------- |	
 | string or array | medium none color |	
 <br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "2px solid blue"                                              |  The three-value syntax separately: first for border-bottom-width, second for border-bottom-style, third for border-bottom-color        |	
+| ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
+<br/>
 
 
 
@@ -1411,6 +1430,11 @@ The list of all elementary styling props.
 | Type            |      Default      |	
 | --------------- | :---------------- |	
 | string or array | medium none color |	
+<br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "2px solid blue"                                              |  The three-value syntax separately: first for border-left-width, second for border-left-style, third for border-left-color        |	
+| ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
 <br/>
 
 
@@ -1430,6 +1454,14 @@ The list of all elementary styling props.
 | ----------------------------------------------------- | :------ |	
 | oneOf(transparent, initial, inherit), string or array |  none   |	
 <br/>
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "blue"                                                        |  The one-value syntax for all four borders |	
+| "blue green"                                                  |  The two-value syntax separately: first for top and bottom borders, second for left and right borders |	
+| "blue green yellow"                                           |  The three-value syntax separately: first for top border, second for left and right borders, third for bottom border |	
+| "blue green yellow orange"                                    |  The four-value syntax separately: first for top border, second for right border, third for bottom border, fourth for left border |	
+| ["blue", "black", "green", "yellow", "red"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
+<br/>
 
 
 
@@ -1448,7 +1480,23 @@ The list of all elementary styling props.
 | --------------- | :------ |	
 | string or array |    0    |	
 <br/>
-
+| Examples of value                                             | Description                       |	
+| ------------------------------------------------------------- | :---------                        |	
+| "10px"                                                       |  The one-value syntax in pixels for all four corners  |	
+| "50%"                                                         |  Value in percentage       |	
+| "10em"                                                        |  Value in em  |	
+| "10rem"                                                       |  Value in rem  |	
+| "10ch"                                                        |  Value in ch  |	
+| "10ex"                                                        |  Value in ex  |	
+| "10vh"                                                        |  Value in vh  |	
+| "10vw"                                                        |  Value in vw  |	
+| "10vmin"                                                      |  Value in vmin  |	
+| "10vmax"                                                      |  Value in vmax  |	
+| "10px 150px"                                                  |  The two-value syntax separately: first for top-left and bottom-right corners, second for top-right and bottom-left corners |
+| "10px 150px 200px"                                            |  The three-value syntax separately: first for top-left corner, second for top-right and bottom-left corners, third for bottom-right corner  |
+| "10px 150px 200px 50px"                                       |  The fourth-value syntax separately: first for top-left corner, second for top-right corner, third for bottom-left corner, fourth for bottom-right corner |
+| ["3px", "5px", "10px", "20px", "30px"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
+<br/>
 
 
 ### `opacity`	
