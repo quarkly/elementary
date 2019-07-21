@@ -1193,8 +1193,23 @@
   <br/>
 
 
+  ### `background`	
 
-  ### `bgс`	
+  That's a shorthand property for background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment.	
+
+  **Syntax**: background="bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment"	
+
+  |      Type       |  Default   |
+  | --------------- | :--------- |
+  | string or array | individual |
+  <br/>
+
+  |                                    Examples of value                                     |                                                                                                Description                                                                                                 |
+  | ---------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | "lightblue url('image.jpg') center center cover no-repeat padding-box content-box fixed" | Value is a group of values for properties in order: background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment |
+  <br/>
+
+  ### `bgc`	
 
   The shorthand of the "background-color" CSS property.	
 
@@ -1213,24 +1228,6 @@
   | "darkblue"                                                    | Value is a predefined name                                  |
   | "primary"                                                     | Value from theme/colors                                     |
   | ["primary", "red", "rgb(0, 0, 255)", "yellow-l3", "green-d2"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
-  <br/>
-
-
-
-  ### `background`	
-
-  That's a shorthand property for background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment.	
-
-  **Syntax**: background="bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment"	
-
-  |      Type       |  Default   |
-  | --------------- | :--------- |
-  | string or array | individual |
-  <br/>
-
-  |                                    Examples of value                                     |                                                                                                Description                                                                                                 |
-  | ---------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | "lightblue url('image.jpg') center center cover no-repeat padding-box content-box fixed" | Value is a group of values for properties in order: background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment |
   <br/>
 
 
