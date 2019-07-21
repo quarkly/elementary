@@ -144,7 +144,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description |	
 | ------------------------------------------------------------- | :--------- |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -171,7 +171,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description |	
 | ------------------------------------------------------------- | :--------- |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -198,7 +198,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description |	
 | ------------------------------------------------------------- | :--------- |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -225,7 +225,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description |	
 | ------------------------------------------------------------- | :--------- |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -253,7 +253,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description |	
 | ------------------------------------------------------------- | :--------- |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -279,7 +279,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description |	
 | ------------------------------------------------------------- | :--------- |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -305,7 +305,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description |	
 | ------------------------------------------------------------- | :--------- |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -343,23 +343,23 @@ The list of all elementary styling props.
 | string, number or array |  none   |	
 <br/>
 
-| Examples of value                                             | Description                       |	
-| ------------------------------------------------------------- | :---------                        |	
-| "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
-| "10em"                                                        |  Value in em                      |	
-| "10rem"                                                       |  Value in rem                     |	
-| "10ch"                                                        |  Value in ch                      |	
-| "10ex"                                                        |  Value in ex                      |	
-| "10vh"                                                        |  Value in vh                      |	
-| "10vw"                                                        |  Value in vw                      |	
-| "10vmin"                                                      |  Value in vmin                    |	
-| "10vmax"                                                      |  Value in vmax                    |	
-| 5                                                             |  Value from theme/scale           |	
-| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
-| "100px, 200px, 300px, 400px"                                  |  The four-value syntax separately: first for top padding, second for right padding, third for bottom padding, fourth for left padding |	
-| "100px, 200px, 300px"                                         |  The three-value syntax separately: first for top padding, second for right and left paddings, third for bottom padding |	
-| "100px, 200px"                                         |  The two-value syntax separately: first for top and bottom paddings, second for right and left paddings|
+|      Examples of value       |                                                             Description                                                              |
+| ---------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| "100px"                      | Value in pixels                                                                                                                      |
+| "40%"                        | Percentage value                                                                                                                     |
+| "10em"                       | Value in em                                                                                                                          |
+| "10rem"                      | Value in rem                                                                                                                         |
+| "10ch"                       | Value in ch                                                                                                                          |
+| "10ex"                       | Value in ex                                                                                                                          |
+| "10vh"                       | Value in vh                                                                                                                          |
+| "10vw"                       | Value in vw                                                                                                                          |
+| "10vmin"                     | Value in vmin                                                                                                                        |
+| "10vmax"                     | Value in vmax                                                                                                                        |
+| 5                            | Value from theme/scale                                                                                                               |
+| [5, 5, 6, 6, 6]              | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                          |
+| "100px, 200px, 300px, 400px" | The four-value syntax separately: first for top padding, second for right padding, third for bottom padding, fourth for left padding |
+| "100px, 200px, 300px"        | The three-value syntax separately: first for top padding, second for right and left paddings, third for bottom padding               |
+| "100px, 200px"               | The two-value syntax separately: first for top and bottom paddings, second for right and left paddings                               |
 <br/>
 
 ### `pt`	
@@ -370,20 +370,21 @@ The list of all elementary styling props.
 | ----------------------- | :------ |	
 | string, number or array |  none   |	
 <br/>
-| Examples of value                                             | Description                       |	
-| ------------------------------------------------------------- | :---------                        |	
-| "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
-| "10em"                                                        |  Value in em                      |	
-| "10rem"                                                       |  Value in rem                     |	
-| "10ch"                                                        |  Value in ch                      |	
-| "10ex"                                                        |  Value in ex                      |	
-| "10vh"                                                        |  Value in vh                      |	
-| "10vw"                                                        |  Value in vw                      |	
-| "10vmin"                                                      |  Value in vmin                    |	
-| "10vmax"                                                      |  Value in vmax                    |	
-| 5                                                             |  Value from theme/scale           |	
-| [5, 5, 6, 6, 6]                                               |  Value for diffenent breakpoints (sets in theme/breakpoints)  |	
+
+| Examples of value |                         Description                         |
+| ----------------- | :---------------------------------------------------------- |
+| "100px"           | Value in pixels                                             |
+| "40%"             | Percentage value                                            |
+| "10em"            | Value in em                                                 |
+| "10rem"           | Value in rem                                                |
+| "10ch"            | Value in ch                                                 |
+| "10ex"            | Value in ex                                                 |
+| "10vh"            | Value in vh                                                 |
+| "10vw"            | Value in vw                                                 |
+| "10vmin"          | Value in vmin                                               |
+| "10vmax"          | Value in vmax                                               |
+| 5                 | Value from theme/scale                                      |
+| [5, 5, 6, 6, 6]   | Value for diffenent breakpoints (sets in theme/breakpoints) |
 <br/>
 
 ### `pr`	
@@ -397,7 +398,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -422,7 +423,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -447,7 +448,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -472,7 +473,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -497,7 +498,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -522,7 +523,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -550,7 +551,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -575,7 +576,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -600,7 +601,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -625,7 +626,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -650,7 +651,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -675,7 +676,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "100px"                                                       |  Value in pixels                  |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -700,7 +701,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "medium"                                                      |  Value is a predefined name        |	
-| "40%"                                                         |  Value in persent                 |	
+| "40%"                                                         |  Percentage value                 |	
 | "10em"                                                        |  Value in em                      |	
 | "10rem"                                                       |  Value in rem                     |	
 | "10ch"                                                        |  Value in ch                      |	
@@ -796,7 +797,7 @@ The list of all elementary styling props.
 ### `lineHeight`	
 
  This CSS property specifies the height of a line.
- It can be specified in number, length or percent.
+ It can be specified in number, length or percentage.
 
 | Type                       | Default  |	
 | -------------------------- | :------- |	
@@ -807,7 +808,7 @@ The list of all elementary styling props.
 | "normal"                                                      |  Value is a predefined name  |	
 | "1.6"                                                         |  Value in numbers  |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -823,7 +824,7 @@ The list of all elementary styling props.
 ### `fontStyle`	
 
  This CSS property specifies the font style for a text.
- It can be specified in number, length or percent.
+ It can be specified in number, length or percentage.
 
 | Type                                                       | Default  |	
 | ---------------------------------------------------------- | :------- |	
@@ -839,7 +840,7 @@ The list of all elementary styling props.
 ### `letterSpacing`	
 
  This CSS property increases or decreases the space between characters in a text.
- It can be specified in number, length or percent.
+ It can be specified in number, length or percentage.
 
 | Type                                              | Default  |	
 | ------------------------------------------------- | :------- |	
@@ -941,7 +942,7 @@ The list of all elementary styling props.
 | ------------------------------------------------------------- | :--------- |	
 | "1"                                                           |  Value in number  |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -1049,7 +1050,7 @@ The list of all elementary styling props.
 | string or array | normal  |	
 <br/>
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -1072,7 +1073,7 @@ The list of all elementary styling props.
 <br/>
 | "normal"                                                       |  Value is a predefined name   |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -1095,7 +1096,7 @@ The list of all elementary styling props.
 <br/>
 | "normal"                                                       |  Value is a predefined name   |	
 | "100px"                                                       |  Value in pixels  |	
-| "40%"                                                         |  Value in persent  |	
+| "40%"                                                         |  Percentage value  |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -1124,7 +1125,7 @@ The list of all elementary styling props.
 | "somegridarea"                                                |  Value is a name  |	
 | "somegridarea / someothergridarea"                            |  The two-value syntax separately: first for grid-column-start, second for grid-column-end   |	
 | "4 somegridarea / 6"                                          |  The two-value syntax separately: first for grid-column-start, second for grid-column-end   |	
-| "span 3 / 6"                                                  |  Value in persent  |	
+| "span 3 / 6"                                                  |  Percentage value  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
 | "10ex"                                                        |  Value in ex  |	
@@ -1307,7 +1308,7 @@ The list of all elementary styling props.
 | ------------------------------------------------------------- | :---------                        |	
 | "auto"                                                        |  Value is a predefined name       |	
 | "100px"                                                       |  Value in pixels  |	
-| "50%"                                                         |  Value in percentage       |	
+| "50%"                                                         |  Percentage value       |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -1328,7 +1329,7 @@ The list of all elementary styling props.
  **Syntax**: there are three different syntaxes you can use with this property:	
 
 1. the keyword syntax ("left top", "left center", e.g.),	
-2. the two-value syntax in persent (the first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%),	
+2. the two-value syntax in percentages (the first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%),	
 3. the two-value syntax in any CSS units(the first value is the horizontal position and the second value is the vertical. The top left corner is 0 0).	
 
 | Type                                                                                                                                        | Default |	
@@ -1483,7 +1484,7 @@ The list of all elementary styling props.
 | Examples of value                                             | Description                       |	
 | ------------------------------------------------------------- | :---------                        |	
 | "10px"                                                       |  The one-value syntax in pixels for all four corners  |	
-| "50%"                                                         |  Value in percentage       |	
+| "50%"                                                         |  Percentage value       |	
 | "10em"                                                        |  Value in em  |	
 | "10rem"                                                       |  Value in rem  |	
 | "10ch"                                                        |  Value in ch  |	
@@ -1494,7 +1495,7 @@ The list of all elementary styling props.
 | "10vmax"                                                      |  Value in vmax  |	
 | "10px 150px"                                                  |  The two-value syntax separately: first for top-left and bottom-right corners, second for top-right and bottom-left corners |
 | "10px 150px 200px"                                            |  The three-value syntax separately: first for top-left corner, second for top-right and bottom-left corners, third for bottom-right corner  |
-| "10px 150px 200px 50px"                                       |  The fourth-value syntax separately: first for top-left corner, second for top-right corner, third for bottom-left corner, fourth for bottom-right corner |
+| "10px 150px 200px 50px"                                       |  The four-value syntax separately: first for top-left corner, second for top-right corner, third for bottom-left corner, fourth for bottom-right corner |
 | ["3px", "5px", "10px", "20px", "30px"] |  Value for diffenent breakpoints (sets in theme/breakpoints)  |
 <br/>
 
@@ -1507,6 +1508,13 @@ The list of all elementary styling props.
 | --------------- | :------ |	
 | number or array |    1    |	
 <br/>
+
+|         Examples of value         |                         Description                         |
+| --------------------------------- | :---------------------------------------------------------- |
+| "0.6"                             | Value in number                                             |
+| ["0.2", "0.4", "0.6", "0.8", "1"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+<br/>
+
 
 
 
@@ -1521,6 +1529,13 @@ The list of all elementary styling props.
 | string or array |  none   |	
 <br/>
 
+|                    Examples of value                     |                                                                    Description                                                                    |
+| -------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "none"                                                   | Value is a predefined name                                                                                                                        |
+| "10px 20px"                                              | The two-value syntax separately: first for the h-offset, second for the v-offset                                                                  |
+| "10px 20px 30px 2px blue"                                | The five-value syntax separately: first for the h-offset, second for the v-offset, third for the blur, fourth for the spread, fifth for the color |
+| ["none", "2px 2px", "5px 5px", "10px 10px", "20px 20px"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                                       |
+<br/>
 
 
 ### `overflow`	
@@ -1532,6 +1547,12 @@ The list of all elementary styling props.
 | oneOf(visible, hidden, scroll, auto, initial, inherit) or array | visible |	
 <br/>
 
+|                 Examples of value                 |                         Description                         |
+| ------------------------------------------------- | :---------------------------------------------------------- |
+| "scroll"                                          | Value is a predefined name                                  |
+| ["visible", "hidden", "scroll", "auto", "hidden"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+<br/>
+
 
 
 ### `position`	
@@ -1541,6 +1562,12 @@ The list of all elementary styling props.
 | Type                                                                        | Default |	
 | --------------------------------------------------------------------------- | :------ |	
 | oneOf(static, absolute, fixed, relative, sticky, initial, inherit) or array | static  |	
+<br/>
+
+|                   Examples of value                   |                         Description                         |
+| ----------------------------------------------------- | :---------------------------------------------------------- |
+| "absolute"                                            | Value is a predefined name                                  |
+| ["static", "absolute", "fixed", "relative", "sticky"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
 <br/>
 
 
@@ -1560,6 +1587,21 @@ The list of all elementary styling props.
 | string or array |  auto   |	
 <br/>
 
+|           Examples of value            |                         Description                         |
+| -------------------------------------- | :---------------------------------------------------------- |
+| "auto"                                 | Value is a predefined name                                  |
+| "10px"                                 | Value in pixels                                             |
+| "10%"                                  | Percentage value                                         |
+| "10em"                                 | Value in em                                                 |
+| "10rem"                                | Value in rem                                                |
+| "10ch"                                 | Value in ch                                                 |
+| "10ex"                                 | Value in ex                                                 |
+| "10vh"                                 | Value in vh                                                 |
+| "10vw"                                 | Value in vw                                                 |
+| "10vmin"                               | Value in vmin                                               |
+| "10vmax"                               | Value in vmax                                               |
+| ["2px", "5px", "10px", "20px", "30px"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+<br/>
 
 
 ### `right`	
@@ -1577,6 +1619,21 @@ The list of all elementary styling props.
 | string or array |  auto   |	
 <br/>
 
+|           Examples of value            |                         Description                         |
+| -------------------------------------- | :---------------------------------------------------------- |
+| "auto"                                 | Value is a predefined name                                  |
+| "10px"                                 | Value in pixels                                             |
+| "10%"                                  | Percentage value                                         |
+| "10em"                                 | Value in em                                                 |
+| "10rem"                                | Value in rem                                                |
+| "10ch"                                 | Value in ch                                                 |
+| "10ex"                                 | Value in ex                                                 |
+| "10vh"                                 | Value in vh                                                 |
+| "10vw"                                 | Value in vw                                                 |
+| "10vmin"                               | Value in vmin                                               |
+| "10vmax"                               | Value in vmax                                               |
+| ["2px", "5px", "10px", "20px", "30px"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+<br/>
 
 
 ### `bottom`	
@@ -1594,6 +1651,21 @@ The list of all elementary styling props.
 | string or array |  auto   |	
 <br/>
 
+|           Examples of value            |                         Description                         |
+| -------------------------------------- | :---------------------------------------------------------- |
+| "auto"                                 | Value is a predefined name                                  |
+| "10px"                                 | Value in pixels                                             |
+| "10%"                                  | Percentage value                                         |
+| "10em"                                 | Value in em                                                 |
+| "10rem"                                | Value in rem                                                |
+| "10ch"                                 | Value in ch                                                 |
+| "10ex"                                 | Value in ex                                                 |
+| "10vh"                                 | Value in vh                                                 |
+| "10vw"                                 | Value in vw                                                 |
+| "10vmin"                               | Value in vmin                                               |
+| "10vmax"                               | Value in vmax                                               |
+| ["2px", "5px", "10px", "20px", "30px"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+<br/>
 
 
 ### `left`	
@@ -1611,6 +1683,21 @@ The list of all elementary styling props.
 | string or array |  auto   |	
 <br/>
 
+|           Examples of value            |                         Description                         |
+| -------------------------------------- | :---------------------------------------------------------- |
+| "auto"                                 | Value is a predefined name                                  |
+| "10px"                                 | Value in pixels                                             |
+| "10%"                                  | Percentage value                                            |
+| "10em"                                 | Value in em                                                 |
+| "10rem"                                | Value in rem                                                |
+| "10ch"                                 | Value in ch                                                 |
+| "10ex"                                 | Value in ex                                                 |
+| "10vh"                                 | Value in vh                                                 |
+| "10vw"                                 | Value in vw                                                 |
+| "10vmin"                               | Value in vmin                                               |
+| "10vmax"                               | Value in vmax                                               |
+| ["2px", "5px", "10px", "20px", "30px"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+<br/>
 
 
 ### `zIndex`	
@@ -1620,3 +1707,11 @@ The list of all elementary styling props.
 | Type                                           | Default |	
 | ---------------------------------------------- | :------ |	
 | oneOf(auto, initial, inherit), number or array |  auto   |
+<br/>
+
+|     Examples of value     |                         Description                         |
+| ------------------------- | :---------------------------------------------------------- |
+| "auto"                    | Value is a predefined name                                  |
+| "1"                       | Value in number                                             |
+| ["1", "1", "2", "2", "2"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+<br/>
