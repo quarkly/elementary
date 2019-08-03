@@ -1548,7 +1548,7 @@
 
   This CSS property affects the vertical position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the top property sets the top edge of an element to a unit above/below the top edge of its nearest positioned ancestor,	
   2. If position="relative" - the top property makes the element's top edge to move above/below its normal position.	
@@ -1580,7 +1580,7 @@
 
   This CSS property affects the horizontal position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the right property sets the right edge of an element to a unit to the right of the right edge of its nearest positioned ancestor,	
   2. If position="relative" - the right property sets the right edge of an element to a unit to the left/right of its normal position,	
@@ -1612,7 +1612,7 @@
 
   This CSS property affects the vertical position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the bottom property sets the bottom edge of an element to a unit above/below the bottom edge of its nearest positioned ancestor,	
   2. If position="relative" - the bottom property makes the element's bottom edge to move above/below its normal position.	
@@ -1644,7 +1644,7 @@
 
   This CSS property affects the horizontal position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the left property sets the left edge of an element to a unit to the left of the left edge of its nearest positioned ancestor,	
   2. If position="relative" - the left property sets the left edge of an element to a unit to the left/right of its normal position,	
