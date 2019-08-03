@@ -119,17 +119,17 @@
 
   ### `display`	
 
-  This CSS property specifies the display behavior (the type of rendering box) of an element.	
+  This CSS property specifies the display behavior (box rendering type) of an element.	
 
   |                             Type                              | Default |
   | ------------------------------------------------------------- | :------ |
   | oneOf(inline, block, inline-block, flex, grid, none) or array | block   |
   <br/>
 
-  |                Examples of value                 |                         Description                         |
+  |                Value examples                 |                         Description                         |
   | ------------------------------------------------ | :---------------------------------------------------------- |
   | "inline"                                         | Simple value                                                |
-  | ["block", "block", "inline", "inline", "inline"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
+  | ["block", "block", "inline", "inline", "inline"] | Value for different breakpoints (sets in theme/breakpoints) |
   <br/>
 
   ### `height`	
@@ -141,7 +141,7 @@
   | string, number or array | auto    |
   <br/>
 
-  |    Examples of value    |                         Description                         |
+  |    Value examples    |                         Description                         |
   | ----------------------- | :---------------------------------------------------------- |
   | "100px"                 | Value in pixels                                             |
   | "40%"                   | Percentage value                                            |
@@ -168,7 +168,7 @@
   | string, number or array | 0       |
   <br/>
 
-  |    Examples of value    |                         Description                         |
+  |    Value examples    |                         Description                         |
   | ----------------------- | :---------------------------------------------------------- |
   | "100px"                 | Value in pixels                                             |
   | "40%"                   | Percentage value                                            |
@@ -195,7 +195,7 @@
   | string, number or array | none    |
   <br/>
 
-  |    Examples of value    |                         Description                         |
+  |    Value examples    |                         Description                         |
   | ----------------------- | :---------------------------------------------------------- |
   | "100px"                 | Value in pixels                                             |
   | "40%"                   | Percentage value                                            |
@@ -222,7 +222,7 @@
   | string, number or array | auto    |
   <br/>
 
-  |    Examples of value    |                         Description                         |
+  |    Value examples    |                         Description                         |
   | ----------------------- | :---------------------------------------------------------- |
   | "100px"                 | Value in pixels                                             |
   | "40%"                   | Percentage value                                            |
@@ -250,7 +250,7 @@
   | string, number or array | 0       |
   <br/>
 
-  |    Examples of value    |                         Description                         |
+  |    Value examples    |                         Description                         |
   | ----------------------- | :---------------------------------------------------------- |
   | "100px"                 | Value in pixels                                             |
   | "40%"                   | Percentage value                                            |
@@ -276,7 +276,7 @@
   | string, number or array | none    |
   <br/>
 
-  |    Examples of value    |                         Description                         |
+  |    Value examples    |                         Description                         |
   | ----------------------- | :---------------------------------------------------------- |
   | "100px"                 | Value in pixels                                             |
   | "40%"                   | Percentage value                                            |
@@ -295,14 +295,14 @@
 
   ### `size`	
 
-  This property defines both are "width" and "height" CSS properties.	
+  This property defines both "width" and "height" CSS properties.	
 
   |      Type       | Default |
   | --------------- | :------ |
   | string or array | none    |
   <br/>
 
-  |    Examples of value    |                         Description                         |
+  |    Value examples    |                         Description                         |
   | ----------------------- | :---------------------------------------------------------- |
   | "100px"                 | Value in pixels                                             |
   | "40%"                   | Percentage value                                            |
@@ -328,7 +328,7 @@
   | oneOf(baseline, text-top, text-bottom, sub, super) or array | baseline |
   <br/>
 
-  |                      Examples of value                       |                         Description                         |
+  |                      Value examples                       |                         Description                         |
   | ------------------------------------------------------------ | :---------------------------------------------------------- |
   | "baseline"                                                   | Simple value                                                |
   | ["baseline", "baseline", "text-top", "text-top", "text-top"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -336,14 +336,14 @@
 
   ### `p`	
 
-  The shorthand of the "padding" CSS property. Are used to generate space around an element's content, inside of any defined borders.	
+  The shorthand for the "padding" CSS property. Used to generate space around an element's content, inside of any defined borders.
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  |      Examples of value       |                                                             Description                                                              |
+  |      Value examples       |                                                             Description                                                              |
   | ---------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
   | "100px"                      | Value in pixels                                                                                                                      |
   | "40%"                        | Percentage value                                                                                                                     |
@@ -357,21 +357,21 @@
   | "10vmax"                     | Value in vmax                                                                                                                        |
   | 5                            | Value from theme/scale                                                                                                               |
   | [5, 5, 6, 6, 6]              | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                          |
-  | "100px, 200px, 300px, 400px" | The four-value syntax separately: first for top padding, second for right padding, third for bottom padding, fourth for left padding |
-  | "100px, 200px, 300px"        | The three-value syntax separately: first for top padding, second for right and left paddings, third for bottom padding               |
-  | "100px, 200px"               | The two-value syntax separately: first for top and bottom paddings, second for right and left paddings                               |
+  | "100px, 200px, 300px, 400px" | If four values are specified, they are applied to the top, right, bottom and the left padding respectively in the specified order    |
+  | "100px, 200px, 300px"        | If three values are specified, the first value is applied to the top padding, the second value is applied to the right and left padding, and the third is applied to the bottom padding               |
+  | "100px, 200px"               | If two values are specified, the first value is applied to the top and bottom paddings, and the second value is applied to the right and left paddings                               |
   <br/>
 
   ### `pt`	
 
-  The shorthand of the "padding-top" CSS property.	
+  The shorthand for the "padding-top" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -389,14 +389,14 @@
 
   ### `pr`	
 
-  The shorthand of the "padding-right" CSS property.	
+  The shorthand for the "padding-right" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -415,14 +415,14 @@
 
   ### `pb`	
 
-  The shorthand of the "padding-bottom" CSS property.	
+  The shorthand for the "padding-bottom" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -441,14 +441,14 @@
 
   ### `pl`	
 
-  The shorthand of the "padding-left" CSS property.	
+  The shorthand for the "padding-left" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -467,14 +467,14 @@
 
   ### `px`	
 
-  Both are "padding-right" and "padding-left" (x-asix) CSS properties.	
+  Both "padding-right" and "padding-left" (x-axis) CSS properties.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -493,14 +493,14 @@
 
   ### `py`	
 
-  This property defines both are "padding-top" and "padding-bottom" (y-asix) CSS properties.	
+  This property defines both "padding-top" and "padding-bottom" (y-axis) CSS properties.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -519,14 +519,14 @@
 
   ### `m`	
 
-  The shorthand of the "margin" CSS property. Are used to sets the margins for an element, outside of any defined borders.	
+  The shorthand for the "margin" CSS property. Used to set the margins for an element, outside of any defined borders.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  |      Examples of value       |                                                            Description                                                            |
+  |      Value examples       |                                                            Description                                                            |
   | ---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
   | "100px"                      | Value in pixels                                                                                                                   |
   | "40%"                        | Percentage value                                                                                                                  |
@@ -540,22 +540,22 @@
   | "10vmax"                     | Value in vmax                                                                                                                     |
   | 5                            | Value from theme/scale                                                                                                            |
   | [5, 5, 6, 6, 6]              | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                       |
-  | "100px, 200px, 300px, 400px" | The four-value syntax separately: first for top margin, second for  right margin, third for bottom margin, fourth for left margin |
-  | "100px, 200px, 300px"        | The three-value syntax separately: first for top margin, second for  right and left margins, third for bottom margin              |
-  | "100px, 200px"               | The two-value syntax separately: first for top and bottom margins, second for right and left margins                              |
+  | "100px, 200px, 300px, 400px" | The four-value syntax: first for top margin, second for  right margin, third for bottom margin, fourth for left margin |
+  | "100px, 200px, 300px"        | The three-value syntax: first for top margin, second for  right and left margins, third for bottom margin              |
+  | "100px, 200px"               | The two-value syntax: first for top and bottom margins, second for right and left margins                              |
   <br/>
 
 
   ### `mt`	
 
-  The shorthand of the "margin-top" CSS property.	
+  The shorthand for the "margin-top" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -574,14 +574,14 @@
 
   ### `mr`	
 
-  The shorthand of the "margin-right" CSS property.	
+  The shorthand for the "margin-right" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -600,14 +600,14 @@
 
   ### `mb`	
 
-  The shorthand of the "margin-bottom" CSS property.	
+  The shorthand for the "margin-bottom" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -626,14 +626,14 @@
 
   ### `ml`	
 
-  The shorthand of the "margin-left" CSS property.	
+  The shorthand for the "margin-left" CSS property.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -652,14 +652,14 @@
 
   ### `mx`	
 
-  This property defines both are "margin-right" and "margin-left" (x-asix) CSS properties.	
+  This property defines both are "margin-right" and "margin-left" (x-axis) CSS properties.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -678,14 +678,14 @@
 
   ### `my`	
 
-  Both are "margin-top" and "margin-bottom" (x-asix) CSS properties.	
+  Both are "margin-top" and "margin-bottom" (x-axis) CSS properties.	
 
   |          Type           | Default |
   | ----------------------- | :------ |
   | string, number or array | none    |
   <br/>
 
-  | Examples of value |                         Description                         |
+  | Value examples |                         Description                         |
   | ----------------- | :---------------------------------------------------------- |
   | "100px"           | Value in pixels                                             |
   | "40%"             | Percentage value                                            |
@@ -711,7 +711,7 @@
   | oneOf(medium, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, initial, inherit), string, number or array | medium  |
   <br/>
 
-  |            Examples of value             |                         Description                         |
+  |            Value examples             |                         Description                         |
   | ---------------------------------------- | :---------------------------------------------------------- |
   | "medium"                                 | Value is a predefined name                                  |
   | "40%"                                    | Percentage value                                            |
@@ -730,8 +730,8 @@
 
   ### `color`	
 
-  This CSS property specifies the color of text.	
-  They can be specified by the following methods:
+  This CSS property specifies the color of the text.	
+  Colors can be specified by the following methods:
   - Hexadecimal colors (`#0000ff`)
   - RGB colors (`rgb(0, 0, 255)`)
   - RGBA colors (`rgba(0, 0, 255, 0.3)`)
@@ -745,7 +745,7 @@
   | string or array | *not specified* |
   <br/>
 
-  |                       Examples of value                       |                         Description                         |
+  |                       Value examples                       |                         Description                         |
   | ------------------------------------------------------------- | :---------------------------------------------------------- |
   | "#0000ff"                                                     | Value in hexadecimal colors                                 |
   | "rgb(0, 0, 255)"                                              | Value in RGB colors                                         |
@@ -760,18 +760,18 @@
 
   ### `fontFamily`	
 
-  This CSS property specifies the font for an element
+  This CSS property specifies the font for an element.
 
   |      Type       |         Default          |
   | --------------- | :----------------------- |
   | string or array | *depends on the browser* |
   <br/>
 
-  |                    Examples of value                    |                                                         Description                                                         |
+  |                    Value examples                    |                                                         Description                                                         |
   | ------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
   | "times"                                                 | Value is the name of a font-family                                                                                          |
-  | "sans-serif"                                            | Value is the name of a generic-family                                                                                       |
-  | "'Times New Roman', Times, serif"                       | Value are several font names as a "fallback" system. If the browser does not support the first font, it tries the next font |
+  | "sans-serif"                                            | Value is the name of a generic font family.                                                                                       |
+  | "'Times New Roman', Times, serif"                       | Value contains several font names that act as a "fallback" system. If the browser does not support the first font, it tries the next font |
   | "sans-heavy"                                            | Value from theme/fonts                                                                                                      |
   | ["sans-serif", "sans-serif", "serif", "serif", "serif"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                 |
   <br/>
@@ -786,10 +786,10 @@
   | oneOf(normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, initial, inherit), or array | normal  |
   <br/>
 
-  |     Examples of value     |                         Description                         |
+  |     Value examples     |                         Description                         |
   | ------------------------- | :---------------------------------------------------------- |
   | "normal"                  | Value is a predefined name                                  |
-  | 500                       | Value in number of weightness                               |
+  | 500                       | Weight numeric value                              |
   | [700, 600, 500, 400, 300] | Value for diffenent breakpoints (sets in theme/breakpoints) |
   <br/>
 
@@ -803,7 +803,7 @@
   | oneOf(left, right, center, justify, initial, inherit), or array | left *or* right |
   <br/>
 
-  |              Examples of value               |                         Description                         |
+  |              Value examples               |                         Description                         |
   | -------------------------------------------- | :---------------------------------------------------------- |
   | "left"                                       | Value is a predefined name                                  |
   | ["center", "center", "left", "left", "left"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -821,10 +821,10 @@
   | "normal", string, or array | normal  |
   <br/>
 
-  |      Examples of value      |                         Description                         |
+  |      Value examples      |                         Description                         |
   | --------------------------- | :---------------------------------------------------------- |
   | "normal"                    | Value is a predefined name                                  |
-  | "1.6"                       | Value in numbers                                            |
+  | "1.6"                       | Numeric values                                            |
   | "100px"                     | Value in pixels                                             |
   | "40%"                       | Percentage value                                            |
   | "10em"                      | Value in em                                                 |
@@ -841,7 +841,7 @@
 
   ### `fontStyle`	
 
-  This CSS property specifies the font style for a text.
+  This CSS property specifies the font style of the text.
   It can be specified in number, length or percentage.
 
   |                            Type                            | Default |
@@ -849,7 +849,7 @@
   | oneOf(normal, italic, oblique, initial, inherit), or array | normal  |
   <br/>
 
-  |                 Examples of value                  |                         Description                         |
+  |                 Value examples                  |                         Description                         |
   | -------------------------------------------------- | :---------------------------------------------------------- |
   | "normal"                                           | Value is a predefined name                                  |
   | ["normal", "normal", "normal", "italic", "italic"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -858,7 +858,7 @@
 
   ### `letterSpacing`	
 
-  This CSS property increases or decreases the space between characters in a text.
+  This CSS property increases or decreases the space between characters in the text.
   It can be specified in number, length or percentage.
 
   |                       Type                        | Default |
@@ -866,7 +866,7 @@
   | oneOf(normal, initial, inherit), string, or array | normal  |
   <br/>
 
-  |                 Examples of value                  |                         Description                         |
+  |                 Value examples                  |                         Description                         |
   | -------------------------------------------------- | :---------------------------------------------------------- |
   | "normal"                                           | Value is a predefined name                                  |
   | "2px"                                              | Value in pixels                                             |
@@ -884,7 +884,7 @@
   | oneOf(stretch, center, flex-start, flex-end, baseline, initial, inherit) or array | stretch |
   <br/>
 
-  |                       Examples of value                        |                         Description                         |
+  |                       Value examples                        |                         Description                         |
   | -------------------------------------------------------------- | :---------------------------------------------------------- |
   | "stretch"                                                      | Value is a predefined name                                  |
   | ["center", "center", "flex-start", "flex-start", "flex-start"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -893,14 +893,14 @@
 
   ### `alignContent`	
 
-  This CSS property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines. There must be multiple lines of items for this property to have any effect!	
+  This CSS property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items it aligns flex lines. There must be multiple lines of items for this property to have any effect!	
 
   |                                                 Type                                                 | Default |
   | ---------------------------------------------------------------------------------------------------- | :------ |
   | oneOf(stretch, center, flex-start, flex-end, space-between, space-around, initial, inherit) or array | stretch |
   <br/>
 
-  |                       Examples of value                        |                         Description                         |
+  |                       Value examples                        |                         Description                         |
   | -------------------------------------------------------------- | :---------------------------------------------------------- |
   | "stretch"                                                      | Value is a predefined name                                  |
   | ["center", "center", "flex-start", "flex-start", "flex-start"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -916,7 +916,7 @@
   | oneOf(auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right, baseline, first baseline, last baseline, safe center, unsafe center, legacy right, legacy left, legacy center, inherit, initial, unset) or array | none    |
   <br/>
 
-  |                       Examples of value                        |                         Description                         |
+  |                       Value examples                        |                         Description                         |
   | -------------------------------------------------------------- | :---------------------------------------------------------- |
   | "stretch"                                                      | Value is a predefined name                                  |
   | ["center", "center", "flex-start", "flex-start", "flex-start"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -932,7 +932,7 @@
   | oneOf(flex-start, flex-end, center, space-between, space-around, initial, inherit) or array | flex-start |
   <br/>
 
-  |                       Examples of value                        |                         Description                         |
+  |                       Value examples                        |                         Description                         |
   | -------------------------------------------------------------- | :---------------------------------------------------------- |
   | "center"                                                       | Value is a predefined name                                  |
   | ["center", "center", "flex-start", "flex-start", "flex-start"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -948,7 +948,7 @@
   | oneOf(nowrap, wrap, wrap-reverse, initial, inherit) or array | nowrap  |
   <br/>
 
-  |               Examples of value                |                         Description                         |
+  |               Value examples                |                         Description                         |
   | ---------------------------------------------- | :---------------------------------------------------------- |
   | "wrap"                                         | Value is a predefined name                                  |
   | ["wrap", "wrap", "nowrap", "nowrap", "nowrap"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -964,9 +964,9 @@
   | number or array | 0       |
   <br/>
 
-  |     Examples of value     |                         Description                         |
+  |     Value examples     |                         Description                         |
   | ------------------------- | :---------------------------------------------------------- |
-  | "1"                       | Value in number                                             |
+  | "1"                       | Numeric value                                             |
   | "100px"                   | Value in pixels                                             |
   | "40%"                     | Percentage value                                            |
   | "10em"                    | Value in em                                                 |
@@ -990,7 +990,7 @@
   | oneOf(row, row-reverse, column, column-reverse, initial, inherit) or array | row     |
   <br/>
 
-  |              Examples of value               |                         Description                         |
+  |              Value examples               |                         Description                         |
   | -------------------------------------------- | :---------------------------------------------------------- |
   | "row"                                        | Value is a predefined name                                  |
   | ["column", "column", "column", "row", "row"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -1006,10 +1006,10 @@
   | string or array | 0 1 auto |
   <br/>
 
-  |                  Examples of value                   |                         Description                          |
+  |                  Value examples                   |                         Description                          |
   | ---------------------------------------------------- | :----------------------------------------------------------- |
   | "auto"                                               | Value is a predefined name                                   |
-  | "0 1 auto"                                           | Value is a group flex-grow flex-shrink and flex-basis values |
+  | "0 1 auto"                                           | Value is a group of flex-grow flex-shrink and flex-basis values |
   | ["1 1 auto", "1 1 auto", "1 1 auto", "auto", "auto"] | Value for diffenent breakpoints (sets in theme/breakpoints)  |
   <br/>
 
@@ -1024,9 +1024,9 @@
   | number or array | 0       |
   <br/>
 
-  |     Examples of value     |                         Description                         |
+  |     Value examples     |                         Description                         |
   | ------------------------- | :---------------------------------------------------------- |
-  | "0"                       | Value in number                                             |
+  | "0"                       | Numeric value                                             |
   | ["0", "0", "1", "1", "1"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
   <br/>
 
@@ -1034,7 +1034,7 @@
 
   ### `justifySelf`	
 
-  This CSS property set the way a box is justified inside its alignment container along the appropriate axis.	
+  This CSS property sets the way a box is justified inside its alignment container along the appropriate axis.	
 
   |                                                                                                                            Type                                                                                                                            | Default |
   | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |
@@ -1044,7 +1044,7 @@
 
   ### `alignSelf`	
 
-  This CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.	
+  This CSS property overrides the grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.	
 
   |                                                                                                                            Type                                                                                                                            | Default |
   | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |
@@ -1059,7 +1059,7 @@
   **Syntax**: there are three different syntaxes you can use with this property:	
 
   1. the one-value syntax for both row and column in any CSS units ("20px", "3vmin", "100%", e.g.),	
-  2. the two-value syntax separately: first row, second column in any CSS units ("20px 10px", "3vmin 2vmax", "21px 82%", e.g.),	
+  2. the two-value syntax: first row, second column in any CSS units ("20px 10px", "3vmin 2vmax", "21px 82%", e.g.),	
   3. global values (inherit, initial, unset)	
 
   |      Type       | Default |
@@ -1069,7 +1069,7 @@
 
   ### `gridColumnGap`	
 
-  This CSS property sets the size of the gap (gutter) between an element's columns.	
+  This CSS property sets the size of the gap (gutter) between the element's columns.	
 
   |                          Type                          | Default |
   | ------------------------------------------------------ | :------ |
@@ -1184,7 +1184,7 @@
 
   ### `gridArea`	
 
-  It is a shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end, specifying a grid item’s size and location within the grid by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area.	
+  This is a shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end, specifying a grid item’s size and location within the grid by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area.	
   [Read about syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area)	
 
   |      Type       | Default |
@@ -1195,7 +1195,7 @@
 
   ### `background`	
 
-  That's a shorthand property for background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment.	
+  This is a shorthand property for background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment.	
 
   **Syntax**: background="bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment"	
 
@@ -1204,21 +1204,21 @@
   | string or array | individual |
   <br/>
 
-  |                                    Examples of value                                     |                                                                                                Description                                                                                                 |
+  |                                    Value examples                                     |                                                                                                Description                                                                                                 |
   | ---------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | "lightblue url('image.jpg') center center cover no-repeat padding-box content-box fixed" | Value is a group of values for properties in order: background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment |
+  | "lightblue url('image.jpg') center center cover no-repeat padding-box content-box fixed" | Value is a group of values for properties in the following order: background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip, background-attachment |
   <br/>
 
   ### `bgc`	
 
-  The shorthand of the "background-color" CSS property.	
+  The shorthand for the "background-color" CSS property.	
 
   |      Type       | Default |
   | --------------- | :------ |
   | string or array | none    |
   <br/>
 
-  |                       Examples of value                       |                         Description                         |
+  |                       Value examples                       |                         Description                         |
   | ------------------------------------------------------------- | :---------------------------------------------------------- |
   | "#0000ff"                                                     | Value in hexadecimal colors                                 |
   | "rgb(0, 0, 255)"                                              | Value in RGB colors                                         |
@@ -1243,7 +1243,7 @@
   | string or array | none    |
   <br/>
 
-  |                                        Examples of value                                        |                         Description                         |
+  |                                        Value examples                                        |                         Description                         |
   | ----------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |
   | "url(image1.jpg), url(image2.jpg)"                                                              | Value is the two image URLs                                 |
   | ["url(image1.jpg)", "url(image2.jpg)", "url(image3.jpg)", "url(image4.jpg)", "url(image5.jpg)"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -1267,7 +1267,7 @@
   | oneOf(auto, cover, contain, initial, inherit), string or array | auto    |
   <br/>
 
-  |                 Examples of value                 |                             Description                             |
+  |                 Value examples                 |                             Description                             |
   | ------------------------------------------------- | :------------------------------------------------------------------ |
   | "auto"                                            | Value is a predefined name                                          |
   | "100px"                                           | Value in pixels                                                     |
@@ -1280,7 +1280,7 @@
   | "10vw"                                            | Value in vw                                                         |
   | "10vmin"                                          | Value in vmin                                                       |
   | "10vmax"                                          | Value in vmax                                                       |
-  | "10px 150px"                                      | The two-value syntax separately: first for width, second for height |
+  | "10px 150px"                                      | The two-value syntax: first for width, second for height |
   | ["cover", "cover", "cover", "contain", "contain"] | Value for diffenent breakpoints (sets in theme/breakpoints)         |
   <br/>
 
@@ -1300,11 +1300,11 @@
   | oneOf(left top, left center, left bottom, right top, right center, right bottom, center top, center center, center bottom), string or array | 0% 0%   |
   <br/>
 
-  |                    Examples of value                     |                                          Description                                           |
+  |                    Value examples                     |                                          Description                                           |
   | -------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
-  | "left top"                                               | The two-value syntax in predefined names separately: first for horizontal, second for vertical |
-  | "25% 75%"                                                | The two-value syntax in percentages separately: first for horizontal, second for vertical      |
-  | "50px 150px"                                             | The two-value syntax in pixels separately: first for horizontal, second for vertical           |
+  | "left top"                                               | The two-value syntax in predefined names: the first is for horizontal, the second is for vertical |
+  | "25% 75%"                                                | The two-value syntax in percentages: the first is for horizontal, the second is for vertical      |
+  | "50px 150px"                                             | The two-value syntax in pixels: the first is for horizontal, the second is for vertical           |
   | ["left top", "left top", "left top", "center", "center"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                    |
   <br/>
 
@@ -1318,7 +1318,7 @@
   | oneOf(repeat, repeat-x, repeat-y, no-repeat, space, round, initial, inherit) or array | repeat  |
   <br/>
 
-  |                   Examples of value                   |                         Description                         |
+  |                   Value examples                   |                         Description                         |
   | ----------------------------------------------------- | :---------------------------------------------------------- |
   | "repeat"                                              | Value is a predefined name                                  |
   | ["repeat", "repeat-x", "no-repeat", "space", "round"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -1335,9 +1335,9 @@
   | string or array | medium none color |
   <br/>
 
-  |                                     Examples of value                                      |                                                Description                                                 |
+  |                                     Value examples                                      |                                                Description                                                 |
   | ------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------- |
-  | "2px solid blue"                                                                           | The three-value syntax separately: first for border-width, second for border-style, third for border-color |
+  | "2px solid blue"                                                                           | The three-value syntax: first for border-width, second for border-style, third for border-color |
   | ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                |
   <br/>
 
@@ -1345,16 +1345,16 @@
 
   ### `borderTop`	
 
-  It is a shorthand property sets all the top border properties in one declaration. The properties that can be set must be in the following order: border-top-width, border-top-style (required), border-top-color.	
+  This is a shorthand property that sets all the top border properties in one declaration. The properties that can be set must be in the following order: border-top-width, border-top-style (required), border-top-color.	
 
   |      Type       |      Default      |
   | --------------- | :---------------- |
   | string or array | medium none color |
   <br/>
 
-  |                                     Examples of value                                      |                                                      Description                                                       |
+  |                                     Value examples                                      |                                                      Description                                                       |
   | ------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------- |
-  | "2px solid blue"                                                                           | The three-value syntax separately: first for border-top-width, second for border-top-style, third for border-top-color |
+  | "2px solid blue"                                                                           | The three-value syntax: first for border-top-width, second for border-top-style, third for border-top-color |
   | ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                            |
   <br/>
 
@@ -1368,9 +1368,9 @@
   | string or array | medium none color |
   <br/>
 
-  |                                     Examples of value                                      |                                                         Description                                                          |
+  |                                     Value examples                                      |                                                         Description                                                          |
   | ------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-  | "2px solid blue"                                                                           | The three-value syntax separately: first for border-right-width, second for border-right-style, third for border-right-color |
+  | "2px solid blue"                                                                           | The three-value syntax: first for border-right-width, second for border-right-style, third for border-right-color |
   | ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                  |
   <br/>
 
@@ -1385,9 +1385,9 @@
   | string or array | medium none color |
   <br/>
 
-  |                                     Examples of value                                      |                                                           Description                                                           |
+  |                                     Value examples                                      |                                                           Description                                                           |
   | ------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------ |
-  | "2px solid blue"                                                                           | The three-value syntax separately: first for border-bottom-width, second for border-bottom-style, third for border-bottom-color |
+  | "2px solid blue"                                                                           | The three-value syntax: first for border-bottom-width, second for border-bottom-style, third for border-bottom-color |
   | ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                     |
   <br/>
 
@@ -1402,9 +1402,9 @@
   | string or array | medium none color |
   <br/>
 
-  |                                     Examples of value                                      |                                                        Description                                                        |
+  |                                     Value examples                                      |                                                        Description                                                        |
   | ------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
-  | "2px solid blue"                                                                           | The three-value syntax separately: first for border-left-width, second for border-left-style, third for border-left-color |
+  | "2px solid blue"                                                                           | The three-value syntax: first for border-left-width, second for border-left-style, third for border-left-color |
   | ["2px solid blue", "2px solid blue", "3px solid blue", "3px solid blue", "4px solid blue"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                               |
   <br/>
 
@@ -1426,12 +1426,12 @@
   | oneOf(transparent, initial, inherit), string or array | none    |
   <br/>
 
-  |              Examples of value              |                                                           Description                                                            |
+  |              Value examples              |                                                           Description                                                            |
   | ------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
   | "blue"                                      | The one-value syntax for all four borders                                                                                        |
-  | "blue green"                                | The two-value syntax separately: first for top and bottom borders, second for left and right borders                             |
-  | "blue green yellow"                         | The three-value syntax separately: first for top border, second for left and right borders, third for bottom border              |
-  | "blue green yellow orange"                  | The four-value syntax separately: first for top border, second for right border, third for bottom border, fourth for left border |
+  | "blue green"                                | The two-value syntax: first for top and bottom borders, second for left and right borders                             |
+  | "blue green yellow"                         | The three-value syntax: first for top border, second for left and right borders, third for bottom border              |
+  | "blue green yellow orange"                  | The four-value syntax: first for top border, second for right border, third for bottom border, fourth for left border |
   | ["blue", "black", "green", "yellow", "red"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                      |
   <br/>
 
@@ -1453,7 +1453,7 @@
   | string or array | 0       |
   <br/>
 
-  |           Examples of value            |                                                                      Description                                                                       |
+  |           Value examples            |                                                                      Description                                                                       |
   | -------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
   | "10px"                                 | The one-value syntax in pixels for all four corners                                                                                                    |
   | "50%"                                  | Percentage value                                                                                                                                       |
@@ -1465,9 +1465,9 @@
   | "10vw"                                 | Value in vw                                                                                                                                            |
   | "10vmin"                               | Value in vmin                                                                                                                                          |
   | "10vmax"                               | Value in vmax                                                                                                                                          |
-  | "10px 150px"                           | The two-value syntax separately: first for top-left and bottom-right corners, second for top-right and bottom-left corners                             |
-  | "10px 150px 200px"                     | The three-value syntax separately: first for top-left corner, second for top-right and bottom-left corners, third for bottom-right corner              |
-  | "10px 150px 200px 50px"                | The four-value syntax separately: first for top-left corner, second for top-right corner, third for bottom-left corner, fourth for bottom-right corner |
+  | "10px 150px"                           | The two-value syntax: first for top-left and bottom-right corners, second for top-right and bottom-left corners                             |
+  | "10px 150px 200px"                     | The three-value syntax: first for top-left corner, second for top-right and bottom-left corners, third for bottom-right corner              |
+  | "10px 150px 200px 50px"                | The four-value syntax: first for top-left corner, second for top-right corner, third for bottom-left corner, fourth for bottom-right corner |
   | ["3px", "5px", "10px", "20px", "30px"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                                            |
   <br/>
 
@@ -1481,9 +1481,9 @@
   | number or array | 1       |
   <br/>
 
-  |         Examples of value         |                         Description                         |
+  |         Value examples         |                         Description                         |
   | --------------------------------- | :---------------------------------------------------------- |
-  | "0.6"                             | Value in number                                             |
+  | "0.6"                             | Numeric value                                             |
   | ["0.2", "0.4", "0.6", "0.8", "1"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
   <br/>
 
@@ -1501,11 +1501,11 @@
   | string or array | none    |
   <br/>
 
-  |                    Examples of value                     |                                                                    Description                                                                    |
+  |                    Value examples                     |                                                                    Description                                                                    |
   | -------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
   | "none"                                                   | Value is a predefined name                                                                                                                        |
-  | "10px 20px"                                              | The two-value syntax separately: first for the h-offset, second for the v-offset                                                                  |
-  | "10px 20px 30px 2px blue"                                | The five-value syntax separately: first for the h-offset, second for the v-offset, third for the blur, fourth for the spread, fifth for the color |
+  | "10px 20px"                                              | The two-value syntax: first for the h-offset, second for the v-offset                                                                  |
+  | "10px 20px 30px 2px blue"                                | The five-value syntax: first for the h-offset, second for the v-offset, third for the blur, fourth for the spread, fifth for the color |
   | ["none", "2px 2px", "5px 5px", "10px 10px", "20px 20px"] | Value for diffenent breakpoints (sets in theme/breakpoints)                                                                                       |
   <br/>
 
@@ -1519,7 +1519,7 @@
   | oneOf(visible, hidden, scroll, auto, initial, inherit) or array | visible |
   <br/>
 
-  |                 Examples of value                 |                         Description                         |
+  |                 Value examples                 |                         Description                         |
   | ------------------------------------------------- | :---------------------------------------------------------- |
   | "scroll"                                          | Value is a predefined name                                  |
   | ["visible", "hidden", "scroll", "auto", "hidden"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -1536,7 +1536,7 @@
   | oneOf(static, absolute, fixed, relative, sticky, initial, inherit) or array | static  |
   <br/>
 
-  |                   Examples of value                   |                         Description                         |
+  |                   Value examples                   |                         Description                         |
   | ----------------------------------------------------- | :---------------------------------------------------------- |
   | "absolute"                                            | Value is a predefined name                                  |
   | ["static", "absolute", "fixed", "relative", "sticky"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
@@ -1548,7 +1548,7 @@
 
   This CSS property affects the vertical position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the top property sets the top edge of an element to a unit above/below the top edge of its nearest positioned ancestor,	
   2. If position="relative" - the top property makes the element's top edge to move above/below its normal position.	
@@ -1559,7 +1559,7 @@
   | string or array | auto    |
   <br/>
 
-  |           Examples of value            |                         Description                         |
+  |           Value examples            |                         Description                         |
   | -------------------------------------- | :---------------------------------------------------------- |
   | "auto"                                 | Value is a predefined name                                  |
   | "10px"                                 | Value in pixels                                             |
@@ -1580,7 +1580,7 @@
 
   This CSS property affects the horizontal position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the right property sets the right edge of an element to a unit to the right of the right edge of its nearest positioned ancestor,	
   2. If position="relative" - the right property sets the right edge of an element to a unit to the left/right of its normal position,	
@@ -1591,7 +1591,7 @@
   | string or array | auto    |
   <br/>
 
-  |           Examples of value            |                         Description                         |
+  |           Value examples            |                         Description                         |
   | -------------------------------------- | :---------------------------------------------------------- |
   | "auto"                                 | Value is a predefined name                                  |
   | "10px"                                 | Value in pixels                                             |
@@ -1612,7 +1612,7 @@
 
   This CSS property affects the vertical position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the bottom property sets the bottom edge of an element to a unit above/below the bottom edge of its nearest positioned ancestor,	
   2. If position="relative" - the bottom property makes the element's bottom edge to move above/below its normal position.	
@@ -1623,7 +1623,7 @@
   | string or array | auto    |
   <br/>
 
-  |           Examples of value            |                         Description                         |
+  |           Value examples            |                         Description                         |
   | -------------------------------------- | :---------------------------------------------------------- |
   | "auto"                                 | Value is a predefined name                                  |
   | "10px"                                 | Value in pixels                                             |
@@ -1644,7 +1644,7 @@
 
   This CSS property affects the horizontal position of a positioned element. This property has no effect on non-positioned elements.	
 
-  **Behaviour**	
+  **Behavior**	
 
   1. If position="absolute" or position="fixed" - the left property sets the left edge of an element to a unit to the left of the left edge of its nearest positioned ancestor,	
   2. If position="relative" - the left property sets the left edge of an element to a unit to the left/right of its normal position,	
@@ -1655,7 +1655,7 @@
   | string or array | auto    |
   <br/>
 
-  |           Examples of value            |                         Description                         |
+  |           Value examples            |                         Description                         |
   | -------------------------------------- | :---------------------------------------------------------- |
   | "auto"                                 | Value is a predefined name                                  |
   | "10px"                                 | Value in pixels                                             |
@@ -1681,9 +1681,9 @@
   | oneOf(auto, initial, inherit), number or array | auto    |
   <br/>
 
-  |     Examples of value     |                         Description                         |
+  |     Value examples     |                         Description                         |
   | ------------------------- | :---------------------------------------------------------- |
   | "auto"                    | Value is a predefined name                                  |
-  | "1"                       | Value in number                                             |
+  | "1"                       | Numeric value                                             |
   | ["1", "1", "2", "2", "2"] | Value for diffenent breakpoints (sets in theme/breakpoints) |
   <br/>
