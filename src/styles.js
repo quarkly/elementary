@@ -1,5 +1,6 @@
 import { isArray, map, isUndefined, get, omit, merge } from 'lodash/fp';
 import PropTypes from 'prop-types';
+import { memoize } from 'lodash';
 import stylesDict, { hashPropsWithAliases } from './dict';
 import { getFromTheme, themeGet, variantGet } from './theme';
 import transformers, { pixel } from './transformers';
@@ -8,15 +9,15 @@ import { variants, themed, mixins } from './modifiers';
 const RULE = 0;
 const PROP_TYPES = 1;
 
-export const getNames = properties =>
+export const getNames = memoize(properties =>
   properties.reduce((acc, name) => {
     if (isUndefined(stylesDict[name])) return acc;
     acc.push(name);
     if (stylesDict[name].alias) acc.push(stylesDict[name].alias);
     return acc;
-  }, []);
-
-export const typeToPropTypes = type => PropTypes[type];
+  }, []),
+);
+export const typeToPropTypes = memoize(type => PropTypes[type]);
 
 export const toPropTypes = style =>
   isArray(style.type)
@@ -27,70 +28,78 @@ export const createMediaQuery = n => `@media screen and (min-width: ${pixel(n)})
 
 export const getTransformer = name => transformers[name] || (value => value);
 
-export const makeRule = (property /* config */) => {
-  // Инициализация - старт
-  const { transformer, variant, scale } = hashPropsWithAliases[property];
-  const transform = getTransformer(transformer);
-  // Инициализация - конец
-  const rule = props => {
-    let resultRule = null;
-    // ищем свойство в пропсах
-    const propertyValue = get(property, props);
-    if (isUndefined(propertyValue)) {
-      return resultRule;
-    }
-    const createStyle = n => {
-      let scaleMap = [];
-      if (variant) n = variantGet(props, variant, n);
-      if (scale) scaleMap = themeGet(props, scale, scaleMap);
-      return {
-        [hashPropsWithAliases[property].name]: transform(n, scaleMap),
-      };
-    };
-    if (isArray(propertyValue)) {
-      const breakpoints = getFromTheme(props, 'breakpoints');
-      // количество свойств в массиве должно быть не больше чем в брейкпоинтах
-      const consistentValues = propertyValue.slice(1, breakpoints.length + 1);
-      resultRule = [createStyle(propertyValue[0])];
-      let index = 1;
-      resultRule = resultRule.concat(
-        map(
-          value => ({
-            // eslint-disable-next-line no-plusplus
-            [createMediaQuery(breakpoints[index++])]: createStyle(value),
-          }),
-          consistentValues,
-        ),
-      );
-    } else {
-      resultRule = createStyle(propertyValue);
-    }
+export const createRule = (property, variant, scale, transform) => props => {
+  let resultRule = null;
+  // ищем свойство в пропсах
+  const propertyValue = get(property, props);
+  if (isUndefined(propertyValue)) {
     return resultRule;
+  }
+  const createStyle = n => {
+    let scaleMap = [];
+    if (variant) n = variantGet(props, variant, n);
+    if (scale) scaleMap = themeGet(props, scale, scaleMap);
+    return {
+      [hashPropsWithAliases[property].name]: transform(n, scaleMap),
+    };
   };
-  const propType = toPropTypes(hashPropsWithAliases[property]);
-  return [rule, propType];
+  if (isArray(propertyValue)) {
+    const breakpoints = getFromTheme(props, 'breakpoints');
+    // количество свойств в массиве должно быть не больше чем в брейкпоинтах
+    const consistentValues = propertyValue.slice(1, breakpoints.length + 1);
+    resultRule = [createStyle(propertyValue[0])];
+    let index = 1;
+    resultRule = resultRule.concat(
+      map(
+        value => ({
+          // eslint-disable-next-line no-plusplus
+          [createMediaQuery(breakpoints[index++])]: createStyle(value),
+        }),
+        consistentValues,
+      ),
+    );
+  } else {
+    resultRule = createStyle(propertyValue);
+  }
+  return resultRule;
 };
 
-export const compose = property => {
-  const composed = [];
-  const dictRule = hashPropsWithAliases[property];
-  const rules = dictRule.compose.reduce((acc, cssRule) => {
-    const [rule] = makeRule(cssRule);
-    acc.push(rule);
-    return acc;
-  }, []);
-  composed[RULE] = props => {
-    if (isUndefined(props[property])) return;
-    const clearProps = omit(property, props);
-    return rules.reduce(
-      (acc, rule, i) =>
-        merge(makeComoosedRule(rule, dictRule.compose[i], props[property], clearProps), acc),
-      {},
-    );
-  };
-  composed[PROP_TYPES] = toPropTypes(dictRule);
-  return composed;
-};
+export const makeRule = memoize(
+  (property /* config */) => {
+    // Инициализация - старт
+    const { transformer, variant, scale } = hashPropsWithAliases[property];
+    const transform = getTransformer(transformer);
+    // Инициализация - конец
+    const rule = createRule(property, variant, scale, transform);
+    const propType = toPropTypes(hashPropsWithAliases[property]);
+    return [rule, propType];
+  },
+  prop => prop,
+);
+
+export const compose = memoize(
+  property => {
+    const composed = [];
+    const dictRule = hashPropsWithAliases[property];
+    const rules = dictRule.compose.reduce((acc, cssRule) => {
+      const [rule] = makeRule(cssRule);
+      acc.push(rule);
+      return acc;
+    }, []);
+    composed[RULE] = props => {
+      if (isUndefined(props[property])) return;
+      const clearProps = omit(property, props);
+      return rules.reduce(
+        (acc, rule, i) =>
+          merge(makeComoosedRule(rule, dictRule.compose[i], props[property], clearProps), acc),
+        {},
+      );
+    };
+    composed[PROP_TYPES] = toPropTypes(dictRule);
+    return composed;
+  },
+  property => property,
+);
 
 export const makeComoosedRule = (rule, ruleKey, ruleValue, props) => {
   if (isArray(ruleValue)) {
@@ -127,7 +136,7 @@ export const makeRules = (properties /* config */) =>
     [{}, {}],
   );
 
-export const upFirstChar = string => string.charAt(0).toUpperCase() + string.slice(1);
+export const upFirstChar = memoize(string => string.charAt(0).toUpperCase() + string.slice(1));
 
 export const makeEffectRuleName = (effect, rule) => `${effect}${upFirstChar(rule)}`;
 
@@ -182,6 +191,18 @@ export const makeEffects = ({ effectNames, properties, rules, propTypes, config 
     [{}, {}],
   );
 
+// export const activator = rules => props => {
+//   if (!rules.length) {
+//     return [];
+//   }
+//   return Object.keys(props).reduce((acc, prop) => {
+//     if (!rules[prop]) {
+//       return acc;
+//     }
+//     acc.push(rules[prop](props));
+//     return acc;
+//   }, []);
+// };
 export default (properties, config = {}) => {
   const deps = [];
   if (config.name) {
@@ -191,6 +212,10 @@ export default (properties, config = {}) => {
     deps.push(variants(config.variant));
   }
   deps.push(mixins);
-  const [rules, propTypes] = makeRulesWithEffect(getNames(properties), config);
+  if (config.effects) {
+    const [rules, propTypes] = makeRulesWithEffect(getNames(properties), config);
+    return [[...deps, ...Object.values(rules)], propTypes];
+  }
+  const [rules, propTypes] = makeRules(getNames(properties), config);
   return [[...deps, ...Object.values(rules)], propTypes];
 };
