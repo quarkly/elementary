@@ -15,9 +15,11 @@ test('sc setup works', () => {
 });
 
 const Box = elementary('div')(
-  { effects: { hover: ':hover' }, styles: ['color'] },
+  { effects: { hover: ':hover' }, styles: ['color'], aliases: true, mixins: true },
   { color: 'indigo' },
 );
+
+const Empty = elementary('div')({ styles: [] });
 
 describe('Elementary integration to SC extend', () => {
   test('extend with inline', () => {
@@ -33,5 +35,9 @@ describe('Elementary integration to SC extend', () => {
     expect(tree).toHaveStyleRule('color', 'red', {
       modifier: ':hover',
     });
+  });
+  test('render without props', () => {
+    const tree = renderer.create(<Empty />).toJSON();
+    expect(tree).toBeDefined();
   });
 });

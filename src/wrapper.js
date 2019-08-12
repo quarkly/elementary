@@ -10,11 +10,18 @@ export const isTemplate = arg => isArray(arg);
 
 export const makeComponent = (styled, tag, styles, config, other) => {
   const [rules, propTypes] = bootstrap(styles, config);
-  let Component = styled(clearProps(tag, config))(...other, ...rules);
+  let Component;
+  if (config.omit) {
+    Component = styled(clearProps(tag, config))(...other, ...rules);
+  } else {
+    Component = styled(tag)(other, ...rules);
+  }
   if (config.normalize) {
     Component = normalize(Component);
   }
-  Component.propTypes = propTypes;
+  if (config.propTypes) {
+    Component.propTypes = propTypes;
+  }
   if (config.name) {
     Component.displayName = config.name;
   }
