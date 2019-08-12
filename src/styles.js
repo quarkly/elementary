@@ -196,7 +196,7 @@ export const activator = rules =>
     if (!Object.keys(rules).length) {
       return {};
     }
-    const res = Object.keys(props).reduce((acc, prop) => {
+    return Object.keys(props).reduce((acc, prop) => {
       if (isUndefined(rules[prop])) {
         return acc;
       }
@@ -211,12 +211,7 @@ export const activator = rules =>
         );
       }
       return merge(styles, acc);
-      // acc.push(rules[prop](props));
-      // console.log(rules[prop](props))
-      // return acc;
     }, {});
-    // console.log(res);
-    return res;
   });
 export default (properties, config = {}) => {
   const deps = [];
@@ -238,6 +233,5 @@ export default (properties, config = {}) => {
     return [[...deps, ...Object.values(rules)], propTypes];
   }
   const [rules, propTypes] = makeRulesWithEffect(propNames, config);
-  // console.log(rules)
   return [[...deps, activator(rules)], propTypes];
 };

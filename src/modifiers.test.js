@@ -26,19 +26,21 @@ const fakeTheme = {
 
 describe('Test modifiers', () => {
   test('variant works fine', () => {
-    const [rules] = bootsrap(['margin'], { variant: 'someVariants' });
+    const [rules] = bootsrap(['margin'], { variant: 'someVariants', mixins: true, aliases: true });
     expect(fakeApplier(rules, { theme: fakeTheme, variant: 'alert' })).toStrictEqual({
       margin: '300px',
       color: 'red',
     });
-    expect(fakeApplier(rules, { m: 3, theme: fakeTheme, variant: 'alert' })).toStrictEqual({
+    expect(
+      fakeApplier(rules, { m: 3, theme: fakeTheme, variant: 'alert', mixins: true, aliases: true }),
+    ).toStrictEqual({
       margin: '16px',
       color: 'red',
     });
     expect(fakeApplier(rules, { theme: fakeTheme })).toStrictEqual({});
   });
   test('themed works fine', () => {
-    const [rules] = bootsrap(['margin'], { name: 'someName' });
+    const [rules] = bootsrap(['margin'], { name: 'someName', mixins: true, aliases: true });
     expect(fakeApplier(rules, { m: 3, theme: fakeTheme })).toStrictEqual({
       margin: '16px',
       padding: '30px',
@@ -49,7 +51,7 @@ describe('Test modifiers', () => {
     });
   });
   test('mixins works fine', () => {
-    const [rules] = bootsrap(['margin']);
+    const [rules] = bootsrap(['margin'], { mixins: true, aliases: true });
     expect(fakeApplier(rules, { m: 3, theme: fakeTheme, cRed: true })).toStrictEqual({
       margin: '16px',
       color: 'red',
@@ -63,7 +65,12 @@ describe('Test modifiers', () => {
     });
   });
   test('actual priority', () => {
-    const [rules] = bootsrap(['margin'], { name: 'someName', variant: 'someVariants' });
+    const [rules] = bootsrap(['margin'], {
+      name: 'someName',
+      variant: 'someVariants',
+      mixins: true,
+      aliases: true,
+    });
     expect(
       fakeApplier(rules, { m: 3, theme: fakeTheme, variant: 'alert', cBlue: true }),
     ).toStrictEqual({
