@@ -16,12 +16,19 @@ test('sc setup works', () => {
 
 const ElButton = elementary('button')({ styles: ['color'], aliases: true });
 
-const Box = elementary('div')({ effects: { hover: ':hover' }, aliases: true, styles: ['color'] });
+const Box = elementary('div')({
+  effects: { hover: ':hover' },
+  aliases: true,
+  styles: ['color'],
+  omit: {},
+  propTypes: true,
+});
 
 const ComposedBox = elementary('div')({
   effects: { hover: ':hover', focus: ':focus' },
   styles: ['color'],
   aliases: true,
+  omit: {},
 });
 
 const NamedBox = elementary('div')({

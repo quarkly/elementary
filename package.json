@@ -71,6 +71,7 @@
   },
   "homepage": "https://github.com/quarkly/elementary#readme",
   "dependencies": {
-    "lodash": ">=4.17.13"
+    "lodash": ">=4.17.13",
+    "lodash.merge": ">=4.6.2"
   }
 }
