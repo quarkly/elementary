@@ -191,18 +191,33 @@ export const makeEffects = ({ effectNames, properties, rules, propTypes, config 
     [{}, {}],
   );
 
-// export const activator = rules => props => {
-//   if (!rules.length) {
-//     return [];
-//   }
-//   return Object.keys(props).reduce((acc, prop) => {
-//     if (!rules[prop]) {
-//       return acc;
-//     }
-//     acc.push(rules[prop](props));
-//     return acc;
-//   }, []);
-// };
+export const activator = rules =>
+  memoize(props => {
+    if (!Object.keys(rules).length) {
+      return {};
+    }
+    const res = Object.keys(props).reduce((acc, prop) => {
+      if (isUndefined(rules[prop])) {
+        return acc;
+      }
+      const styles = rules[prop](props);
+      if (isArray(styles)) {
+        return merge(
+          styles.reduce((accum, style) => {
+            Object.assign(accum, style);
+            return accum;
+          }, {}),
+          acc,
+        );
+      }
+      return merge(styles, acc);
+      // acc.push(rules[prop](props));
+      // console.log(rules[prop](props))
+      // return acc;
+    }, {});
+    // console.log(res);
+    return res;
+  });
 export default (properties, config = {}) => {
   const deps = [];
   if (config.name) {
@@ -211,11 +226,18 @@ export default (properties, config = {}) => {
   if (config.variant) {
     deps.push(variants(config.variant));
   }
-  deps.push(mixins);
+  if (config.mixins) {
+    deps.push(mixins);
+  }
+  let propNames = properties;
+  if (config.aliases) {
+    propNames = getNames(properties);
+  }
   if (config.effects) {
-    const [rules, propTypes] = makeRulesWithEffect(getNames(properties), config);
+    const [rules, propTypes] = makeRulesWithEffect(propNames, config);
     return [[...deps, ...Object.values(rules)], propTypes];
   }
-  const [rules, propTypes] = makeRules(getNames(properties), config);
-  return [[...deps, ...Object.values(rules)], propTypes];
+  const [rules, propTypes] = makeRulesWithEffect(propNames, config);
+  // console.log(rules)
+  return [[...deps, activator(rules)], propTypes];
 };
